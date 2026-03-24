@@ -1,10 +1,8 @@
 ---
-title: "¿Cuánto le cuesta la ""Ceguera Operativa"" a su Ingenio?"
+title: '¿Cuánto le cuesta la "Ceguera Operativa" a su Ingenio?'
 author: "Marcelo J. Lamarque"
 editor: visual
 ---
-
-# ¿Cuánto le cuesta la "Ceguera Operativa" a su Ingenio?
 
 ## El costo oculto de la ineficiencia en el NOA
 

@@ -46,7 +46,7 @@
     "href": "articulos.html",
     "title": "Artículos y Publicaciones Científicas",
     "section": "",
-    "text": "Explora nuestras últimas investigaciones sobre optimización de la industria azucarera y transformación digital.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDe la Factoría Lineal a la Biorrefinería 4.0\n\n\n\nBiorrefinería\n\nOptimización\n\nAgroindustria\n\n\n\nResumen: La industria azucarera del NOA enfrenta un agotamiento del modelo productivo lineal. Este ensayo sostiene que la transición hacia la Biorrefinería 4.0 es un…\n\n\n\n\n\n\n19 mar 2026\n\n\n\n\n\n\nNo hay resultados"
+    "text": "Explora nuestras últimas investigaciones sobre optimización de la industria azucarera y transformación digital.\n\n\n\n\n\n\n\n\n\n\n\n\n¿Cuánto le cuesta la “Ceguera Operativa” a su Ingenio?\n\n\n\n\n\n\nMarcelo J. Lamarque\n\n\n\n\n\n\n\n\n\n\n\n\n\nDe la Factoría Lineal a la Biorrefinería 4.0\n\n\n\nBiorrefinería\n\nOptimización\n\nAgroindustria\n\n\n\nResumen: La industria azucarera del NOA enfrenta un agotamiento del modelo productivo lineal. Este ensayo sostiene que la transición hacia la Biorrefinería 4.0 es un…\n\n\n\n\n\n\n19 mar 2026\n\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "quienes-somos.html",
@@ -54,5 +54,33 @@
     "title": "Quiénes Somos",
     "section": "",
     "text": "Growise Consultora\n                    Inteligencia de Negocios\n                    para Agroindustria y Warehousing.\n        \n        \n            LinkedIn\n            Instagram\n            Email\n        \n    \n\n\n\n    \n        \n            Nuestro ADN: Del Barro a la Estrategia\n        \n\n        \n            Growise se fundó sobre una premisa: la teoría del MBA no sirve de nada sin la experiencia de la \"trinchera\".\n        \n        \n            Nuestro origen se remonta a la gestión de empresas familiares en crisis y a la operación de grandes plantas industriales. Entendemos la presión de la caja, la soledad del dueño y la urgencia de los resultados porque lo vivimos \"del otro lado del mostrador\".\n        \n        \n            Hoy, somos el puente que faltaba: combinamos la potencia de la Ciencia de Datos y la Ingeniería con la empatía y visión de negocio que solo da la experiencia real.\n        \n        \n        \n        \n        \n            \n                \n                Marcelo J. Lamarque\n                \n                    Ingeniero Industrial | MBA | PhD Candidate\n                \n                \n                    30 años de experiencia liderando plantas y reingenierías (Ledesma, La Sevillanita). Marcelo aporta la visión híbrida: conoce el barro de la operación y el lenguaje del directorio. Su especialidad es aplicar Data Science (R, Machine Learning) para encontrar rentabilidad donde el ojo humano no la ve.\n                \n                \n                    mlamarque@growise.com.ar\n                    WhatsApp: +54 9 381 330 1435\n                    LinkedIn\n                \n            \n            \n            \n                \n                Bruno Macchi\n                \n                    Licenciado en Administración de Empresas\n                \n                \n                    Bruno es el ancla de gestión y viabilidad. Con experiencia corporativa (ex-Pluspetrol), aporta el rigor administrativo y contractual necesario para que los proyectos escalen. Asegura que cada solución técnica sea financieramente sólida, legalmente segura y culturalmente aplicable.\n                \n                \n                    bmacchi@growise.com.ar\n                    WhatsApp: +54 9 381 604 3798\n                    LinkedIn\n                \n            \n        \n\n        \n        \n        \n            Con Growise, la misma consultora que analiza su modelo de costos es la que construye el dashboard de Power BI, programa el modelo de optimización en R y se asegura de que su equipo pueda gestionarlo.\n        \n\n        \n            Ver Nuestros Servicios\n        \n    \n\n\n\n    \n        \n            © Growise Consultora. Todos los derechos reservados.\n            Design: HTML5 UP"
+  },
+  {
+    "objectID": "articulos/ceguera_operativa/ceguera_operativa.html",
+    "href": "articulos/ceguera_operativa/ceguera_operativa.html",
+    "title": "¿Cuánto le cuesta la “Ceguera Operativa” a su Ingenio?",
+    "section": "",
+    "text": "En la industria azucarera del Noroeste Argentino, existe un fantasma que recorre los directorios: el Capital Inmovilizado. No se trata de máquinas paradas, sino de la brecha entre lo que su empresa produce hoy y lo que podría producir con los mismos recursos si operara en la Frontera de Eficiencia.\nDe acuerdo con mis investigaciones recientes sobre la competitividad del sector, la pérdida sistémica por ineficiencia técnica en la región alcanza la alarmante cifra de USD 436 millones.\n\nLa pregunta no es si su ingenio es productivo, sino qué tan lejos está del líder del sector y cuántos dólares está dejando sobre la mesa cada día por no cerrar esa brecha."
+  },
+  {
+    "objectID": "articulos/ceguera_operativa/ceguera_operativa.html#el-costo-oculto-de-la-ineficiencia-en-el-noa",
+    "href": "articulos/ceguera_operativa/ceguera_operativa.html#el-costo-oculto-de-la-ineficiencia-en-el-noa",
+    "title": "¿Cuánto le cuesta la “Ceguera Operativa” a su Ingenio?",
+    "section": "",
+    "text": "En la industria azucarera del Noroeste Argentino, existe un fantasma que recorre los directorios: el Capital Inmovilizado. No se trata de máquinas paradas, sino de la brecha entre lo que su empresa produce hoy y lo que podría producir con los mismos recursos si operara en la Frontera de Eficiencia.\nDe acuerdo con mis investigaciones recientes sobre la competitividad del sector, la pérdida sistémica por ineficiencia técnica en la región alcanza la alarmante cifra de USD 436 millones.\n\nLa pregunta no es si su ingenio es productivo, sino qué tan lejos está del líder del sector y cuántos dólares está dejando sobre la mesa cada día por no cerrar esa brecha."
+  },
+  {
+    "objectID": "articulos/ceguera_operativa/ceguera_operativa.html#qué-es-la-ceguera-operativa",
+    "href": "articulos/ceguera_operativa/ceguera_operativa.html#qué-es-la-ceguera-operativa",
+    "title": "¿Cuánto le cuesta la “Ceguera Operativa” a su Ingenio?",
+    "section": "¿Qué es la Ceguera Operativa?",
+    "text": "¿Qué es la Ceguera Operativa?\nMuchos CEOs y dueños de ingenios confían en su experiencia y en los reportes diarios de molienda. Sin embargo, la complejidad de una biorrefinería moderna genera puntos ciegos. La ceguera operativa ocurre cuando:\n\nSe asume que la única forma de mejorar es con CAPEX (comprar más “fierros”).\nNo se identifica el peso real de los determinantes (vapor, escala, logística) en el resultado final.\nSe opera bajo promedios históricos en lugar de modelos predictivos."
+  },
+  {
+    "objectID": "articulos/ceguera_operativa/ceguera_operativa.html#de-la-autopsia-al-diagnóstico-predictivo",
+    "href": "articulos/ceguera_operativa/ceguera_operativa.html#de-la-autopsia-al-diagnóstico-predictivo",
+    "title": "¿Cuánto le cuesta la “Ceguera Operativa” a su Ingenio?",
+    "section": "De la Autopsia al Diagnóstico Predictivo",
+    "text": "De la Autopsia al Diagnóstico Predictivo\nEn Growise, no nos quedamos en el “qué pasó”. Usamos modelos de Análisis Envolvente de Datos (DEA) y algoritmos de Machine Learning para realizar una “autopsia digital” de los procesos.\nIdentificamos su índice de eficiencia (\\(\\theta\\)) y, lo más importante, determinamos qué variables específicas debe ajustar para alcanzar la frontera técnica. No es magia, es ciencia de datos aplicada a la rentabilidad azucarera."
   }
 ]
