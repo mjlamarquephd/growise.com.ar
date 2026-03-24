@@ -1,0 +1,10 @@
+---
+title: "Artículos y Publicaciones Científicas"
+listing:
+  contents: articulos
+  type: grid
+  sort: "date desc"
+  categories: true
+---
+
+Explora nuestras últimas investigaciones sobre optimización de la industria azucarera y transformación digital.

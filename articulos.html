@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Servicios – Growise</title>
+<title>Artículos y Publicaciones Científicas – Growise</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -68,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Buscar"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>
 /* RESET BÁSICO GLOBAL */
 body { padding: 0 !important; margin: 0 !important; }
@@ -87,6 +118,35 @@ header.quarto-title-block { padding-top: 3em !important; margin-bottom: 2em !imp
 .cell-output-display img { max-width: 100% !important; height: auto !important; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 25px 0; }
 </style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -119,11 +179,11 @@ header.quarto-title-block { padding-top: 3em !important; margin-bottom: 2em !imp
 <span class="menu-text">Quiénes Somos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./servicios.html" aria-current="page"> 
+    <a class="nav-link" href="./servicios.html"> 
 <span class="menu-text">Servicios</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./articulos.html"> 
+    <a class="nav-link active" href="./articulos.html" aria-current="page"> 
 <span class="menu-text">Artículos</span></a>
   </li>  
 </ul>
@@ -137,15 +197,15 @@ header.quarto-title-block { padding-top: 3em !important; margin-bottom: 2em !imp
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    </div>
+    <h5 class="quarto-listing-category-title">Categorías</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Todas <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QWdyb2luZHVzdHJpYQ==">Agroindustria <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QmlvcnJlZmluZXIlQzMlQURh">Biorrefinería <span class="quarto-category-count">(1)</span></div><div class="category" data-category="T3B0aW1pemFjaSVDMyVCM24=">Optimización <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Servicios</h1>
+<h1 class="title">Artículos y Publicaciones Científicas</h1>
 </div>
 
 
@@ -162,97 +222,49 @@ header.quarto-title-block { padding-top: 3em !important; margin-bottom: 2em !imp
 </header>
 
 
-<style>
-/* FUERZA A LA PÁGINA A OCUPAR TODO EL ANCHO Y RESPETA EL DISEÑO ORIGINAL */
-#quarto-content { 
-    display: block !important; 
-    max-width: none !important; 
-    margin: 0 !important; 
-    padding: 0 !important;
-}
-</style>
+<p>Explora nuestras últimas investigaciones sobre optimización de la industria azucarera y transformación digital.</p>
 
-<header id="header">
-    <div class="inner">
-        <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="Logo Growise"></a>
-        <h1><strong>Growise Consultora</strong><br>
-                    Inteligencia de Negocios<br>
-                    para Agroindustria y Warehousing.</h1>
-        
-        <ul class="icons" style="margin-top: 20px;">
-            <li><a href="[https://www.linkedin.com/company/growiseconsultora/](https://www.linkedin.com/company/growiseconsultora/)" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-            <li><a href="[https://www.instagram.com/growise.company/](https://www.instagram.com/growise.company/)" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="mailto:mlamarque@growise.com.ar" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-        </ul>
-    </div>
-</header>
 
-<div id="main">
-    <section id="servicios-detalle">
-        <header class="major">
-            <h2 class="anchored">Nuestros Servicios</h2>
-        </header>
-        
-        <h3 class="anchored">Modelos de Costeo y Control de Gestión (BI)</h3>
-        <p>
-            <strong>El Problema:</strong> ¿Sabe cuánto le cuesta realmente cada caja de berry procesada, cada tonelada de azúcar producida o cada pallet almacenado en su depósito? Los costeos genéricos ocultan las fugas de rentabilidad.
-        </p>
-        <p>
-            <strong>Nuestra Solución:</strong> Desarrollamos <strong>modelos de costeo a medida</strong> para su operación. Integramos sus datos (partes de producción, ERP, planillas) en un Dashboard de Power BI que le permite ver el costo real y la rentabilidad por producto o línea.
-        </p>
-        
-        <div style="background-color: #f8f9fa; padding: 2em; border-left: 5px solid #787878; margin: 2em 0; border-radius: 4px;">
-            <h4 style="color: #444; margin-top: 0;" class="anchored">La Diferencia Growise: Conclusiones, no Gráficos</h4>
-            <p style="font-size: 0.95em; font-style: italic; margin-bottom: 1em;">
-                "El tablero pasa de ser una herramienta de descubrimiento a una herramienta de confirmación."
-            </p>
-            <p style="font-size: 0.9em; margin-bottom: 0;">
-                Los tableros estándar le dan datos y le piden a usted que sea el analista. Nuestro modelo es diferente: implementamos un "cerebro" (IA + Experiencia Experta) que le entrega la <strong>conclusión primero</strong>. Usted solo entra para verificar. <strong>Le ahorramos al CEO el 90% del esfuerzo mental.</strong>
-            </p>
-        </div>
-        
-        <hr>
-        
-        <h3 class="anchored">Optimización de Procesos (Modelos Matemáticos, ML y IA)</h3>
-        <p>
-            <strong>El Problema:</strong> La eficiencia de cosechadoras, el diseño del layout de un empaque, el análisis del proceso de producción o la gestión de inventario en un almacén son problemas complejos con miles de variables.
-        </p>
-        <p>
-            <strong>Nuestra Solución:</strong> Usamos <strong>Modelos Matemáticos, Machine Learning e IA</strong> (con R, Excel Avanzado y Solver) para encontrar la solución óptima. Optimizamos la rentabilidad de la cosecha, disminuimos las pérdidas en su empaque, mejoramos la eficiencia de sus líneas de producción y reducimos los costos operativos de su warehousing.
-        </p>
-        
-        <hr> 
-        
-        <h3 class="anchored">Consultoría Estratégica (Ingeniería + Administración)</h3>
-        <p>
-            <strong>El Problema:</strong> Los datos son inútiles si no se usan para tomar mejores decisiones estratégicas.
-        </p>
-        <p>
-            <strong>Nuestra Solución:</strong> Este es nuestro mayor diferencial. Actuamos como su socio estratégico. Lo ayudamos a leer los datos (Visión de Ingeniería), definir la hoja de ruta (Visión Estratégica de MBA) y asegurar la correcta implementación (Visión de Administración).<br>
-            <br> No entregamos datos en Tableros de Control bonitos. Entregamos <strong>rentabilidad y tranquilidad</strong>. Acompañamos en la toma de decisiones basadas en datos y experiencia para que pueda dedicarse a lo importante y no a lo urgente.
-        </p>
-        
-        <hr> 
-        
-        <ul class="actions">
-            <li><a href="quienes-somos.html" class="button">Conocer al Equipo</a></li>
-            <li><a href="index.html" class="button">Volver al Inicio</a></li>
-        </ul>
-    </section>
+
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="QmlvcnJlZmluZXIlQzMlQURhJTJDT3B0aW1pemFjaSVDMyVCM24lMkNBZ3JvaW5kdXN0cmlh" data-listing-date-sort="1773889200000" data-listing-file-modified-sort="1774376805102" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4634">
+<a href="./articulos/ensayo-biorrefineria/Ensayo_Biorrefineria.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./articulos/ensayo-biorrefineria/Esquema_Refineria.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+De la Factoría Lineal a la Biorrefinería 4.0
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmlvcnJlZmluZXIlQzMlQURh'); return false;">Biorrefinería</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('T3B0aW1pemFjaSVDMyVCM24='); return false;">Optimización</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QWdyb2luZHVzdHJpYQ=='); return false;">Agroindustria</div>
+
 </div>
+<div class="card-text listing-description delink">
+<p><strong>Resumen:</strong> La industria azucarera del NOA enfrenta un agotamiento del modelo productivo lineal. Este ensayo sostiene que la transición hacia la Biorrefinería 4.0 es un…</p>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
 
-<footer id="footer">
-    <div class="inner">
-        <ul class="copyright">
-            <li>© Growise Consultora. Todos los derechos reservados.</li>
-            <li>Design: <a href="[http://html5up.net](http://html5up.net)">HTML5 UP</a></li>
-        </ul>
-    </div>
-</footer>
-
-
-
-</main> <!-- /main -->
+</div>
+<div class="listing-date">
+19 mar 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No hay resultados</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -1,0 +1,93 @@
+---
+title: "Servicios"
+---
+
+```{=html}
+<style>
+/* FUERZA A LA PÁGINA A OCUPAR TODO EL ANCHO Y RESPETA EL DISEÑO ORIGINAL */
+#quarto-content { 
+    display: block !important; 
+    max-width: none !important; 
+    margin: 0 !important; 
+    padding: 0 !important;
+}
+</style>
+
+<header id="header">
+    <div class="inner">
+        <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="Logo Growise" /></a>
+        <h1><strong>Growise Consultora</strong><br />
+                    Inteligencia de Negocios<br />
+                    para Agroindustria y Warehousing.</h1>
+        
+        <ul class="icons" style="margin-top: 20px;">
+            <li><a href="[https://www.linkedin.com/company/growiseconsultora/](https://www.linkedin.com/company/growiseconsultora/)" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="[https://www.instagram.com/growise.company/](https://www.instagram.com/growise.company/)" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="mailto:mlamarque@growise.com.ar" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+    </div>
+</header>
+
+<div id="main">
+    <section id="servicios-detalle">
+        <header class="major">
+            <h2>Nuestros Servicios</h2>
+        </header>
+        
+        <h3>Modelos de Costeo y Control de Gestión (BI)</h3>
+        <p>
+            <strong>El Problema:</strong> ¿Sabe cuánto le cuesta realmente cada caja de berry procesada, cada tonelada de azúcar producida o cada pallet almacenado en su depósito? Los costeos genéricos ocultan las fugas de rentabilidad.
+        </p>
+        <p>
+            <strong>Nuestra Solución:</strong> Desarrollamos <strong>modelos de costeo a medida</strong> para su operación. Integramos sus datos (partes de producción, ERP, planillas) en un Dashboard de Power BI que le permite ver el costo real y la rentabilidad por producto o línea.
+        </p>
+        
+        <div style="background-color: #f8f9fa; padding: 2em; border-left: 5px solid #787878; margin: 2em 0; border-radius: 4px;">
+            <h4 style="color: #444; margin-top: 0;">La Diferencia Growise: Conclusiones, no Gráficos</h4>
+            <p style="font-size: 0.95em; font-style: italic; margin-bottom: 1em;">
+                "El tablero pasa de ser una herramienta de descubrimiento a una herramienta de confirmación."
+            </p>
+            <p style="font-size: 0.9em; margin-bottom: 0;">
+                Los tableros estándar le dan datos y le piden a usted que sea el analista. Nuestro modelo es diferente: implementamos un "cerebro" (IA + Experiencia Experta) que le entrega la <strong>conclusión primero</strong>. Usted solo entra para verificar. <strong>Le ahorramos al CEO el 90% del esfuerzo mental.</strong>
+            </p>
+        </div>
+        
+        <hr>
+        
+        <h3>Optimización de Procesos (Modelos Matemáticos, ML y IA)</h3>
+        <p>
+            <strong>El Problema:</strong> La eficiencia de cosechadoras, el diseño del layout de un empaque, el análisis del proceso de producción o la gestión de inventario en un almacén son problemas complejos con miles de variables.
+        </p>
+        <p>
+            <strong>Nuestra Solución:</strong> Usamos <strong>Modelos Matemáticos, Machine Learning e IA</strong> (con R, Excel Avanzado y Solver) para encontrar la solución óptima. Optimizamos la rentabilidad de la cosecha, disminuimos las pérdidas en su empaque, mejoramos la eficiencia de sus líneas de producción y reducimos los costos operativos de su warehousing.
+        </p>
+        
+        <hr> 
+        
+        <h3>Consultoría Estratégica (Ingeniería + Administración)</h3>
+        <p>
+            <strong>El Problema:</strong> Los datos son inútiles si no se usan para tomar mejores decisiones estratégicas.
+        </p>
+        <p>
+            <strong>Nuestra Solución:</strong> Este es nuestro mayor diferencial. Actuamos como su socio estratégico. Lo ayudamos a leer los datos (Visión de Ingeniería), definir la hoja de ruta (Visión Estratégica de MBA) y asegurar la correcta implementación (Visión de Administración).<br>
+            <br> No entregamos datos en Tableros de Control bonitos. Entregamos <strong>rentabilidad y tranquilidad</strong>. Acompañamos en la toma de decisiones basadas en datos y experiencia para que pueda dedicarse a lo importante y no a lo urgente.
+        </p>
+        
+        <hr> 
+        
+        <ul class="actions">
+            <li><a href="quienes-somos.html" class="button">Conocer al Equipo</a></li>
+            <li><a href="index.html" class="button">Volver al Inicio</a></li>
+        </ul>
+    </section>
+</div>
+
+<footer id="footer">
+    <div class="inner">
+        <ul class="copyright">
+            <li>&copy; Growise Consultora. Todos los derechos reservados.</li>
+            <li>Design: <a href="[http://html5up.net](http://html5up.net)">HTML5 UP</a></li>
+        </ul>
+    </div>
+</footer>
+```

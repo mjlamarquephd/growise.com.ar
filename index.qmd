@@ -1,0 +1,144 @@
+---
+# Configuraciones de Quarto (puedes dejarlo vacío o poner el título)
+title: "Inicio"
+---
+
+```{=html}
+<style>
+/* FUERZA A LA HOME A OCUPAR TODO EL ANCHO */
+#quarto-content { 
+    display: block !important; 
+    max-width: none !important; 
+    margin: 0 !important; 
+    padding: 0 !important;
+}
+</style>
+
+<header id="header">
+    <div class="inner">
+        <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="Logo Growise" /></a>
+        <h1><strong>Growise Consultora</strong><br />
+                    Inteligencia de Negocios<br />
+                    para Agroindustria y Warehousing.</h1>
+        
+        <ul class="icons" style="margin-top: 20px;">
+            <li><a href="[https://www.linkedin.com/company/growiseconsultora/](https://www.linkedin.com/company/growiseconsultora/)" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="[https://www.instagram.com/growise.company/](https://www.instagram.com/growise.company/)" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="mailto:mlamarque@growise.com.ar" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+    </div>
+</header>
+
+<div id="main">
+    <section id="one">
+        <header class="major">
+            <h2>Optimizamos la Rentabilidad de la Agroindustria y Operaciones de Warehousing</h2>
+            <p style="font-size: 1.1em; color: #555; margin-top: -1em;">
+                No entregamos reportes teóricos. Transformamos datos complejos en decisiones de negocio rentables, uniendo la ingeniería de procesos con la estrategia de alta dirección.
+            </p>
+        </header>
+
+        <p style="font-weight: bold;">
+            Somos una consultora boutique especializada en dos áreas de alto impacto:
+        </p>
+
+        <div class="row">
+            <div class="col-6 col-12-small">
+                <h3>Agroindustria</h3>
+                <p>Nos especializamos en la optimización de procesos y costos de plantas agroindustriales: <strong>Ingenios Azucareros, Citrícolas y plantas de procesamiento</strong>.</p>
+            </div>
+            <div class="col-6 col-12-small">
+                <h3>Warehousing</h3>
+                <p>Aplicamos el mismo rigor analítico para optimizar la eficiencia, costos y layout de <strong>Centros de Distribución y Almacenes</strong>.</p>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <p>Nuestra ventaja es la sinergia de nuestro equipo: unimos la visión de <strong>Ingeniería, Estrategia y Datos</strong> con la <strong>Administración y Gestión de Negocios</strong>.</p>
+
+        <ul class="actions">
+            <li><a href="servicios.html" class="button">Nuestros Servicios</a></li>
+            <li><a href="quienes-somos.html" class="button">Quiénes Somos</a></li>
+        </ul>
+    </section>
+
+    <section id="two">
+        <h2>Áreas de Expertise</h2>
+        <div class="row">
+            <article class="col-6 col-12-xsmall work-item">
+                <a href="images/fulls/Dashboard_Estrategico.png" class="image fit thumb"><img src="images/thumbs/Dashboard_Estrategico.png" alt="" /></a>
+                <h3>Modelos de Costeo y Control (BI)</h3>
+                <p>Desarrollamos modelos de costeo específicos para su industria.</p>
+            </article>
+            <article class="col-6 col-12-xsmall work-item">
+                <a href="images/fulls/Optimizacion_Procesos.png" class="image fit thumb"><img src="images/thumbs/Optimizacion_Procesos.png" alt="" /></a>
+                <h3>Optimización de Procesos (IA/ML)</h3>
+                <p>Modelos en R y Solver para optimizar procesos de planta y almacenes.</p>
+            </article>
+            <article class="col-6 col-12-xsmall work-item">
+                <a href="images/fulls/Analisis_Competitividad.png" class="image fit thumb"><img src="images/thumbs/Analisis_Competitividad.png" alt="" /></a>
+                <h3>Consultoría Estratégica</h3>
+                <p>Acompañamiento (Ingeniería + MBA) en la toma de decisiones.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="three">
+        <h2>Contacto</h2>
+        <p>Deje de navegar a ciegas o por intuición. Descubra cuánto dinero está perdiendo su operación hoy.</p>
+        
+        <div class="row">
+
+            <div class="col-6 col-12-small">
+                <h3 style="color: #787878; margin-bottom: 0.5em;">Marcelo J. Lamarque</h3>
+                <ul class="labeled-icons">
+                    <li>
+                        <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+                        <a href="mailto:mlamarque@growise.com.ar">mlamarque@growise.com.ar</a>
+                    </li>
+                    <li>
+                        <h3 class="icon solid fa-mobile-alt"><span class="label">WhatsApp</span></h3>
+                        <a href="https://wa.me/5493813301435">Agendar Diagnóstico Inicial</a>
+                    </li>
+                    <li>
+                        <h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
+                        <a href="https://www.linkedin.com/in/mlamarque/">Perfil de LinkedIn</a>
+                    </li>
+                    <li>
+                        <h3 class="icon solid fa-map-marker-alt"><span class="label">Ubicación</span></h3>
+                        Yerba Buena, Tucumán<br />
+                        Argentina
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-12-small">
+                <h3 style="color: #787878; margin-bottom: 0.5em;">Bruno Macchi</h3>
+                <ul class="labeled-icons">
+                    <li>
+                        <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+                        <a href="mailto:bmacchi@growise.com.ar">bmacchi@growise.com.ar</a>
+                    </li>
+                    <li>
+                        <h3 class="icon solid fa-mobile-alt"><span class="label">WhatsApp</span></h3>
+                        <a href="https://wa.me/5493816043798">+54 9 381 604 3798</a>
+                    </li>
+                    <li>
+                        <h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
+                        <a href="https://www.linkedin.com/in/macchib/">Perfil de LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div> 
+    </section>
+</div> <footer id="footer">
+    <div class="inner">
+        <ul class="copyright">
+            <li>&copy; Growise Consultora. Todos los derechos reservados.</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </div>
+</footer>
+```

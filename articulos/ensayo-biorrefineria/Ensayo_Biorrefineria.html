@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Marcelo Javier Lamarque">
+<meta name="author" content="Julio Rodríguez Rey">
+<meta name="author" content="Lorena Bearzotti">
+
+<title>De la Factoría Lineal a la Biorrefinería 4.0 – Growise</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<link href="../../site_libs/tabwid-1.1.3/tabwid.css" rel="stylesheet">
+
+<script src="../../site_libs/tabwid-1.1.3/tabwid.js"></script>
+
+<style>
+/* RESET BÁSICO GLOBAL */
+body { padding: 0 !important; margin: 0 !important; }
+.quarto-container { max-width: none !important; padding: 0 !important; }
+main { margin-top: 0 !important; padding: 0 !important; }
+
+/* LEGIBILIDAD (Para los artículos) */
+p, li, section, .quarto-title-meta { color: #333 !important; font-size: 1.05em; line-height: 1.6; }
+h1, h2, h3, h4 { color: #2c3e50 !important; font-weight: bold; }
+
+/* GALERÍA DE ARTÍCULOS Y METADATOS */
+header.quarto-title-block { padding-top: 3em !important; margin-bottom: 2em !important; }
+.quarto-listing-category-title { font-weight: bold; color: #787878; margin-bottom: 1em; }
+.quarto-title-meta { border-top: 1px solid #eee; margin-top: 2em; padding-top: 1em; }
+.quarto-title-meta-heading { color: #888; text-transform: uppercase; font-size: 0.75em; letter-spacing: 1px; }
+.quarto-title-meta-contents { color: #444; }
+.cell-output-display img { max-width: 100% !important; height: auto !important; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 25px 0; }
+</style>
+<style>
+section.abstract em, p em, li em { font-style: italic !important; text-decoration: none !important; }
+</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../assets/css/main.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Growise</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../quienes-somos.html"> 
+<span class="menu-text">Quiénes Somos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../servicios.html"> 
+<span class="menu-text">Servicios</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../articulos.html"> 
+<span class="menu-text">Artículos</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#el-ocaso-del-paradigma-azucarero-tradicional" id="toc-el-ocaso-del-paradigma-azucarero-tradicional" class="nav-link active" data-scroll-target="#el-ocaso-del-paradigma-azucarero-tradicional">El Ocaso del Paradigma Azucarero Tradicional</a></li>
+  <li><a href="#la-biorrefinería-4.0-del-hardware-a-la-inteligencia-operativa" id="toc-la-biorrefinería-4.0-del-hardware-a-la-inteligencia-operativa" class="nav-link" data-scroll-target="#la-biorrefinería-4.0-del-hardware-a-la-inteligencia-operativa">La Biorrefinería 4.0: Del “Hardware” a la Inteligencia Operativa</a></li>
+  <li><a href="#metodología-la-arquitectura-de-auditoría-híbrida" id="toc-metodología-la-arquitectura-de-auditoría-híbrida" class="nav-link" data-scroll-target="#metodología-la-arquitectura-de-auditoría-híbrida">Metodología: La Arquitectura de Auditoría Híbrida</a>
+  <ul class="collapse">
+  <li><a href="#fase-i-el-diagnóstico-con-dea-bcc-o" id="toc-fase-i-el-diagnóstico-con-dea-bcc-o" class="nav-link" data-scroll-target="#fase-i-el-diagnóstico-con-dea-bcc-o">Fase I: El Diagnóstico con DEA BCC-O</a></li>
+  <li><a href="#fase-ii-de-la-autopsia-a-la-prospección-con-random-forest" id="toc-fase-ii-de-la-autopsia-a-la-prospección-con-random-forest" class="nav-link" data-scroll-target="#fase-ii-de-la-autopsia-a-la-prospección-con-random-forest">Fase II: De la “Autopsia” a la Prospección con Random Forest</a></li>
+  </ul></li>
+  <li><a href="#análisis-de-resultados-el-dolor-del-capital-inmovilizado" id="toc-análisis-de-resultados-el-dolor-del-capital-inmovilizado" class="nav-link" data-scroll-target="#análisis-de-resultados-el-dolor-del-capital-inmovilizado">Análisis de Resultados: El “Dolor” del Capital Inmovilizado</a></li>
+  <li><a href="#el-rol-de-la-auditoría-técnica-y-la-madurez-digital" id="toc-el-rol-de-la-auditoría-técnica-y-la-madurez-digital" class="nav-link" data-scroll-target="#el-rol-de-la-auditoría-técnica-y-la-madurez-digital">El Rol de la Auditoría Técnica y la Madurez Digital</a></li>
+  <li><a href="#conclusiones-y-roadmap-hacia-el-modelo-de-optimización" id="toc-conclusiones-y-roadmap-hacia-el-modelo-de-optimización" class="nav-link" data-scroll-target="#conclusiones-y-roadmap-hacia-el-modelo-de-optimización">Conclusiones y Roadmap: Hacia el Modelo de Optimización</a></li>
+  <li><a href="#bibliografia" id="toc-bibliografia" class="nav-link" data-scroll-target="#bibliografia">Bibliografia</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">De la Factoría Lineal a la Biorrefinería 4.0</h1>
+<p class="subtitle lead">El salto de eficiencia técnica en el NOA</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Biorrefinería</div>
+    <div class="quarto-category">Optimización</div>
+    <div class="quarto-category">Agroindustria</div>
+  </div>
+  </div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Autores/as</div>
+  <div class="quarto-title-meta-heading">Afiliaciones</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Marcelo Javier Lamarque <a href="mailto:marcelo.lamarque@unsta.edu.ar" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Facultad de Ingeniería, Universidad del Norte Santo Tomás de Aquino
+          </p>
+        <p class="affiliation">
+            CENIT (Centro de Innovación Tecnológica) - Facultad de Ciencias Exactas y Tecnología, Universidad Nacional de Tucumán
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Julio Rodríguez Rey <a href="mailto:jrodriguezrey@herrera.unt.edu.ar" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            CENIT (Centro de Innovación Tecnológica) - Facultad de Ciencias Exactas y Tecnología, Universidad Nacional de Tucumán
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Lorena Bearzotti <a href="mailto:lorena.bearzotti@pucv.cl" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Escuela de Ingeniería de Construcción y Transporte, Facultad de Ingeniería, Pontificia Universidad Católica de Valparaíso
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">19 de marzo de 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Resumen</div>
+    <p><strong>Resumen:</strong> La industria azucarera del NOA enfrenta un agotamiento del modelo productivo lineal. Este ensayo sostiene que la transición hacia la Biorrefinería 4.0 es un imperativo de supervivencia condicionado por la sofisticación analítica de las empresas. Se propone un marco de hibridación donde el DEA-BCC orientado a outputs actúa como diagnóstico de la eficiencia técnica (<span class="math inline">\(\theta\)</span>) y algoritmos de Random Forest operan como una “autopsia digital” para deconstruir el <em>Yield Gap</em>. Al analizar las 19 DMUs de la región con datos del IPAAT, se demuestra que el cierre de la brecha operativa no depende solo de la inversión física, sino de la capacidad de arbitrar flujos de biomasa y energía mediante modelos prescriptivos que superen la intuición analógica del pasado.</p>
+    <p><strong>Palabras clave:</strong> Eficiencia Técnica; Biorrefinería 4.0; Análisis Envolvente de Datos (DEA); Random Forest; Industria Azucarera del NOA; Inteligencia Operativa; Analítica Prescriptiva.</p>
+    <p><strong>Abstract:</strong> The sugar industry in Northwestern Argentina (NOA) is facing the obsolescence of the linear production model. This essay contends that the transition toward Biorefinery 4.0 is a survival imperative, fundamentally conditioned by the firms’ analytical sophistication. A hybrid framework is proposed in which output-oriented DEA-BCC serves as a diagnostic tool for technical efficiency (<span class="math inline">\(\theta\)</span>), while Random Forest algorithms function as a “digital autopsy” to deconstruct the <em>Yield Gap</em>. By analyzing the region’s 19 DMUs using audited IPAAT data, it is demonstrated that closing the operational gap depends not only on physical capital investment but also on the strategic capacity to arbitrate biomass and energy flows through prescriptive models that transcend the analog intuition of the past.</p>
+    <p><strong>Keywords:</strong> Technical Efficiency; Biorefinery 4.0; Data Envelopment Analysis (DEA); Random Forest; NOA Sugar Industry; Operational Intelligence; Prescriptive Analytics.</p>
+  </div>
+</div>
+
+
+</header>
+
+
+<section id="el-ocaso-del-paradigma-azucarero-tradicional" class="level1">
+<h1>El Ocaso del Paradigma Azucarero Tradicional</h1>
+<p>La industria azucarera del Noroeste Argentino (NOA) se encuentra en una encrucijada histórica. El modelo del ingenio concebido exclusivamente para la extracción de sacarosa ha quedado obsoleto ante las demandas de la <strong>economía circular</strong> y la transición energética <span class="citation" data-cites="dessbesell2017">(<a href="#ref-dessbesell2017" role="doc-biblioref">Dessbesell et&nbsp;al. 2017</a>)</span>.</p>
+<p>La realidad operativa de Tucumán, Salta y Jujuy hoy se debate entre la persistencia de una gestión intuitiva y la necesidad de una transformación digital profunda. El problema no es solo la falta de tecnología, sino la <strong>brecha de madurez analítica</strong>.</p>
+<p>En el NOA, la toma de decisiones sigue anclada en análisis descriptivos básicos (hojas de cálculo), lo que genera una “ceguera operativa” ante las ineficiencias sistémicas. Como sostiene <span class="citation" data-cites="anino2018">(<a href="#ref-anino2018" role="doc-biblioref">Anino 2018</a>)</span>, la sostenibilidad del sector depende de su capacidad para mutar hacia centros de valorización integral de biomasa.</p>
+</section>
+<section id="la-biorrefinería-4.0-del-hardware-a-la-inteligencia-operativa" class="level1">
+<h1>La Biorrefinería 4.0: Del “Hardware” a la Inteligencia Operativa</h1>
+<p>La literatura académica clásica postula que la integración de una destilería de bioetanol posee el potencial teórico de actuar como un <strong>catalizador termodinámico</strong> <span class="citation" data-cites="bonomi2011">(<a href="#ref-bonomi2011" role="doc-biblioref">Bonomi 2011</a>)</span>. En términos de Investigación de Operaciones, la destilería se concibe como un “amortiguador” (<em>buffer</em>) que permite expandir la frontera de posibilidades de producción del ingenio, ofreciendo beneficios como:</p>
+<ul>
+<li><strong>Flexibilización del Output:</strong> Desviar jugos de baja pureza hacia la producción de alcohol, optimizando el rendimiento global de la caña.</li>
+<li><strong>Estabilidad Térmica:</strong> Un mejor aprovechamiento del bagazo y el vapor, transformando el excedente energético en productos de alto valor.</li>
+</ul>
+<p>Sin embargo, desde una perspectiva de consultoría estratégica y analítica avanzada, este ensayo argumenta que <strong>el simple emplazamiento de una planta de bioetanol (el “hardware” industrial) no garantiza el salto hacia la frontera de eficiencia</strong>.</p>
+<p>La evidencia demuestra que los ingenios tradicionales operan bajo una lógica lineal donde la destilería suele ser tratada como un silo anexo y no como un sistema integrado. Para que la teórica flexibilidad de la Biorrefinería se traduzca en una eficiencia técnica (<span class="math inline">\(\theta\)</span>) real y resiliente frente a la variabilidad de la materia prima <span class="citation" data-cites="bogetoft2011">(<a href="#ref-bogetoft2011" role="doc-biblioref">Bogetoft y Otto 2011</a>)</span>, se requiere una transición hacia la <strong>Biorrefinería 4.0</strong> <span class="citation" data-cites="pessl2017 ghobakhloo2018">(<a href="#ref-pessl2017" role="doc-biblioref">Pessl 2017</a>; <a href="#ref-ghobakhloo2018" role="doc-biblioref">Ghobakhloo 2018</a>)</span>.</p>
+<p>Esto implica abandonar la gestión intuitiva para adoptar una <strong>Inteligencia Operativa basada en datos</strong> <span class="citation" data-cites="petrus2024">(<a href="#ref-petrus2024" role="doc-biblioref">Petrus et&nbsp;al. 2024</a>)</span>, donde el volumen procesado (Escala) y la asignación dinámica de flujos (Diversificación) se orquestan algorítmicamente para maximizar la rentabilidad del complejo.</p>
+</section>
+<section id="metodología-la-arquitectura-de-auditoría-híbrida" class="level1">
+<h1>Metodología: La Arquitectura de Auditoría Híbrida</h1>
+<p>Para superar la gestión basada en la intuición, este ensayo propone una <strong>Arquitectura de Optimización Híbrida</strong> que integra dos fases complementarias, alejándose de los análisis descriptivos tradicionales.</p>
+<section id="fase-i-el-diagnóstico-con-dea-bcc-o" class="level2">
+<h2 class="anchored" data-anchor-id="fase-i-el-diagnóstico-con-dea-bcc-o">Fase I: El Diagnóstico con DEA BCC-O</h2>
+<p>Utilizamos el <strong>Análisis Envolvente de Datos (DEA)</strong> bajo el supuesto de retornos variables a escala (VRS) y orientación a productos (outputs) <span class="citation" data-cites="banker1984">(<a href="#ref-banker1984" role="doc-biblioref">Banker 1984</a>)</span>. El índice <span class="math inline">\(\theta\)</span> no es solo un número; es el estándar de oro que identifica a los “Ingenios Frontera” (los referentes) y a los “Seguidores” (los ineficientes). Esta fase permite separar el efecto del tamaño del ingenio de su verdadera capacidad de gestión técnica <span class="citation" data-cites="bogetoft2011">(<a href="#ref-bogetoft2011" role="doc-biblioref">Bogetoft y Otto 2011</a>)</span>.</p>
+<p>La <a href="#tbl-resultados-dea" class="quarto-xref">Tabla&nbsp;1</a> presenta el ranking de eficiencia consolidado. Para garantizar la confidencialidad industrial requerida en este estudio, se han anonimizado las DMUs, manteniendo la trazabilidad entre zafras.</p>
+<div class="cell" data-layout-align="center">
+<div id="tbl-resultados-dea" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-resultados-dea-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1: Eficiencia Técnica Relativa (BCC-O) por DMU y Zafra (Datos Anonimizados)
+</figcaption>
+<div aria-describedby="tbl-resultados-dea-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="tabwid"><style>.cl-38a9193e{}.cl-38a004c0{font-family:'Arial';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-38a004d4{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-38a382da{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-38a382e4{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-38a3a74c{width:1.202in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a756{width:0.659in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a757{width:1.804in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a760{width:1.225in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a761{width:0.956in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a762{width:1.202in;background-color:rgba(226, 239, 218, 1.00);vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a76a{width:0.659in;background-color:rgba(226, 239, 218, 1.00);vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a76b{width:1.804in;background-color:rgba(226, 239, 218, 1.00);vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a774{width:1.225in;background-color:rgba(226, 239, 218, 1.00);vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a775{width:0.956in;background-color:rgba(226, 239, 218, 1.00);vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a776{width:1.202in;background-color:rgba(226, 239, 218, 1.00);vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a777{width:0.659in;background-color:rgba(226, 239, 218, 1.00);vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a77e{width:1.804in;background-color:rgba(226, 239, 218, 1.00);vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a788{width:1.225in;background-color:rgba(226, 239, 218, 1.00);vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a789{width:0.956in;background-color:rgba(226, 239, 218, 1.00);vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a78a{width:1.202in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a78b{width:0.659in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a792{width:1.804in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a793{width:1.225in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a794{width:0.956in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a795{width:1.202in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a79c{width:0.659in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a79d{width:1.804in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a79e{width:1.225in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a7a6{width:0.956in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a7a7{width:1.202in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a7a8{width:0.659in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a7a9{width:1.804in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a7b0{width:1.225in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-38a3a7b1{width:0.956in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-38a9193e"><thead><tr style="overflow-wrap:break-word;"><th class="cl-38a3a74c"><p class="cl-38a382da"><span class="cl-38a004c0">Identificador</span></p></th><th class="cl-38a3a756"><p class="cl-38a382e4"><span class="cl-38a004c0">Zafra</span></p></th><th class="cl-38a3a757"><p class="cl-38a382e4"><span class="cl-38a004c0">Molienda (Tn Brutas)</span></p></th><th class="cl-38a3a760"><p class="cl-38a382e4"><span class="cl-38a004c0">Eficiencia (θ)</span></p></th><th class="cl-38a3a761"><p class="cl-38a382da"><span class="cl-38a004c0">Perfil</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-38a3a762"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-12</span></p></td><td class="cl-38a3a76a"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a76b"><p class="cl-38a382e4"><span class="cl-38a004d4">3.470.652</span></p></td><td class="cl-38a3a774"><p class="cl-38a382e4"><span class="cl-38a004c0">1,000</span></p></td><td class="cl-38a3a775"><p class="cl-38a382da"><span class="cl-38a004d4">Líder</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a776"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-14</span></p></td><td class="cl-38a3a777"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a77e"><p class="cl-38a382e4"><span class="cl-38a004d4">512.740</span></p></td><td class="cl-38a3a788"><p class="cl-38a382e4"><span class="cl-38a004c0">1,000</span></p></td><td class="cl-38a3a789"><p class="cl-38a382da"><span class="cl-38a004d4">Líder</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a776"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-15</span></p></td><td class="cl-38a3a777"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a77e"><p class="cl-38a382e4"><span class="cl-38a004d4">536.332</span></p></td><td class="cl-38a3a788"><p class="cl-38a382e4"><span class="cl-38a004c0">1,000</span></p></td><td class="cl-38a3a789"><p class="cl-38a382da"><span class="cl-38a004d4">Líder</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a78a"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-19</span></p></td><td class="cl-38a3a78b"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a792"><p class="cl-38a382e4"><span class="cl-38a004d4">1.873.775</span></p></td><td class="cl-38a3a793"><p class="cl-38a382e4"><span class="cl-38a004c0">0,996</span></p></td><td class="cl-38a3a794"><p class="cl-38a382da"><span class="cl-38a004d4">Referente</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-08</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">2.750.814</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,886</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-16</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">683.063</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,861</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-05</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">828.913</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,853</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-03</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">2.885.665</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,840</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-09</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">1.434.690</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,818</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-13</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">557.425</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,814</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-07</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">855.623</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,799</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-02</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">855.470</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,797</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-17</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">651.256</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,789</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-01</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">656.606</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,763</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-06</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">821.865</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,760</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-11</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">1.255.619</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,759</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-10</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">1.834.907</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,743</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-18</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">1.155.596</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,743</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-04</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2024</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">800.309</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,742</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a776"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-07</span></p></td><td class="cl-38a3a777"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a77e"><p class="cl-38a382e4"><span class="cl-38a004d4">916.935</span></p></td><td class="cl-38a3a788"><p class="cl-38a382e4"><span class="cl-38a004c0">1,000</span></p></td><td class="cl-38a3a789"><p class="cl-38a382da"><span class="cl-38a004d4">Líder</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a776"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-12</span></p></td><td class="cl-38a3a777"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a77e"><p class="cl-38a382e4"><span class="cl-38a004d4">3.090.522</span></p></td><td class="cl-38a3a788"><p class="cl-38a382e4"><span class="cl-38a004c0">1,000</span></p></td><td class="cl-38a3a789"><p class="cl-38a382da"><span class="cl-38a004d4">Líder</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a776"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-19</span></p></td><td class="cl-38a3a777"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a77e"><p class="cl-38a382e4"><span class="cl-38a004d4">1.690.853</span></p></td><td class="cl-38a3a788"><p class="cl-38a382e4"><span class="cl-38a004c0">1,000</span></p></td><td class="cl-38a3a789"><p class="cl-38a382da"><span class="cl-38a004d4">Líder</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a78a"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-15</span></p></td><td class="cl-38a3a78b"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a792"><p class="cl-38a382e4"><span class="cl-38a004d4">616.590</span></p></td><td class="cl-38a3a793"><p class="cl-38a382e4"><span class="cl-38a004c0">0,928</span></p></td><td class="cl-38a3a794"><p class="cl-38a382da"><span class="cl-38a004d4">Referente</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a78a"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-02</span></p></td><td class="cl-38a3a78b"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a792"><p class="cl-38a382e4"><span class="cl-38a004d4">895.743</span></p></td><td class="cl-38a3a793"><p class="cl-38a382e4"><span class="cl-38a004c0">0,926</span></p></td><td class="cl-38a3a794"><p class="cl-38a382da"><span class="cl-38a004d4">Referente</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a78a"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-13</span></p></td><td class="cl-38a3a78b"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a792"><p class="cl-38a382e4"><span class="cl-38a004d4">748.120</span></p></td><td class="cl-38a3a793"><p class="cl-38a382e4"><span class="cl-38a004c0">0,900</span></p></td><td class="cl-38a3a794"><p class="cl-38a382da"><span class="cl-38a004d4">Referente</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-05</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">848.633</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,884</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-03</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">2.303.210</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,878</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-16</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">746.780</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,873</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-09</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">1.615.425</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,859</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-11</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">1.329.519</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,849</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-14</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">764.341</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,849</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-17</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">895.965</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,841</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-10</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">1.923.334</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,834</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-04</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">720.874</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,824</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-06</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">980.399</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,810</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-08</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">2.312.657</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,804</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a795"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-01</span></p></td><td class="cl-38a3a79c"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a79d"><p class="cl-38a382e4"><span class="cl-38a004d4">578.844</span></p></td><td class="cl-38a3a79e"><p class="cl-38a382e4"><span class="cl-38a004c0">0,797</span></p></td><td class="cl-38a3a7a6"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-38a3a7a7"><p class="cl-38a382da"><span class="cl-38a004c0">DMU-18</span></p></td><td class="cl-38a3a7a8"><p class="cl-38a382e4"><span class="cl-38a004d4">2025</span></p></td><td class="cl-38a3a7a9"><p class="cl-38a382e4"><span class="cl-38a004d4">1.425.772</span></p></td><td class="cl-38a3a7b0"><p class="cl-38a382e4"><span class="cl-38a004c0">0,797</span></p></td><td class="cl-38a3a7b1"><p class="cl-38a382da"><span class="cl-38a004d4">Seguidor</span></p></td></tr></tbody></table></div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p><br>
+Como complemento visual, la <a href="#fig-dotplot-dea" class="quarto-xref">Figura&nbsp;1</a> muestra la brecha de eficiencia (<em>Yield Gap</em>) entre los ingenios frontera y los seguidores. Esta dispersión es la que justifica la necesidad de la Fase II: entender qué variables operativas confinan a las DMUs fuera de la envolvente de eficiencia.<br>
+</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-dotplot-dea" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-pos="H">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dotplot-dea-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Ensayo_Biorrefineria_files/figure-html/fig-dotplot-dea-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-pos="H" width="2100">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dotplot-dea-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Comparativa de Eficiencia Técnica por DMU y Zafra.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="fase-ii-de-la-autopsia-a-la-prospección-con-random-forest" class="level2">
+<h2 class="anchored" data-anchor-id="fase-ii-de-la-autopsia-a-la-prospección-con-random-forest">Fase II: De la “Autopsia” a la Prospección con Random Forest</h2>
+<p>Una vez identificado el score de eficiencia <span class="math inline">\(\theta\)</span> para cada ingenio del NOA, aplicamos <strong>Machine Learning (Random Forest)</strong> <span class="citation" data-cites="almeida2021">(<a href="#ref-almeida2021" role="doc-biblioref">Almeida et&nbsp;al. 2021</a>)</span> para trascender el análisis descriptivo y <strong>auditar la capacidad de gestión</strong> de la DMU. En esta fase, la eficiencia técnica actúa como nuestra variable objetivo, permitiendo que el algoritmo no solo realice una <strong>“autopsia”</strong> operativa para deconstruir las causas raíz de la ineficiencia histórica, sino que evalúe la madurez digital del ingenio. Este enfoque identifica si la DMU posee la infraestructura necesaria para la generación de <strong>Big Data</strong> (sensores y captura de datos) y, fundamentalmente, si existe la capacidad organizacional para la interpretación de dichos datos y la toma de decisiones en consecuencia.</p>
+<p>Este enfoque de “<strong>XAI</strong>” (Inteligencia Artificial Explicable) <span class="citation" data-cites="barredoarrieta2020">(<a href="#ref-barredoarrieta2020" role="doc-biblioref">Barredo Arrieta et&nbsp;al. 2020</a>)</span> es el puente que transforma el dato en una prescripción estratégica. Al revelar que la ineficiencia se explica, por ejemplo, en un 65% por la inestabilidad en variables críticas, el modelo trasciende su rol de registro histórico para constituirse como un <strong>simulador prospectivo de alto impacto</strong>. Esto faculta al gestor para adelantarse a los hechos y orquestar la operación bajo un modelo de optimización proactiva; uno donde la inteligencia operativa no solo maximiza los balances de masa en tiempo real, sino que integra proyecciones de comportamiento de mercados para arbitrar dinámicamente <strong>la mezcla de productos</strong> (<em>product mix</em>).</p>
+<p>Bajo esta arquitectura, el flujo de datos se traduce en decisiones precisas de inversión (CAPEX) y en la capacidad de pivotar la producción —optimizando la ratio azúcar/alcohol u otros derivados de la diversificación— según la rentabilidad marginal dictada por el estado del mercado. En última instancia, la hibridación analítica prepara la infraestructura física y digital de la planta para capitalizar proactivamente las fluctuaciones comerciales mediante una agilidad técnica y económica integrada.</p>
+</section>
+</section>
+<section id="análisis-de-resultados-el-dolor-del-capital-inmovilizado" class="level1">
+<h1>Análisis de Resultados: El “Dolor” del Capital Inmovilizado</h1>
+<p>Al aplicar esta metodología a los datos auditados, la realidad del NOA emerge con crudeza. Los resultados de la investigación demuestran que la brecha operativa entre los líderes y los seguidores representa un <strong>Costo de Oportunidad Sistémico</strong> de millones de dólares. Como consultor, enfatizo que este “Capital Inmovilizado” es el precio que paga el sector por no adoptar el salto hacia la Biorrefinería 4.0. La analítica demuestra que los ingenios que han integrado destilerías no solo presentan scores <span class="math inline">\(\theta\)</span> más altos, sino que muestran una menor sensibilidad a las fluctuaciones de la calidad de la caña, gracias a la flexibilidad del bioetanol como producto compensador.</p>
+<p>Para cuantificar el impacto económico de la ineficiencia técnica, se monetizó el <em>Yield Gap</em> de las unidades seguidoras. A diferencia de los enfoques tradicionales que asumen un commodity estándar, este estudio aplicó un Precio Promedio Ponderado (Precio <em>Mix</em>) específico para el ADN comercial de cada DMU. Este valor se obtuvo valorizando la canasta real de outputs físicos (azúcares crudo, blanco, refinado, orgánico y alcoholes hidratado y anhidro) a sus respectivos precios de mercado. De este modo, el Costo de Oportunidad Acumulado (zafras 2024 y 2025) refleja el verdadero “dolor financiero” del sector, castigando con mayor severidad la ineficiencia volumétrica en aquellos ingenios que, si bien fabrican productos de alto valor agregado, operan por debajo de la frontera de eficiencia.<br>
+</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-costo-oportunidad-noa" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-costo-oportunidad-noa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Ensayo_Biorrefineria_files/figure-html/fig-costo-oportunidad-noa-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="2700">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-costo-oportunidad-noa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Costo de Oportunidad por Brecha Analítica: Modelo de Arbitraje Multiproducto
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><br>
+La propuesta metodológica aquí presentada no es solo descriptiva; es prescriptiva. A través de la hibridación de DEA y <strong>Machine Learning (Random Forest)</strong>, se identifican los determinantes del <em>Yield Gap</em>.</p>
+<p>Para cuantificar la intensidad de la integración industrial, definimos el índice de Diversificación como la relación entre la producción total expresada en azúcares equivalentes —metodología de normalización que permite consolidar la valorización de toda la biomasa procesada en una unidad común— y la molienda neta:<br>
+<span class="math display">\[\text{Diversificación}=\frac{\text{Azúcar Equiv [ton]}}{\text{Caña Neta [ton]}+1}\]</span><br>
+Este indicador es crítico, ya que captura la capacidad de la DMU para orquestar la compleja arquitectura de valorización detallada en el <strong>Esquema de la Biorrefinería 4.0</strong>. Como se observa en la arquitectura propuesta, la frontera de eficiencia ya no depende únicamente de la dualidad azúcar-etanol. El modelo de Inteligencia Operativa debe arbitrar dinámicamente entre múltiples rutas de valorización: desde la cogeneración de bioelectricidad a partir del bagazo, hasta la obtención de productos de alto valor agregado como lignina y furfural mediante el pretratamiento de la biomasa, o la producción de biogás y levadura a partir de la vinaza.</p>
+<div id="fig-arquitectura-biorrefineria" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-arquitectura-biorrefineria-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Esquema_Refineria.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-arquitectura-biorrefineria-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: Arquitectura de Valorización Integral en la Biorrefinería 4.0: Rutas de diversificación y economía circular.
+</figcaption>
+</figure>
+</div>
+<p><br>
+</p>
+<p>Bajo este paradigma, la <strong>Biorrefinería 4.0</strong> se aleja de la lógica de optimización lineal de la factoría tradicional para transformarse en un sistema de arbitraje multiproducto. La hibridación de algoritmos permite que la planta no solo reaccione a las condiciones técnicas <span class="citation" data-cites="davis2019">(<a href="#ref-davis2019" role="doc-biblioref">Davis, Voigt, y Foxon 2019</a>)</span>, sino que prepare su configuración operativa para maximizar la rentabilidad marginal de cada flujo <span class="citation" data-cites="mandegari2017 meramo-hurtado2020">(<a href="#ref-mandegari2017" role="doc-biblioref">Mandegari et&nbsp;al. 2017</a>; <a href="#ref-meramo-hurtado2020" role="doc-biblioref">Meramo-Hurtado et&nbsp;al. 2020</a>)</span>. La diversificación efectiva, por tanto, mide la madurez de la DMU para transformar el residuo en recurso, reduciendo la vulnerabilidad del ingenio ante la volatilidad de los precios internacionales mediante una canasta de outputs resiliente y circular.<br>
+</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-importancia" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-pos="H" width="2100">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-importancia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Ensayo_Biorrefineria_files/figure-html/fig-importancia-1.png" id="fig-importancia" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-fig-pos="H" width="2100">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-importancia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><br>
+La <a href="#fig-importancia" class="quarto-xref">Figura&nbsp;4</a> revela la verdadera jerarquía de los drivers de rentabilidad del sector, decodificados mediante algoritmos de Random Forest. Los resultados arrojan una conclusión disruptiva para la visión tradicional: el <strong>Índice de Diversificación</strong> se erige como el determinante absoluto de la eficiencia técnica, confirmando que la capacidad de arbitrar el <em>product mix</em> (Biorrefinería 4.0) genera un valor estratégico superior a la mera posesión de una destilería física. Bajo este modelo, la destilería deja de ser un activo estático para convertirse en una herramienta de agilidad comercial y estabilidad técnica.</p>
+<p>En segundo lugar, el análisis identifica al <strong>Impacto del Trash</strong> como una fricción operativa que supera incluso a la Escala de Molienda en su capacidad de destruir valor. Desde la perspectiva de la inteligencia operativa, la materia extraña actúa como un <strong>“impuesto termodinámico”</strong> que drena la capacidad de evaporación y cristalización. Mientras que para un jefe de fábrica es una variable exógena, para la gobernanza corporativa es una variable endógena: los ingenios con fuerte integración vertical (como Ledesma) logran blindar su frontera de eficiencia controlando la calidad desde el surco, mientras que los seguidores “importan” la ineficiencia logística de terceros.</p>
+<p>Por lo tanto, cerrar el <em>Yield Gap</em> en el NOA no es una cuestión de comprar “más fierros” o aumentar el volumen de molienda (escala), sino de <strong>sofisticación analítica</strong>. La inversión estratégica debe migrar de los molinos hacia la digitalización prescriptiva de la cadena de suministro agrícola. Solo mediante la integración de modelos que gobiernen el flujo de biomasa desde el campo, los ingenios podrán transformar su estructura de costos y alcanzar la resiliencia que define a los líderes de la frontera eficiente.</p>
+<div class="cell" data-layout-align="center">
+<div id="tbl-jerarquia-drivers" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-jerarquia-drivers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;2: Jerarquía de Impacto Estratégico: Drivers de Eficiencia en el NOA
+</figcaption>
+<div aria-describedby="tbl-jerarquia-drivers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="tabwid"><style>.cl-3bcdc7ea{}.cl-3bc4ca32{font-family:'Arial';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(255, 255, 255, 1.00);background-color:transparent;}.cl-3bc4ca3c{font-family:'Arial';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-3bc4ca3d{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-3bc90b24{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-3bc92fc8{width:1.2in;background-color:rgba(26, 82, 118, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bc92fd2{width:1.3in;background-color:rgba(26, 82, 118, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bc92fd3{width:3.5in;background-color:rgba(26, 82, 118, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bc92fdc{width:1.2in;background-color:rgba(226, 239, 218, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(229, 229, 229, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bc92fdd{width:1.3in;background-color:rgba(226, 239, 218, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(229, 229, 229, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bc92fde{width:3.5in;background-color:rgba(226, 239, 218, 1.00);vertical-align: middle;border-bottom: 1pt solid rgba(229, 229, 229, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bc92fe6{width:1.2in;background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(229, 229, 229, 1.00);border-top: 1pt solid rgba(229, 229, 229, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bc92fe7{width:1.3in;background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(229, 229, 229, 1.00);border-top: 1pt solid rgba(229, 229, 229, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bc92ff0{width:3.5in;background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(229, 229, 229, 1.00);border-top: 1pt solid rgba(229, 229, 229, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bc92ff1{width:1.2in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1pt solid rgba(229, 229, 229, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bc92ffa{width:1.3in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1pt solid rgba(229, 229, 229, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3bc92ffb{width:3.5in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1pt solid rgba(229, 229, 229, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-3bcdc7ea"><thead><tr style="overflow-wrap:break-word;"><th class="cl-3bc92fc8"><p class="cl-3bc90b24"><span class="cl-3bc4ca32">Driver Estratégico</span></p></th><th class="cl-3bc92fd2"><p class="cl-3bc90b24"><span class="cl-3bc4ca32">Impacto en Eficiencia (θ)</span></p></th><th class="cl-3bc92fd3"><p class="cl-3bc90b24"><span class="cl-3bc4ca32">Visión de Consultoría (CEO-Level)</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-3bc92fdc"><p class="cl-3bc90b24"><span class="cl-3bc4ca3c">Diversificación</span></p></td><td class="cl-3bc92fdd"><p class="cl-3bc90b24"><span class="cl-3bc4ca3c">Máximo (Líder)</span></p></td><td class="cl-3bc92fde"><p class="cl-3bc90b24"><span class="cl-3bc4ca3d">No es 'tener una destilería', es la agilidad de arbitrar mercados y flujos de biomasa.</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3bc92fe6"><p class="cl-3bc90b24"><span class="cl-3bc4ca3d">Impacto Trash</span></p></td><td class="cl-3bc92fe7"><p class="cl-3bc90b24"><span class="cl-3bc4ca3d">Crítico (Fricción)</span></p></td><td class="cl-3bc92ff0"><p class="cl-3bc90b24"><span class="cl-3bc4ca3d">Impuesto logístico exógeno que destruye la capacidad térmica y fabril del ingenio.</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3bc92fe6"><p class="cl-3bc90b24"><span class="cl-3bc4ca3d">Escala (Molienda)</span></p></td><td class="cl-3bc92fe7"><p class="cl-3bc90b24"><span class="cl-3bc4ca3d">Secundario</span></p></td><td class="cl-3bc92ff0"><p class="cl-3bc90b24"><span class="cl-3bc4ca3d">El tamaño no garantiza eficiencia si la gestión sigue anclada en modelos analógicos.</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3bc92ff1"><p class="cl-3bc90b24"><span class="cl-3bc4ca3d">Integración Física</span></p></td><td class="cl-3bc92ffa"><p class="cl-3bc90b24"><span class="cl-3bc4ca3d">Marginal</span></p></td><td class="cl-3bc92ffb"><p class="cl-3bc90b24"><span class="cl-3bc4ca3d">El hardware sin inteligencia operativa (4.0) representa capital inmovilizado.</span></p></td></tr></tbody></table></div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-provincias" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-pos="H">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-provincias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Ensayo_Biorrefineria_files/figure-html/fig-provincias-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-pos="H" width="1800">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-provincias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5: Distribución de la Eficiencia Técnica (θ) por Grupos Provinciales (Zafra 2025).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><br>
+Como se detalla en la <a href="#fig-provincias" class="quarto-xref">Figura&nbsp;5</a>, la eficiencia técnica regional presenta una asimetría estructural. Las DMUs de Salta y Jujuy operan con una mediana de <span class="math inline">\(\theta\)</span> marcadamente superior y una menor volatilidad operativa en comparación con las de Tucumán. Esta resiliencia de la frontera norte se fundamenta en un modelo de doble apalancamiento: por un lado, la <strong>Diversificación</strong> extrema (variable líder en la <a href="#fig-importancia" class="quarto-xref">Figura&nbsp;4</a>) que utiliza la destilería como un estabilizador económico y térmico; y por el otro, una fuerte <strong>integración vertical hacia atrás</strong>.</p>
+<p>A diferencia de la fragmentación de la propiedad de la tierra en Tucumán, el modelo de gestión agrícola centralizada en el Norte permite a estos ingenios gobernar su cadena de suministro. Al controlar la cosecha, estas DMUs logran mitigar drásticamente el <strong>Impacto del Trash</strong> desde el surco. Esta gobernanza transforma una variable exógena e incontrolable para los tucumanos en un parámetro endógeno y optimizado, asegurando que el tren de molienda procese biomasa limpia y blindando el balance termodinámico del complejo.</p>
+<p>En consecuencia, esta ‘autopsia técnica’ confirma que el rezago en los ingenios seguidores es el resultado de una doble vulnerabilidad: el confinamiento en modelos de producto único (baja diversificación) y la exposición crónica a ineficiencias importadas del campo (alto trash). La analítica avanzada concluye que cerrar el <em>Yield Gap</em> regional requiere abandonar la gestión reactiva y trascender la inversión exclusiva en ‘fierros’ fabriles (escala física).</p>
+<p>El salto hacia la frontera exige orientar el CAPEX mediante una visión sistémica: financiar la diversificación inteligente de la matriz de productos e integrar digitalmente la logística de cosecha. Reducir la carga cognitiva gerencial implica desplegar modelos prescriptivos que detecten automatizadamente las pérdidas invisibles, desde la fricción en el cañaveral hasta las fugas en el balance térmico, emulando así la agilidad estratégica de los líderes de la región.</p>
+</section>
+<section id="el-rol-de-la-auditoría-técnica-y-la-madurez-digital" class="level1">
+<h1>El Rol de la Auditoría Técnica y la Madurez Digital</h1>
+<p>Desde una perspectiva de <strong>consultoría estratégica</strong>, la ineficiencia en el NOA no es un problema de voluntad técnica, sino de <strong>arquitectura de información y gobernanza de datos</strong>. Los registros del IPAAT, aunque valiosos, actúan hoy como un “retrovisor” histórico y no como un sistema de navegación en tiempo real. Como académicos, debemos señalar que esta “ceguera operativa” —la incapacidad de cuantificar las pérdidas invisibles en el balance térmico o de anticipar el impacto exógeno del trash de caña sobre la molienda— es lo que mantiene a los “Ingenios Seguidores” anclados debajo de la frontera de eficiencia <span class="citation" data-cites="zhu2022">(<a href="#ref-zhu2022" role="doc-biblioref">Zhu 2022</a>)</span>. La auditoría técnica basada en la hibridación DEA-ML permite una <strong>transparencia radical:</strong> el índice <span class="math inline">\(\theta\)</span> deja de ser una mera percepción fabril para convertirse en un indicador objetivo del <em>Yield Gap</em> sistémico. Como sostiene <span class="citation" data-cites="zhu2022">(<a href="#ref-zhu2022" role="doc-biblioref">Zhu 2022</a>)</span>, el uso de DEA en entornos de datos complejos audita la veracidad de los reportes industriales; pero al integrarlo con algoritmos predictivos, transformamos esos registros históricos en modelos de analítica prescriptiva que expanden el control gerencial desde el surco hasta la destilería.</p>
+</section>
+<section id="conclusiones-y-roadmap-hacia-el-modelo-de-optimización" class="level1">
+<h1>Conclusiones y Roadmap: Hacia el Modelo de Optimización</h1>
+<p>El tránsito hacia la Biorrefinería 4.0 en el NOA no es un desafío de adquisición de bienes de capital, sino de arquitectura de decisión. La evidencia de este ensayo demuestra que el simple emplazamiento de una destilería posee un poder explicativo marginal sobre el éxito operativo. La verdadera hoja de ruta hacia la frontera técnica se sintetiza en tres pilares estratégicos:</p>
+<ol type="1">
+<li><p><strong>De la “Autopsia” a la Prospección Sistémica (Campo-Fábrica):</strong> Si bien el uso de <strong>Machine Learning (Random Forest)</strong> permite realizar “autopsias” precisas sobre la ineficiencia histórica, el imperativo de la Biorrefinería 4.0 es institucionalizar estos modelos como herramientas de prospección integral. No basta con identificar <em>ex-post</em> que la inestabilidad en el caudal de vapor o el exceso de trash destruyeron el score de eficiencia <span class="math inline">\(\theta\)</span>. La verdadera ventaja radica en la hibridación DEA-ML para anticipar el impacto de variables exógenas logísticas y transformarlas en <strong>oportunidades de arbitraje</strong>. Esto permite al gestor proyectar la configuración operativa óptima en tiempo real, desde el control de calidad en el surco hasta el <em>mix</em> de productos (azúcar/bioetanol) dictado por el mercado.</p></li>
+<li><p><strong>Reducción de la Carga Cognitiva y Madurez Digital:</strong> El CEO no requiere más registros históricos o tablas de Excel que actúan como “retrovisores” operativos. La propuesta de hibridación DEA-ML actúa como un filtro de <strong>Inteligencia Operativa</strong> que traduce la complejidad técnica en un <strong>Tablero de Optimización Sistémica</strong>. Al automatizar la detección de desviaciones y entregar conclusiones prescriptivas, se reduce la carga cognitiva gerencial, permitiendo que la dirección se enfoque en la arquitectura de información y en la agilidad organizacional necesaria para responder a los datos.</p></li>
+<li><p><strong>El Salto Tecnológico como Opción Financiera Física:</strong> La evidencia es concluyente: los ingenios diversificados y con integración vertical (como los líderes de Salta/Jujuy) no solo son más eficientes, sino más resilientes. Bajo el paradigma 4.0, la inversión en una destilería no debe verse solo como infraestructura, sino como una <strong>“opción financiera física”</strong> que otorga la flexibilidad necesaria para estabilizar la rentabilidad ante la volatilidad de precios y la fricción de la materia prima. La capacidad de gobernar la cadena de suministro y transformar el residuo en recurso es la medida definitiva de la madurez de una DMU para liderar la bioeconomía regional.</p></li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div id="tbl-comparativa-paradigmas" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-layout-align="center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-comparativa-paradigmas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;3: Síntesis Estratégica: Del Paradigma Tradicional a la Biorrefinería 4.0
+</figcaption>
+<div aria-describedby="tbl-comparativa-paradigmas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="tabwid"><style>.cl-3c525744{}.cl-3c49b3fa{font-family:'Arial';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-3c49b404{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-3c4d3d36{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-3c4d3d40{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-3c4d5ea6{width:1.4in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3c4d5eb0{width:2.2in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3c4d5eb1{width:2.6in;background-color:rgba(198, 224, 180, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3c4d5eba{width:1.4in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3c4d5ebb{width:2.2in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3c4d5ec4{width:2.6in;background-color:rgba(226, 239, 218, 1.00);vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3c4d5ec5{width:1.4in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3c4d5ec6{width:2.2in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3c4d5ece{width:2.6in;background-color:rgba(226, 239, 218, 1.00);vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3c4d5ecf{width:1.4in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3c4d5ed8{width:2.2in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3c4d5ed9{width:2.6in;background-color:rgba(226, 239, 218, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-3c525744"><thead><tr style="overflow-wrap:break-word;"><th class="cl-3c4d5ea6"><p class="cl-3c4d3d36"><span class="cl-3c49b3fa">Dimensión Analítica</span></p></th><th class="cl-3c4d5eb0"><p class="cl-3c4d3d36"><span class="cl-3c49b3fa">Paradigma Tradicional</span><br><span class="cl-3c49b3fa">(Seguidores NOA)</span></p></th><th class="cl-3c4d5eb1"><p class="cl-3c4d3d36"><span class="cl-3c49b3fa">Biorrefinería Inteligente</span><br><span class="cl-3c49b3fa">(Frontera DEA-ML)</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-3c4d5eba"><p class="cl-3c4d3d40"><span class="cl-3c49b3fa">Rol de los Datos</span></p></td><td class="cl-3c4d5ebb"><p class="cl-3c4d3d40"><span class="cl-3c49b404">Registro histórico y descriptivo (Excel).</span></p></td><td class="cl-3c4d5ec4"><p class="cl-3c4d3d40"><span class="cl-3c49b404">Activo prescriptivo y de arbitraje en tiempo real.</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3c4d5ec5"><p class="cl-3c4d3d40"><span class="cl-3c49b3fa">Gestión de Eficiencia</span></p></td><td class="cl-3c4d5ec6"><p class="cl-3c4d3d40"><span class="cl-3c49b404">Reactiva (Mantenimiento físico y 'fierros').</span></p></td><td class="cl-3c4d5ece"><p class="cl-3c4d3d40"><span class="cl-3c49b404">Proactiva (Algoritmos orientados a outputs).</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3c4d5ec5"><p class="cl-3c4d3d40"><span class="cl-3c49b3fa">Tratamiento del Trash</span></p></td><td class="cl-3c4d5ec6"><p class="cl-3c4d3d40"><span class="cl-3c49b404">Gasto logístico inevitable (Variable exógena ignorada).</span></p></td><td class="cl-3c4d5ece"><p class="cl-3c4d3d40"><span class="cl-3c49b404">Impuesto termodinámico a minimizar (Frontera de Fricción).</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3c4d5ecf"><p class="cl-3c4d3d40"><span class="cl-3c49b3fa">Toma de Decisiones</span></p></td><td class="cl-3c4d5ed8"><p class="cl-3c4d3d40"><span class="cl-3c49b404">Alta carga cognitiva por silos de información.</span></p></td><td class="cl-3c4d5ed9"><p class="cl-3c4d3d40"><span class="cl-3c49b404">Inteligencia Operativa centralizada (Modelos Híbridos).</span></p></td></tr></tbody></table></div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p><strong>Conclusión Final:</strong> El modelo de optimización propuesto no es una mejora incremental; es una ruptura de paradigma. Para cerrar el <em>Yield Gap</em> regional, el NOA debe cruzar el abismo que separa la intuición analógica de la prospección digital. La hibridación DEA-ML transforma cada ingenio en un <strong>nodo inteligente</strong> capaz de arbitrar con precisión matemática su destino productivo, reduciendo la complejidad sistémica a conclusiones estratégicas accionables. El futuro de la biorrefinería en Argentina no se escribirá en planillas de cálculo, sino en la capacidad de procesar la incertidumbre mediante la soberanía analítica.</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="bibliografia" class="level1">
+
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Bibliografia</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-almeida2021" class="csl-entry" role="listitem">
+Almeida, Gabriela Mourão De, Gener Tadeu Pereira, Angélica Santos Rabelo De Souza Bahia, Kathleen Fernandes, y José Marques Júnior. 2021. <span>«Machine Learning in the Prediction of Sugarcane Production Environments»</span>. <em>Computers and Electronics in Agriculture</em> 190 (noviembre): 106452. <a href="https://doi.org/10.1016/j.compag.2021.106452">https://doi.org/10.1016/j.compag.2021.106452</a>.
+</div>
+<div id="ref-anino2018" class="csl-entry" role="listitem">
+Anino, Pablo. 2018. <span>«Informes de <span>Cadena</span> de <span>Valor</span> - <span>Azucarera</span>»</span>. Ciudad Autónoma de Buenos Aires: Subsecretaría de Programación Microeconómica - Secretaría de Política Económica - Ministerio de Hacienda - Presidencia de la Nación.
+</div>
+<div id="ref-banker1984" class="csl-entry" role="listitem">
+Banker, Rajiv D. 1984. <span>«Estimating Most Productive Scale Size Using Data Envelopment Analysis»</span>. <em>European Journal of Operational Research</em> 17 (1): 35-44. <a href="https://doi.org/10.1016/0377-2217(84)90006-7">https://doi.org/10.1016/0377-2217(84)90006-7</a>.
+</div>
+<div id="ref-barredoarrieta2020" class="csl-entry" role="listitem">
+Barredo Arrieta, Alejandro, Natalia Díaz-Rodríguez, Javier Del Ser, y Adrien Bennetot. 2020. <span>«Explainable <span>Artificial Intelligence</span> (<span>XAI</span>): <span>Concepts</span>, Taxonomies, Opportunities and Challenges toward Responsible <span>AI</span>»</span>. <em>Information Fusion</em>. <a href="https://doi.org/10.1016/j.inffus.2019.12.012">https://doi.org/10.1016/j.inffus.2019.12.012</a>.
+</div>
+<div id="ref-bogetoft2011" class="csl-entry" role="listitem">
+Bogetoft, Peter, y Lars Otto. 2011. <em>Benchmarking with <span>DEA</span>, <span>SFA</span>, and <span>R</span></em>. Vol. 157. International <span>Series</span> en <span>Operations Research</span> &amp; <span>Management Science</span>.
+</div>
+<div id="ref-bonomi2011" class="csl-entry" role="listitem">
+Bonomi, Antonio. 2011. <span>«Virtual <span>Sugarcane Biorefinery</span>: <span>A Tool</span> to <span>Compare</span> the <span>Sustainability</span> of <span>Different Technological Alternatives</span>»</span>. <em>CEPAC PASI 2011 Presentation</em>.
+</div>
+<div id="ref-davis2019" class="csl-entry" role="listitem">
+Davis, Steve, Ivan Voigt, y kitty Foxon. 2019. <span>«New Opportunities for Improved Sugar Factory Performance through the <span>Sugar Factory</span> 4.0 Project - <span>Shukela Sugar Magazine</span>»</span>. <em>Shukela Sugar Magazine</em>.
+</div>
+<div id="ref-dessbesell2017" class="csl-entry" role="listitem">
+Dessbesell, Luana, Chunbao (Charles) Xu, Reino Pulkki, Mathew Leitch, y Nubla Mahmood. 2017. <span>«Forest Biomass Supply Chain Optimization for a Biorefinery Aiming to Produce High-Value Bio-Based Materials and Chemicals from Lignin and Forestry Residues: A Review of Literature»</span>. <em>Canadian Journal of Forest Research</em> 47 (3): 277-88. <a href="https://doi.org/10.1139/cjfr-2016-0336">https://doi.org/10.1139/cjfr-2016-0336</a>.
+</div>
+<div id="ref-ghobakhloo2018" class="csl-entry" role="listitem">
+Ghobakhloo, Morteza. 2018. <span>«The Future of Manufacturing Industry: A Strategic Roadmap Toward <span>Industry</span> 4.0»</span>. <em>Journal of Manufacturing Technology Management</em> 29 (6): 910-36. <a href="https://doi.org/10.1108/JMTM-02-2018-0057">https://doi.org/10.1108/JMTM-02-2018-0057</a>.
+</div>
+<div id="ref-mandegari2017" class="csl-entry" role="listitem">
+Mandegari, Mohsen Ali, Somayeh Farzad, Eugéne van Rensburg, y Johann F. Görgens. 2017. <span>«Multi-Criteria Analysis of a Biorefinery for Co-Production of Lactic Acid and Ethanol from Sugarcane Lignocellulose»</span>. <em>Biofuels, Bioproducts and Biorefining</em> 11 (6): 971-90. <a href="https://doi.org/10.1002/BBB.1801;">https://doi.org/10.1002/BBB.1801;</a>
+</div>
+<div id="ref-meramo-hurtado2020" class="csl-entry" role="listitem">
+Meramo-Hurtado, Samir I., Eduardo Sanchez-Tuiran, José María Ponce-Ortega, Mahmoud M. El-Halwagi, y Karina Angélica Ojeda-Delgado. 2020. <span>«Synthesis and <span>Sustainability Evaluation</span> of a <span>Lignocellulosic Multifeedstock Biorefinery Considering Technical Performance Indicators</span>»</span>. <em>ACS Omega</em> 5 (16): 9259-75. <a href="https://doi.org/10.1021/ACSOMEGA.0C00114/ASSET/IMAGES/MEDIUM/AO0C00114_M016.GIF">https://doi.org/10.1021/ACSOMEGA.0C00114/ASSET/IMAGES/MEDIUM/AO0C00114_M016.GIF</a>.
+</div>
+<div id="ref-pessl2017" class="csl-entry" role="listitem">
+Pessl, Ernst. 2017. <span>«Roadmap <span>Industry</span> 4.0 – <span>Implementation Guideline</span> for <span>Enterprises</span>»</span>. <em>International Journal of Science, Technology and Society</em> 5 (6): 193. <a href="https://doi.org/10.11648/j.ijsts.20170506.14">https://doi.org/10.11648/j.ijsts.20170506.14</a>.
+</div>
+<div id="ref-petrus2024" class="csl-entry" role="listitem">
+Petrus, Ana, Albert Weichselbraun, Ralf-Peter Mundani, Stefanie Müller, Ingo Barkow, Ana Bucić-Kojić, Mirela Planinić, Marina Tišma, y Ana Jurinjak Tušek. 2024. <span>«Systematic <span>Review</span> of <span>Machine-learning Techniques</span> to <span>Support Development</span> of <span>Lignocellulose Biorefineries</span>»</span>. <em>Chemical &amp; biochemical engineering quarterly</em> 38 (3): 241-63. <a href="https://doi.org/10.15255/CABEQ.2023.2273">https://doi.org/10.15255/CABEQ.2023.2273</a>.
+</div>
+<div id="ref-zhu2022" class="csl-entry" role="listitem">
+Zhu, Joe. 2022. <span>«<span>DEA</span> Under Big Data: Data Enabled Analytics and Network Data Envelopment Analysis»</span>. <em>Annals of Operations Research</em> 309 (2): 761-83. <a href="https://doi.org/10.1007/s10479-020-03668-8">https://doi.org/10.1007/s10479-020-03668-8</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.poptrox.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+
+
+</body></html>

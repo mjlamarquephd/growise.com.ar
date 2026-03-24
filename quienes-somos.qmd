@@ -1,0 +1,103 @@
+---
+title: "Quiénes Somos"
+---
+
+```{=html}
+<style>
+/* FUERZA A LA PÁGINA A OCUPAR TODO EL ANCHO Y RESPETA EL DISEÑO ORIGINAL */
+#quarto-content { 
+    display: block !important; 
+    max-width: none !important; 
+    margin: 0 !important; 
+    padding: 0 !important;
+}
+</style>
+
+<header id="header">
+    <div class="inner">
+        <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="Logo Growise" /></a>
+        <h1><strong>Growise Consultora</strong><br />
+                    Inteligencia de Negocios<br />
+                    para Agroindustria y Warehousing.</h1>
+        
+        <ul class="icons" style="margin-top: 20px;">
+            <li><a href="[https://www.linkedin.com/company/growiseconsultora/](https://www.linkedin.com/company/growiseconsultora/)" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="[https://www.instagram.com/growise.company/](https://www.instagram.com/growise.company/)" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="mailto:mlamarque@growise.com.ar" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+    </div>
+</header>
+
+<div id="main">
+    <section id="quienes-somos">
+        <header class="major">
+            <h2>Nuestro ADN: Del Barro a la Estrategia</h2>
+        </header>
+
+        <p style="font-size: 1.1em; color: #555;">
+            Growise se fundó sobre una premisa: <strong>la teoría del MBA no sirve de nada sin la experiencia de la "trinchera".</strong>
+        </p>
+        <p>
+            Nuestro origen se remonta a la gestión de empresas familiares en crisis y a la operación de grandes plantas industriales. Entendemos la presión de la caja, la soledad del dueño y la urgencia de los resultados porque lo vivimos "del otro lado del mostrador".
+        </p>
+        <p>
+            Hoy, somos el puente que faltaba: combinamos la potencia de la <strong>Ciencia de Datos y la Ingeniería</strong> con la empatía y visión de negocio que solo da la experiencia real.
+        </p>
+        
+        <hr>
+        
+        <div class="row">
+            <div class="col-6 col-12-small team-member">
+                <span class="image fit"><img src="images/marcelo-lamarque.jpg" alt="Marcelo J. Lamarque" /></span>
+                <h3>Marcelo J. Lamarque</h3>
+                <p style="font-size: 0.9em; font-style: italic; color: #787878;">
+                    Ingeniero Industrial | MBA | PhD Candidate
+                </p>
+                <p>
+                    30 años de experiencia liderando plantas y reingenierías (Ledesma, La Sevillanita). Marcelo aporta la <strong>visión híbrida</strong>: conoce el barro de la operación y el lenguaje del directorio. Su especialidad es aplicar Data Science (R, Machine Learning) para encontrar rentabilidad donde el ojo humano no la ve.
+                </p>
+                <p style="font-size: 0.9em;">
+                    <a href="mailto:mlamarque@growise.com.ar">mlamarque@growise.com.ar</a><br>
+                    <a href="[https://wa.me/5493813301435](https://wa.me/5493813301435)">WhatsApp: +54 9 381 330 1435</a><br>
+                    <a href="[https://www.linkedin.com/in/mlamarque/](https://www.linkedin.com/in/mlamarque/)">LinkedIn</a>
+                </p>
+            </div>
+            
+            <div class="col-6 col-12-small team-member">
+                <span class="image fit"><img src="images/bruno-macchi.jpg" alt="Bruno Macchi" /></span>
+                <h3>Bruno Macchi</h3>
+                <p style="font-size: 0.9em; font-style: italic; color: #787878;">
+                    Licenciado en Administración de Empresas
+                </p>
+                <p>
+                    Bruno es el <strong>ancla de gestión y viabilidad</strong>. Con experiencia corporativa (ex-Pluspetrol), aporta el rigor administrativo y contractual necesario para que los proyectos escalen. Asegura que cada solución técnica sea financieramente sólida, legalmente segura y culturalmente aplicable.
+                </p>
+                <p style="font-size: 0.9em;">
+                    <a href="mailto:bmacchi@growise.com.ar">bmacchi@growise.com.ar</a><br>
+                    <a href="[https://wa.me/5493816043798](https://wa.me/5493816043798)">WhatsApp: +54 9 381 604 3798</a><br>
+                    <a href="[https://www.linkedin.com/in/macchib/](https://www.linkedin.com/in/macchib/)">LinkedIn</a>
+                </p>
+            </div>
+        </div>
+
+        <hr>
+        
+        <p>
+            Con Growise, la misma consultora que analiza su modelo de costos es la que construye el dashboard de Power BI, programa el modelo de optimización en R y se asegura de que su equipo pueda gestionarlo.
+        </p>
+
+        <ul class="actions">
+            <li><a href="servicios.html" class="button">Ver Nuestros Servicios</a></li>
+        </ul>
+    </section>
+</div>
+
+<footer id="footer">
+    <div class="inner">
+        <ul class="copyright">
+            <li>&copy; Growise Consultora. Todos los derechos reservados.</li>
+            <li>Design: <a href="[http://html5up.net](http://html5up.net)">HTML5 UP</a></li>
+        </ul>
+    </div>
+</footer>
+```
