@@ -35,6 +35,13 @@
     "text": "Fase II: De la “Autopsia” a la Prospección con Random Forest\nUna vez identificado el score de eficiencia \\(\\theta\\) para cada ingenio del NOA, aplicamos Machine Learning (Random Forest) (Almeida et al. 2021) para trascender el análisis descriptivo y auditar la capacidad de gestión de la DMU. En esta fase, la eficiencia técnica actúa como nuestra variable objetivo, permitiendo que el algoritmo no solo realice una “autopsia” operativa para deconstruir las causas raíz de la ineficiencia histórica, sino que evalúe la madurez digital del ingenio. Este enfoque identifica si la DMU posee la infraestructura necesaria para la generación de Big Data (sensores y captura de datos) y, fundamentalmente, si existe la capacidad organizacional para la interpretación de dichos datos y la toma de decisiones en consecuencia.\nEste enfoque de “XAI” (Inteligencia Artificial Explicable) (Barredo Arrieta et al. 2020) es el puente que transforma el dato en una prescripción estratégica. Al revelar que la ineficiencia se explica, por ejemplo, en un 65% por la inestabilidad en variables críticas, el modelo trasciende su rol de registro histórico para constituirse como un simulador prospectivo de alto impacto. Esto faculta al gestor para adelantarse a los hechos y orquestar la operación bajo un modelo de optimización proactiva; uno donde la inteligencia operativa no solo maximiza los balances de masa en tiempo real, sino que integra proyecciones de comportamiento de mercados para arbitrar dinámicamente la mezcla de productos (product mix).\nBajo esta arquitectura, el flujo de datos se traduce en decisiones precisas de inversión (CAPEX) y en la capacidad de pivotar la producción —optimizando la ratio azúcar/alcohol u otros derivados de la diversificación— según la rentabilidad marginal dictada por el estado del mercado. En última instancia, la hibridación analítica prepara la infraestructura física y digital de la planta para capitalizar proactivamente las fluctuaciones comerciales mediante una agilidad técnica y económica integrada."
   },
   {
+    "objectID": "articulos/demo-sevillanita/Demo_Sevillanita.html",
+    "href": "articulos/demo-sevillanita/Demo_Sevillanita.html",
+    "title": "Demo Interactiva: Analítica Operativa y Logística",
+    "section": "",
+    "text": "Bienvenidos a nuestra demostración interactiva. En Growise, transformamos datos estáticos en motores de decisión. Utilice los controles, filtros y pestañas a continuación para explorar los datos operativos como si estuviera frente a la torre de control de su propia empresa."
+  },
+  {
     "objectID": "articulos.html",
     "href": "articulos.html",
     "title": "Artículos y Publicaciones Científicas",
