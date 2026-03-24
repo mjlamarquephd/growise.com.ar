@@ -17,6 +17,16 @@ En la industria azucarera del Noroeste Argentino, existe un fantasma que recorre
 
 De acuerdo con mis investigaciones recientes sobre la competitividad del sector, la pérdida sistémica por ineficiencia técnica en la región alcanza la alarmante cifra de **USD 436 millones**.
 
+> *"Este análisis fue procesado íntegramente en R, utilizando modelos DEA parametrizados para la industria local."*
+
+::: {.callout-note icon="false"}
+## En síntesis:
+
+-   **La brecha:** USD 436M de capital inmovilizado en el NOA.
+-   **El origen:** Ineficiencia técnica, no falta de inversión en CAPEX.
+-   **La solución:** Analítica predictiva para alcanzar la frontera de eficiencia.
+:::
+
 ```{r}
 #| label: fig-portada
 #| warning: false
@@ -98,7 +108,7 @@ ggplot(df_costo, aes(x = reorder(ID_Anonimo, Costo_Oportunidad_USD), y = Costo_O
   scale_fill_gradient(low = "#FCAE91", high = "#CB181D") +
   scale_y_continuous(labels = label_dollar(scale = 1e-6, suffix = "M")) +
   labs(
-    title = "Capital Inmovilizado Acumulado (Zafras 2024-2025)",
+    title = "¿Cuánto dinero está perdiendo su ingenio por la brecha de eficiencia?",
     subtitle = paste0("Costo de Oportunidad Ponderado por Mix de Productos: USD ", comma(costo_total_noa)),
     x = "Unidades Seguidoras",
     y = "Pérdida de Ingresos Estimada (Millones USD)"
@@ -108,8 +118,6 @@ ggplot(df_costo, aes(x = reorder(ID_Anonimo, Costo_Oportunidad_USD), y = Costo_O
 ```
 
 > **La pregunta no es si su ingenio es productivo, sino qué tan lejos está del líder del sector y cuántos dólares está dejando sobre la mesa cada día por no cerrar esa brecha.**
-
-
 
 ## ¿Qué es la Ceguera Operativa?
 
@@ -126,3 +134,39 @@ Muchos CEOs y dueños de ingenios confían en su experiencia y en los reportes d
 En **Growise**, no nos quedamos en el "qué pasó". Usamos modelos de **Análisis Envolvente de Datos (DEA)** y algoritmos de **Machine Learning** para realizar una "autopsia digital" de los procesos.
 
 Identificamos su índice de eficiencia ($\theta$) y, lo más importante, determinamos qué variables específicas debe ajustar para alcanzar la frontera técnica. No es magia, es ciencia de datos aplicada a la rentabilidad azucarera.
+
+#### El "Cómo": La Ciencia detrás del Rescate
+
+Para que usted pueda tomar decisiones, no necesita más datos (ya tiene demasiados), necesita **Inteligencia de Datos**. En Growise, aplicamos una metodología de tres capas que transforma la operación:
+
+**1. Identificación de la Frontera (Benchmarking Real):**
+
+No lo comparamos con un "ideal teórico", sino con el **Líder Real** del sector. Usando modelos de **Análisis Envolvente de Datos (DEA)**, procesamos las variables públicas del IPAAT para ubicar a su ingenio en la curva de eficiencia técnica ($\theta$). Si su índice es 0.85, usted tiene un 15% de capacidad instalada que no está facturando.
+
+**2. La "Autopsia Digital" con Machine Learning:**
+
+Una vez identificada la brecha, el "Cómo" resolverla surge de sus propios datos históricos. Aplicamos algoritmos de **Random Forest** y **Gradient Boosting** para encontrar las variables críticas que realmente mueven la aguja:
+
+-   ¿Es el porcentaje de *trash* en la caña?
+
+-   ¿Es la presión de vapor en momentos críticos?
+
+-   ¿Es una ineficiencia en la escala de molienda?
+
+    El algoritmo nos dice exactamente qué variable "explicativa" está dañando su rentabilidad.
+
+**3. Hoja de Ruta de Inversión (Prescripción):**
+
+El resultado final no es un gráfico lindo, sino una conclusión de negocio: *"Para cerrar su brecha de eficiencia del 15%, no necesita un trapiche nuevo; necesita optimizar el flujo logístico de entrada en X puntos"*. **Esto es ahorrarle carga cognitiva al CEO.**
+
+## ¿Dónde se ubica su empresa en este mapa?
+
+Este análisis utiliza datos públicos, pero la verdadera transformación ocurre cuando aplicamos estos modelos a los **datos de tiempo real de su planta**.
+
+Si está listo para dejar de operar bajo promedios históricos y quiere descubrir su hoja de ruta hacia la frontera de eficiencia, **[agendemos una breve charla técnica](https://wa.me/5493813301435?text=Hola%20Marcelo,%20le%C3%AD%20tu%20art%C3%ADculo%20sobre%20Ceguera%20Operativa%20y%20me%20interesar%C3%ADa%20conversar)**.
+
+<br/>
+
+**Ing. Marcelo J. Lamarque, MBA** <span style="font-size: 0.85em;">
+.\
+*Estratega en Eficiencia Operativa | Doctorando en Ingeniería Industrial | Co-founder de **Growise***</span>

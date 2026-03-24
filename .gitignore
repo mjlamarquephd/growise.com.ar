@@ -1,8 +1,22 @@
+# --- Infraestructura de RStudio ---
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+.Renviron  # <-- CRUCIAL: Protege tus claves de SQL
 
+# --- Quarto (Temporales de renderizado) ---
 /.quarto/
+/_site/      # Si tu salida es la carpeta docs, ignora _site
 **/*.quarto_ipynb
+
+# --- Datos y Logística (Agroindustria) ---
 *.csv
+*.xlsx
+*.rds
+*.sqlite
+*.parquet
+/data/       # Ignora toda la carpeta de datos si la tienes
+
+# --- NO IGNORAR (Asegúrate de que NO estén estas líneas) ---
+# !articulos/**/*_files/  # Si alguna vez ves esto con un '!', es una excepción.
