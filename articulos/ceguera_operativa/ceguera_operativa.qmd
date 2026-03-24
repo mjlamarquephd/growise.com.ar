@@ -1,0 +1,31 @@
+---
+title: "¿Cuánto le cuesta la ""Ceguera Operativa"" a su Ingenio?"
+author: "Marcelo J. Lamarque"
+editor: visual
+---
+
+# ¿Cuánto le cuesta la "Ceguera Operativa" a su Ingenio?
+
+## El costo oculto de la ineficiencia en el NOA
+
+En la industria azucarera del Noroeste Argentino, existe un fantasma que recorre los directorios: el **Capital Inmovilizado**. No se trata de máquinas paradas, sino de la brecha entre lo que su empresa produce hoy y lo que *podría* producir con los mismos recursos si operara en la **Frontera de Eficiencia**.
+
+De acuerdo con mis investigaciones recientes sobre la competitividad del sector, la pérdida sistémica por ineficiencia técnica en la región alcanza la alarmante cifra de **USD 436 millones**.
+
+> **La pregunta no es si su ingenio es productivo, sino qué tan lejos está del líder del sector y cuántos dólares está dejando sobre la mesa cada día por no cerrar esa brecha.**
+
+## ¿Qué es la Ceguera Operativa?
+
+Muchos CEOs y dueños de ingenios confían en su experiencia y en los reportes diarios de molienda. Sin embargo, la complejidad de una biorrefinería moderna genera puntos ciegos. La ceguera operativa ocurre cuando:
+
+1.  Se asume que la única forma de mejorar es con **CAPEX** (comprar más "fierros").
+
+2.  No se identifica el peso real de los determinantes (vapor, escala, logística) en el resultado final.
+
+3.  Se opera bajo promedios históricos en lugar de modelos predictivos.
+
+## De la Autopsia al Diagnóstico Predictivo
+
+En **Growise**, no nos quedamos en el "qué pasó". Usamos modelos de **Análisis Envolvente de Datos (DEA)** y algoritmos de **Machine Learning** para realizar una "autopsia digital" de los procesos.
+
+Identificamos su índice de eficiencia ($\theta$) y, lo más importante, determinamos qué variables específicas debe ajustar para alcanzar la frontera técnica. No es magia, es ciencia de datos aplicada a la rentabilidad azucarera.
