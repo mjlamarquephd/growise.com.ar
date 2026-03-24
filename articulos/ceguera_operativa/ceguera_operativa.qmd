@@ -2,6 +2,13 @@
 title: '¿Cuánto le cuesta la "Ceguera Operativa" a su Ingenio?'
 author: "Marcelo J. Lamarque"
 editor: visual
+categories:  # <-- Añadimos esta sección
+  - Agroindustria
+  - Industria Azucarera
+  - Eficiencia
+  - Transformación Digital
+  - NOA
+  - Optimización
 ---
 
 ## El costo oculto de la ineficiencia en el NOA
@@ -10,7 +17,99 @@ En la industria azucarera del Noroeste Argentino, existe un fantasma que recorre
 
 De acuerdo con mis investigaciones recientes sobre la competitividad del sector, la pérdida sistémica por ineficiencia técnica en la región alcanza la alarmante cifra de **USD 436 millones**.
 
+```{r}
+#| label: fig-portada
+#| warning: false
+#| message: false
+#| echo: false
+#| fig-cap: "Costo de Oportunidad por Brecha Analítica: Modelo de Arbitraje Multiproducto"
+#| fig-width: 9
+#| fig-height: 6
+
+library(tidyverse)
+library(here)
+library(Benchmarking)
+library(scales)
+
+# 1. Carga y Agregación Exacta de la Base v4
+df_panel <- read_csv(here("articulos", "ensayo-biorrefineria", "Base_Zafra_Diaria_Auditada_TOTAL_v4.csv"), show_col_types = FALSE)
+
+df_acumulado <- df_panel %>%
+  filter(!grepl("Total|Subtotal", Ingenio, ignore.case = TRUE)) %>%
+  group_by(Ingenio) %>%
+  summarise(
+    Cana_Total = sum(C_Neta_t, na.rm = TRUE),
+    Azuc_Equiv_Total = sum(Azuc_Equiv_t, na.rm = TRUE),
+    # Desagregación física real para el cálculo financiero
+    A_Crudo = sum(Azuc_Crudo_t, na.rm = TRUE),
+    A_Blanco = sum(Azuc_Blanco_t, na.rm = TRUE),
+    A_Refinado = sum(Azuc_Refinado_t, na.rm = TRUE),
+    A_Organico = sum(Azuc_Organico_t, na.rm = TRUE),
+    Alc_Hidratado = sum(Alc_Hidratado_l, na.rm = TRUE) / 1000, # Pasamos a m3
+    Alc_Anhidro = sum(Alc_Anhidro_l, na.rm = TRUE) / 1000,     # Pasamos a m3
+    .groups = "drop"
+  ) %>%
+  filter(Cana_Total > 0)
+
+# 2. Cálculo DEA (Frontera VRS orientada a outputs equivalentes)
+X <- as.matrix(df_acumulado$Cana_Total)
+Y <- as.matrix(df_acumulado$Azuc_Equiv_Total)
+modelo_global <- dea(X, Y, RTS="vrs", ORIENT="out")
+df_acumulado$theta <- 1 / modelo_global$eff
+
+# 3. Monetización: Parametrización de Precios de Mercado (USD)
+# Estos valores diferencian la rentabilidad del portfolio de cada DMU
+P_Crudo <- 450
+P_Blanco <- 520
+P_Refinado <- 550
+P_Organico <- 700
+P_Alc_Hidratado <- 600
+P_Alc_Anhidro <- 680
+
+df_costo <- df_acumulado %>%
+  mutate(
+    # Ingreso Real Total basado en lo que realmente fabricó
+    Ingreso_Real = (A_Crudo * P_Crudo) + (A_Blanco * P_Blanco) + 
+                   (A_Refinado * P_Refinado) + (A_Organico * P_Organico) + 
+                   (Alc_Hidratado * P_Alc_Hidratado) + (Alc_Anhidro * P_Alc_Anhidro),
+    
+    # Precio Mix Unitario: ¿A cuánto vende en promedio cada "Tonelada Equivalente"?
+    Precio_Mix_Unitario = ifelse(Azuc_Equiv_Total > 0, Ingreso_Real / Azuc_Equiv_Total, 0),
+    
+    # Anonimización coherente
+    ID_Anonimo = paste0("DMU-", sprintf("%02d", as.numeric(as.factor(Ingenio)))),
+    
+    # Brecha en Toneladas Equivalentes
+    Gap_Equivalente = (Azuc_Equiv_Total / theta) - Azuc_Equiv_Total,
+    
+    # Costo de oportunidad ponderado por el ADN comercial del ingenio
+    Costo_Oportunidad_USD = ifelse(theta < 1, Gap_Equivalente * Precio_Mix_Unitario, 0)
+  ) %>%
+  filter(Costo_Oportunidad_USD > 0) %>%
+  arrange(desc(Costo_Oportunidad_USD))
+
+# 4. Sumatoria del "Dolor" Sistémico Real
+costo_total_noa <- sum(df_costo$Costo_Oportunidad_USD, na.rm = TRUE)
+
+# 5. Visualización Estratégica
+ggplot(df_costo, aes(x = reorder(ID_Anonimo, Costo_Oportunidad_USD), y = Costo_Oportunidad_USD, fill = Costo_Oportunidad_USD)) +
+  geom_bar(stat = "identity", width = 0.7) +
+  coord_flip() +
+  scale_fill_gradient(low = "#FCAE91", high = "#CB181D") +
+  scale_y_continuous(labels = label_dollar(scale = 1e-6, suffix = "M")) +
+  labs(
+    title = "Capital Inmovilizado Acumulado (Zafras 2024-2025)",
+    subtitle = paste0("Costo de Oportunidad Ponderado por Mix de Productos: USD ", comma(costo_total_noa)),
+    x = "Unidades Seguidoras",
+    y = "Pérdida de Ingresos Estimada (Millones USD)"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "none", panel.grid.major.y = element_blank())
+```
+
 > **La pregunta no es si su ingenio es productivo, sino qué tan lejos está del líder del sector y cuántos dólares está dejando sobre la mesa cada día por no cerrar esa brecha.**
+
+
 
 ## ¿Qué es la Ceguera Operativa?
 

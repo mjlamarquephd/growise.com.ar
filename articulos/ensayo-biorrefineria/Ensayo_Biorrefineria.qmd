@@ -3,7 +3,7 @@ title: "De la Factoría Lineal a la Biorrefinería 4.0"
 subtitle: "El salto de eficiencia técnica en el NOA"
 date: "2026-03-19"
 image: Esquema_Refineria.png
-categories: [Biorrefinería, Optimización, Agroindustria]
+categories: [Biorrefinería, Optimización, Agroindustria, Industria Azucarera, NOA, Transformación Digital]
 bibliography: "bibliografia.bib"
 
 format:
