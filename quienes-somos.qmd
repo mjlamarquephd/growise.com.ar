@@ -21,8 +21,8 @@ title: "Quiénes Somos"
                     para Agroindustria y Warehousing.</h1>
         
         <ul class="icons" style="margin-top: 20px;">
-            <li><a href="[https://www.linkedin.com/company/growiseconsultora/](https://www.linkedin.com/company/growiseconsultora/)" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-            <li><a href="[https://www.instagram.com/growise.company/](https://www.instagram.com/growise.company/)" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="https://www.linkedin.com/company/growiseconsultora/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://www.instagram.com/growise.company/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
             <li><a href="mailto:mlamarque@growise.com.ar" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
         </ul>
     </div>
@@ -58,8 +58,8 @@ title: "Quiénes Somos"
                 </p>
                 <p style="font-size: 0.9em;">
                     <a href="mailto:mlamarque@growise.com.ar">mlamarque@growise.com.ar</a><br>
-                    <a href="https://wa.me/5493813301435(https://wa.me/5493813301435)">WhatsApp: +54 9 381 330 1435</a><br>
-                    <a href="https://www.linkedin.com/in/mlamarque/(https://www.linkedin.com/in/mlamarque/)">LinkedIn</a>
+                    <a href="https://wa.me/5493813301435">WhatsApp: +54 9 381 330 1435</a><br>
+                    <a href="https://www.linkedin.com/in/mlamarque/">LinkedIn</a>
                 </p>
             </div>
             
@@ -74,8 +74,8 @@ title: "Quiénes Somos"
                 </p>
                 <p style="font-size: 0.9em;">
                     <a href="mailto:bmacchi@growise.com.ar">bmacchi@growise.com.ar</a><br>
-                    <a href="https://wa.me/5493816043798(https://wa.me/5493816043798)">WhatsApp: +54 9 381 604 3798</a><br>
-                    <a href="https://www.linkedin.com/in/macchib/(https://www.linkedin.com/in/macchib/)">LinkedIn</a>
+                    <a href="https://wa.me/5493816043798">WhatsApp: +54 9 381 604 3798</a><br>
+                    <a href="https://www.linkedin.com/in/macchib/">LinkedIn</a>
                 </p>
             </div>
         </div>
