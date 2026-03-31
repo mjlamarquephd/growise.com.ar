@@ -14,8 +14,7 @@ website:
         text: Servicios
       - href: articulos.qmd
         text: Artículos
-  include-in-header: google-analytics.html
-  
+
 format:
   html:
     theme: cosmo
@@ -23,6 +22,7 @@ format:
     toc: true
     lang: es
     include-in-header:
+      - google-analytics.html
       - text: |
           <style>
           /* RESET BÁSICO GLOBAL */
