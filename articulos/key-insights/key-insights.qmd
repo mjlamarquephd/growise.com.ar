@@ -1,0 +1,73 @@
+---
+  title: "Key Insights: Eficiencia Técnica en el NOA"
+subtitle: "Ranking Estratégico y Drivers de Rentabilidad (Zafras 2024-2025)"
+date: "last-modified"
+format:
+  html:
+  theme: cosmo
+toc: true
+code-fold: true
+page-layout: article
+---
+  
+  # 1. El Diagnóstico: ¿Quién marca la frontera?
+  
+  Utilizamos **DEA (Data Envelopment Analysis)** para identificar a los ingenios que definen la frontera de eficiencia en el Noroeste Argentino. Este modelo separa el efecto del tamaño (molienda) de la verdadera capacidad de gestión técnica.
+
+```{r}
+#| label: setup
+#| include: false
+library(tidyverse)
+library(flextable)
+library(scales)
+
+# Simulamos la carga de datos que ya tenés en tu motor analítico
+# Nota: Aquí debés cargar tu dataframe 'df_zafra' generado en el artículo completo
+::: {.callout-note}
+
+Nota de Confidencialidad
+Para garantizar el cumplimiento de los acuerdos de confidencialidad del sector, las unidades (DMUs) han sido anonimizadas, manteniendo la trazabilidad técnica.
+:::
+  
+  Fragmento de código
+#| label: tbl-resumen-ejecutivo
+#| tbl-cap: "Ranking de Eficiencia Técnica Relativa (Top Perfil)"
+#| echo: false
+
+# Mostramos solo el top o un resumen estratégico
+flextable(df_zafra[order(Anio, -Score_Theta), 
+                   .(ID_Anonimo, Anio, Score_Theta, Perfil_Estrategico)]) %>%
+  theme_vanilla() %>%
+  bold(j = "Score_Theta") %>%
+  bg(i = ~ Score_Theta == 1.000, bg = "#E2EFDA") %>%
+  set_header_labels(
+    ID_Anonimo = "ID",
+    Anio = "Zafra",
+    Score_Theta = "Eficiencia (θ)",
+    Perfil_Estrategico = "Perfil"
+  ) %>%
+  colformat_double(j = "Score_Theta", digits = 3) %>%
+  autofit()
+2. El Yield Gap: El "Dolor" del Capital Inmovilizado
+La brecha entre los líderes y los seguidores no es solo técnica; representa un Costo de Oportunidad millonario. La siguiente figura muestra la dispersión de eficiencia en la región.
+
+Fragmento de código
+#| label: fig-yield-gap
+#| fig-cap: "Dispersión de Eficiencia: Distancia a la Frontera"
+#| echo: false
+
+# Aquí insertás tu ggplot de dispersión (Figura 1 del ensayo)
+3. La Autopsia Digital: ¿Por qué perdemos eficiencia?
+  Mediante Machine Learning (Random Forest), identificamos qué variables "atrapan" a los ingenios fuera de la frontera. El resultado es disruptivo: el Índice de Diversificación y el Impacto del Trash pesan más que la inversión en activos fijos.
+
+Fragmento de código
+#| label: fig-drivers-clavo
+#| fig-cap: "Drivers Críticos de Rentabilidad"
+#| echo: false
+
+# Aquí insertás tu gráfico Lollipop (Figura 4 del ensayo)
+::: {.callout-important}
+
+Conclusión para el CEO
+Cerrar la brecha de USD 436M no requiere necesariamente más "fierros" (CAPEX), sino una soberanía analítica que permita arbitrar el mix de productos en tiempo real.
+:::
