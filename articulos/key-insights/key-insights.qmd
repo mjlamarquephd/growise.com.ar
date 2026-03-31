@@ -1,7 +1,9 @@
 ---
 title: "Key Insights: Eficiencia Técnica en el NOA"
 subtitle: "Ranking Estratégico y Drivers de Rentabilidad (Zafras 2024-2025)"
+author: "Marcelo J. Lamarque"
 date: "last-modified"
+categories: [Agroindustria, Industria Azucarera, Eficiencia, Key Insights, NOA, Data Science]
 format:
   html:
     theme: cosmo
