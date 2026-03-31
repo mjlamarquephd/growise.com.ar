@@ -1,6 +1,6 @@
 #!/bin/bash
 # 1. Limpiar y Renderizar el artículo
-quarto render articulos/key-insights/key-insights.qmd
+quarto render articulos
 
 # 2. Preparar todos los cambios (HTML, JSON de búsqueda, etc.)
 git add .
