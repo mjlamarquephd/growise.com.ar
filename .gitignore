@@ -20,5 +20,3 @@
 
 # --- NO IGNORAR (Asegúrate de que NO estén estas líneas) ---
 # !articulos/**/*_files/  # Si alguna vez ves esto con un '!', es una excepción.
-.Rproj.user
-.Rproj.user
