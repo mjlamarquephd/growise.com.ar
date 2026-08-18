@@ -17,8 +17,8 @@ title: "Servicios"
     <div class="inner">
         <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="Logo Growise" /></a>
         <h1><strong>Growise Consultora</strong><br />
-                    Recovery Audit<br />
-                    Auditoría Algorítmica de Fuga de Margen.</h1>
+                    Inteligencia de Negocios<br />
+                    para Agroindustria y Warehousing.</h1>
         
         <ul class="icons" style="margin-top: 20px;">
             <li><a href="https://www.linkedin.com/company/growiseconsultora/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -31,61 +31,48 @@ title: "Servicios"
 <div id="main">
     <section id="servicios-detalle">
         <header class="major">
-            <h2>Nuestro Servicio: Recovery Audit — Freight &amp; Fuel</h2>
-            <p style="font-size: 1.1em; color: #555; margin-top: -1em;">
-                Un diagnóstico cerrado, no una consultoría abierta. Alcance definido, cotización a medida, entregable en USD.
-            </p>
+            <h2>Nuestros Servicios</h2>
         </header>
         
-        <h3>El Problema</h3>
+        <h3>Modelos de Costeo y Control de Gestión (BI)</h3>
         <p>
-            En operaciones de transporte de cargas generales, el margen se pierde en lugares que nadie audita de forma sistemática: peajes duplicados o no imputados al dador de carga, tarifas de subcontratados fuera de lo pactado, desvíos de consumo de diésel, viajes parciales facturados como completos, notas de crédito nunca reclamadas. Individualmente son montos chicos. Sumados sobre miles de transacciones, son fuga de EBITDA.
+            <strong>El Problema:</strong> ¿Sabe cuánto le cuesta realmente cada caja de berry procesada, cada tonelada de azúcar producida o cada pallet almacenado en su depósito? Los costeos genéricos ocultan las fugas de rentabilidad.
         </p>
         <p>
-            La mayoría de las gerencias operativas lo tratan como "costo de hacer negocios". Los datos, cuando se auditan con el método correcto, suelen mostrar que <strong>entre el 30% y el 50% de esa pérdida no es física — es administrativa, de sistema o de descontrol operativo.</strong>
+            <strong>Nuestra Solución:</strong> Desarrollamos <strong>modelos de costeo a medida</strong> para su operación. Integramos sus datos (partes de producción, ERP, planillas) en un Dashboard de Power BI que le permite ver el costo real y la rentabilidad por producto o línea.
         </p>
-
-        <h3>Nuestra Solución</h3>
-        <p>
-            Ejecutamos un <strong>Data Audit Sprint</strong> de 14 a 21 días. Usted exporta sus archivos (comprobantes, tarifarios, contratos); nuestro motor los cruza con reglas de negocio específicas del sector y detecta anomalías. Cada hallazgo se valida manualmente antes de llegar a usted — nunca entregamos una conclusión de IA sin auditoría humana.
-        </p>
-        <p>
-            Diseñamos nuestros propios algoritmos de Machine Learning, integrados en un pipeline de análisis que corre sobre modelos de IA en infraestructura local — sus datos nunca salen a servicios de terceros en la nube. El resultado se traduce en un modelo de datos estructurado, fácil de visualizar, sobre el que construimos su reporte personalizado.
-        </p>
-        <p>
-            Podemos mostrarle el motor en acción sobre un dataset sintético durante la llamada de Scoping.
-        </p>
-        <p>
-            <strong>Zero-Touch ERP:</strong> no accedemos a sus sistemas, no pedimos permisos de red, no requerimos VPN. Todo el trabajo es asincrónico, sobre datos que usted controla en todo momento.
-        </p>
-
+        
         <div style="background-color: #f8f9fa; padding: 2em; border-left: 5px solid #787878; margin: 2em 0; border-radius: 4px;">
-            <h4 style="color: #444; margin-top: 0;">La Diferencia Growise: un número, no un tablero</h4>
+            <h4 style="color: #444; margin-top: 0;">La Diferencia Growise: Conclusiones, no Gráficos</h4>
             <p style="font-size: 0.95em; font-style: italic; margin-bottom: 1em;">
-                "El entregable no es un dashboard para que usted interprete. Es una conclusión ya verificada."
+                "El tablero pasa de ser una herramienta de descubrimiento a una herramienta de confirmación."
             </p>
             <p style="font-size: 0.9em; margin-bottom: 0;">
-                Le entregamos un informe ejecutivo con el monto identificado, la evidencia que lo sustenta y la vía de reclamo — expresado en USD de EBITDA recuperable. Usted entra a validar, no a analizar.
+                Los tableros estándar le dan datos y le piden a usted que sea el analista. Nuestro modelo es diferente: implementamos un "cerebro" (IA + Experiencia Experta) que le entrega la <strong>conclusión primero</strong>. Usted solo entra para verificar. <strong>Le ahorramos al CEO el 90% del esfuerzo mental.</strong>
             </p>
         </div>
-
+        
         <hr>
-
-        <h3>Modelo Comercial</h3>
-        <p>Trabajamos bajo un esquema de <strong>riesgo compartido</strong>:</p>
-        <ul>
-            <li><strong>Scoping Fee:</strong> pagado por adelantado al inicio del Sprint. El monto se define en la llamada de Scoping, en función de la complejidad y el volumen de su operación.</li>
-            <li><strong>Success Fee:</strong> un porcentaje sobre el monto identificado y verificado en el informe — se devenga independientemente de si usted decide ejecutar o no el reclamo ante el tercero.</li>
-        </ul>
-        <p>No cobramos por hora. Cobramos por diagnóstico cerrado y por hallazgo demostrado.</p>
-
-        <hr>
-
-        <h3>Alcance actual: Transporte de Cargas Generales</h3>
+        
+        <h3>Optimización de Procesos (Modelos Matemáticos, ML y IA)</h3>
         <p>
-            Hoy aplicamos el Recovery Audit exclusivamente a operaciones de logística y transporte de cargas generales. El motor detrás del servicio (el Growise Data Engine) está diseñado para extenderse a otras industrias con alta densidad transaccional — pero preferimos ejecutar bien un sector a la vez antes de ampliar el alcance.
+            <strong>El Problema:</strong> La eficiencia de cosechadoras, el diseño del layout de un empaque, el análisis del proceso de producción o la gestión de inventario en un almacén son problemas complejos con miles de variables.
         </p>
-
+        <p>
+            <strong>Nuestra Solución:</strong> Usamos <strong>Modelos Matemáticos, Machine Learning e IA</strong> (con R, Excel Avanzado y Solver) para encontrar la solución óptima. Optimizamos la rentabilidad de la cosecha, disminuimos las pérdidas en su empaque, mejoramos la eficiencia de sus líneas de producción y reducimos los costos operativos de su warehousing.
+        </p>
+        
+        <hr> 
+        
+        <h3>Consultoría Estratégica (Ingeniería + Administración)</h3>
+        <p>
+            <strong>El Problema:</strong> Los datos son inútiles si no se usan para tomar mejores decisiones estratégicas.
+        </p>
+        <p>
+            <strong>Nuestra Solución:</strong> Este es nuestro mayor diferencial. Actuamos como su socio estratégico. Lo ayudamos a leer los datos (Visión de Ingeniería), definir la hoja de ruta (Visión Estratégica de MBA) y asegurar la correcta implementación (Visión de Administración).<br>
+            <br> No entregamos datos en Tableros de Control bonitos. Entregamos <strong>rentabilidad y tranquilidad</strong>. Acompañamos en la toma de decisiones basadas en datos y experiencia para que pueda dedicarse a lo importante y no a lo urgente.
+        </p>
+        
         <hr> 
         
         <ul class="actions">
@@ -99,7 +86,7 @@ title: "Servicios"
     <div class="inner">
         <ul class="copyright">
             <li>&copy; Growise Consultora. Todos los derechos reservados.</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>Design: <a href="[http://html5up.net](http://html5up.net)">HTML5 UP</a></li>
         </ul>
     </div>
 </footer>
