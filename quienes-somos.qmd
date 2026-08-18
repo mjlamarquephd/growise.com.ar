@@ -17,8 +17,8 @@ title: "Quiénes Somos"
     <div class="inner">
         <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="Logo Growise" /></a>
         <h1><strong>Growise Consultora</strong><br />
-                    Inteligencia de Negocios<br />
-                    para Agroindustria y Warehousing.</h1>
+                    Recovery Audit<br />
+                    Auditoría Algorítmica de Fuga de Margen.</h1>
         
         <ul class="icons" style="margin-top: 20px;">
             <li><a href="https://www.linkedin.com/company/growiseconsultora/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -54,7 +54,7 @@ title: "Quiénes Somos"
                     Ingeniero Industrial | MBA | PhD Candidate
                 </p>
                 <p>
-                    30 años de experiencia liderando plantas y reingenierías (Ledesma, La Sevillanita). Marcelo aporta la <strong>visión híbrida</strong>: conoce el barro de la operación y el lenguaje del directorio. Su especialidad es aplicar Data Science (R, Machine Learning) para encontrar rentabilidad donde el ojo humano no la ve.
+                    30 años de experiencia liderando plantas, reingenierías y operaciones de logística en empresas industriales de gran envergadura — incluyendo una de las plantas de mayor integración vertical y multiproducto del país, con el concepto de biorrefinería aplicado desde hace años. Marcelo aporta la <strong>visión híbrida</strong>: conoce el barro de la operación y el lenguaje del directorio. Su especialidad es aplicar Data Science (R, Machine Learning) para encontrar rentabilidad donde el ojo humano no la ve.
                 </p>
                 <p style="font-size: 0.9em;">
                     <a href="mailto:mlamarque@growise.com.ar">mlamarque@growise.com.ar</a><br>
@@ -70,7 +70,7 @@ title: "Quiénes Somos"
                     Licenciado en Administración de Empresas
                 </p>
                 <p>
-                    Bruno es el <strong>ancla de gestión y viabilidad</strong>. Con experiencia corporativa (ex-Pluspetrol), aporta el rigor administrativo y contractual necesario para que los proyectos escalen. Asegura que cada solución técnica sea financieramente sólida, legalmente segura y culturalmente aplicable.
+                    Bruno es el <strong>ancla comercial y de reglas de negocio</strong>. Con background en una empresa petrolera argentina de operaciones y alcance internacional, clase mundial, aporta el conocimiento específico de presupuesto, control de gestión, contratos, tarifas, costos y cobranzas que hoy es la materia prima del catálogo de reglas que ejecuta nuestro motor de detección. Asegura que cada hallazgo sea financieramente sólido, contractualmente verificable y accionable.
                 </p>
                 <p style="font-size: 0.9em;">
                     <a href="mailto:bmacchi@growise.com.ar">bmacchi@growise.com.ar</a><br>
@@ -83,7 +83,7 @@ title: "Quiénes Somos"
         <hr>
         
         <p>
-            Con Growise, la misma consultora que analiza su modelo de costos es la que construye el dashboard de Power BI, programa el modelo de optimización en R y se asegura de que su equipo pueda gestionarlo.
+            Con Growise, la misma consultora que analiza su modelo de costos es la que construye, a medida de su empresa, las herramientas y programa el modelo de optimización, asegurándose de que su equipo pueda gestionarlo. Nuestro servicio es <em>hands-on</em> de punta a punta.
         </p>
 
         <ul class="actions">
@@ -96,7 +96,7 @@ title: "Quiénes Somos"
     <div class="inner">
         <ul class="copyright">
             <li>&copy; Growise Consultora. Todos los derechos reservados.</li>
-            <li>Design: <a href="[http://html5up.net](http://html5up.net)">HTML5 UP</a></li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
     </div>
 </footer>

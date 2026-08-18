@@ -18,8 +18,8 @@ title: "Inicio"
     <div class="inner">
         <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="Logo Growise" /></a>
         <h1><strong>Growise Consultora</strong><br />
-                    Inteligencia de Negocios<br />
-                    para Agroindustria y Warehousing.</h1>
+                    Recovery Audit<br />
+                    Auditoría Algorítmica de Fuga de Margen.</h1>
         
         <ul class="icons" style="margin-top: 20px;">
     <li><a href="https://www.linkedin.com/company/growiseconsultora/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
@@ -32,30 +32,34 @@ title: "Inicio"
 <div id="main">
     <section id="one">
         <header class="major">
-            <h2>Optimizamos la Rentabilidad de la Agroindustria y Operaciones de Warehousing</h2>
+            <h2>Blinde el margen que su operación ya genera.</h2>
             <p style="font-size: 1.1em; color: #555; margin-top: -1em;">
-                No entregamos reportes teóricos. Transformamos datos complejos en decisiones de negocio rentables, uniendo la ingeniería de procesos con la estrategia de alta dirección.
+                Auditamos su operación para detectar y blindar el margen expuesto a fugas administrativas — con evidencia verificable, no estimaciones.
             </p>
         </header>
 
         <p style="font-weight: bold;">
-            Somos una consultora boutique especializada en dos áreas de alto impacto:
+            Growise es la firma detrás de un motor propio de auditoría: el Growise Data Engine. Cruza sus datos operativos contra sus contratos y tarifas pactadas para blindar sus operaciones frente a la fuga de margen, y convierte cada hallazgo en una oportunidad de mejora de procesos y flujos de dinero cuantificado en USD.
+        </p>
+
+        <p style="font-size: 0.95em; color: #666; font-style: italic;">
+            Recovery Audit está diseñado para empresas internacionales de transporte de cargas generales con una facturación anual no menor a USD 5 millones.
         </p>
 
         <div class="row">
             <div class="col-6 col-12-small">
-                <h3>Agroindustria</h3>
-                <p>Nos especializamos en la optimización de procesos y costos de plantas agroindustriales: <strong>Ingenios Azucareros, Citrícolas y plantas de procesamiento</strong>.</p>
+                <h3>Foco actual: Freight &amp; Fuel Audit</h3>
+                <p>Auditamos fletes, peajes, diésel y notas de crédito no reclamadas en operaciones de <strong>Transporte de Cargas Generales</strong>. Un diagnóstico cerrado de 14-21 días, 100% remoto, sobre archivos que usted exporta — sin acceso a sus sistemas.</p>
             </div>
             <div class="col-6 col-12-small">
-                <h3>Warehousing</h3>
-                <p>Aplicamos el mismo rigor analítico para optimizar la eficiencia, costos y layout de <strong>Centros de Distribución y Almacenes</strong>.</p>
+                <h3>El Engine</h3>
+                <p>La misma lógica de detección es adaptable a cualquier industria con alta densidad transaccional. Hoy la aplicamos en logística de cargas generales; es la base sobre la que construimos cada nuevo módulo.</p>
             </div>
         </div>
         
         <hr>
         
-        <p>Nuestra ventaja es la sinergia de nuestro equipo: unimos la visión de <strong>Ingeniería, Estrategia y Datos</strong> con la <strong>Administración y Gestión de Negocios</strong>.</p>
+        <p>Unimos ingeniería de datos, arquitectura de procesos y experiencia operativa real — no solo visualización.</p>
 
         <ul class="actions">
             <li><a href="servicios.html" class="button">Nuestros Servicios</a></li>
@@ -68,25 +72,25 @@ title: "Inicio"
         <div class="row">
             <article class="col-6 col-12-xsmall work-item">
                 <a href="images/fulls/Dashboard_Estrategico.png" class="image fit thumb"><img src="images/thumbs/Dashboard_Estrategico.png" alt="" /></a>
-                <h3>Modelos de Costeo y Control (BI)</h3>
-                <p>Desarrollamos modelos de costeo específicos para su industria.</p>
+                <h3>Auditoría de Fletes, Peajes y Combustible</h3>
+                <p>Cruzamos comprobantes, tarifas pactadas y consumo real para identificar descalces facturados de más.</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
                 <a href="images/fulls/Optimizacion_Procesos.png" class="image fit thumb"><img src="images/thumbs/Optimizacion_Procesos.png" alt="" /></a>
-                <h3>Optimización de Procesos (IA/ML)</h3>
-                <p>Modelos en R y Solver para optimizar procesos de planta y almacenes.</p>
+                <h3>Motor Zero-Touch ERP</h3>
+                <p>Trabajamos sobre archivos planos exportados por usted. Sin APIs, sin VPN, sin acceso a sus sistemas.</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
                 <a href="images/fulls/Analisis_Competitividad.png" class="image fit thumb"><img src="images/thumbs/Analisis_Competitividad.png" alt="" /></a>
-                <h3>Consultoría Estratégica</h3>
-                <p>Acompañamiento (Ingeniería + MBA) en la toma de decisiones.</p>
+                <h3>Validación 100% Humana</h3>
+                <p>Ninguna conclusión sale sin auditoría de un socio. La IA acelera el cruce; la decisión final es siempre nuestra.</p>
             </article>
         </div>
     </section>
 
     <section id="three">
         <h2>Contacto</h2>
-        <p>Deje de navegar a ciegas o por intuición. Descubra cuánto dinero está perdiendo su operación hoy.</p>
+        <p>Si su operación mueve fletes, peajes o combustible a gran escala, es probable que esté perdiendo dinero sin saberlo. Un Recovery Audit se lo demuestra con datos.</p>
         
         <div class="row">
 
