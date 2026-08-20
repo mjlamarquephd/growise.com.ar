@@ -8,10 +8,10 @@ website:
     left:
       - href: index.qmd
         text: Inicio
-      - href: quienes-somos.qmd
-        text: Quiénes Somos
       - href: servicios.qmd
         text: Servicios
+      - href: quienes-somos.qmd
+        text: Quiénes Somos
       - href: articulos.qmd
         text: Artículos
 

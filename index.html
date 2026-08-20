@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Inicio – Growise</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -32,15 +35,14 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,6 +70,23 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Buscar"
   }
 }</script>
+<!-- Google tag (gtag.js) -->
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-E46S4T4S3Z"></script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+
+
+  gtag('config', 'G-E46S4T4S3Z');
+
+</script>
 <style>
 /* RESET BÁSICO GLOBAL */
 body { padding: 0 !important; margin: 0 !important; }
@@ -98,8 +117,6 @@ header.quarto-title-block { padding-top: 3em !important; margin-bottom: 2em !imp
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Growise</span>
     </a>
@@ -115,12 +132,12 @@ header.quarto-title-block { padding-top: 3em !important; margin-bottom: 2em !imp
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./quienes-somos.html"> 
-<span class="menu-text">Quiénes Somos</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./servicios.html"> 
 <span class="menu-text">Servicios</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./quienes-somos.html"> 
+<span class="menu-text">Quiénes Somos</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./articulos.html"> 
@@ -163,12 +180,60 @@ header.quarto-title-block { padding-top: 3em !important; margin-bottom: 2em !imp
 
 
 <style>
-/* FUERZA A LA HOME A OCUPAR TODO EL ANCHO */
-#quarto-content { 
+/* 1. ELIMINAR EL HEADER AUTOMÁTICO OCULTO DE QUARTO */
+#title-block-header,
+.quarto-title-block,
+.quarto-title-banner,
+header.quarto-title-block {
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 0 !important;
+}
+
+/* 2. RESETEAR CONTENEDORES INTERMEDIOS DE QUARTO / BOOTSTRAP */
+#quarto-content,
+#quarto-content > *,
+#quarto-document-content,
+.quarto-container,
+.page-columns,
+.content,
+main.content { 
     display: block !important; 
     max-width: none !important; 
-    margin: 0 !important; 
-    padding: 0 !important;
+    margin-top: 0 !important; 
+    padding-top: 0 !important;
+    border-top: none !important;
+}
+
+/* 3. ESPACIADO CALIBRADO DEL CONTENEDOR PRINCIPAL (#main) */
+#main {
+    padding-top: 3.5rem !important; /* Libra el menú superior sin dejar espacio residual */
+    margin-top: 0 !important;
+}
+
+/* 4. ANULAR PADDING Y BORDES DE LAS SECCIONES DE LA PLANTILLA */
+#main > section,
+#main > section#one,
+#main > section:first-of-type,
+#one {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    border-top: none !important;
+}
+
+#main header.major,
+#main section#one header.major,
+header.major {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 1.2em !important;
+}
+
+#main header.major h2,
+header.major h2 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 </style>
 
@@ -176,80 +241,88 @@ header.quarto-title-block { padding-top: 3em !important; margin-bottom: 2em !imp
     <div class="inner">
         <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="Logo Growise"></a>
         <h1><strong>Growise Consultora</strong><br>
-                    Inteligencia de Negocios<br>
-                    para Agroindustria y Warehousing.</h1>
+            Estrategia de Negocios &amp;<br>
+            Rentabilidad Operativa.</h1>
         
         <ul class="icons" style="margin-top: 20px;">
-    <li><a href="https://www.linkedin.com/company/growiseconsultora/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-    <li><a href="https://www.instagram.com/growise.company/" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-    <li><a href="mailto:mlamarque@growise.com.ar" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-</ul>
+            <li><a href="https://www.linkedin.com/company/growiseconsultora/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://www.instagram.com/growise.company/" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+            <li><a href="mailto:mlamarque@growise.com.ar" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
     </div>
 </header>
 
 <div id="main">
     <section id="one">
         <header class="major">
-            <h2 class="anchored">Optimizamos la Rentabilidad de la Agroindustria y Operaciones de Warehousing</h2>
-            <p style="font-size: 1.1em; color: #555; margin-top: -1em;">
-                No entregamos reportes teóricos. Transformamos datos complejos en decisiones de negocio rentables, uniendo la ingeniería de procesos con la estrategia de alta dirección.
+            <h2 class="anchored">Del Barro a la Estrategia</h2>
+            <p style="font-size: 1.15em; color: #444; line-height: 1.5; margin-top: -0.5em;">
+                Transformamos datos complejos en decisiones de negocio rentables, uniendo la ingeniería de procesos y el análisis de datos con la estrategia de alta dirección.
             </p>
         </header>
 
-        <p style="font-weight: bold;">
-            Somos una consultora boutique especializada en dos áreas de alto impacto:
-        </p>
-
-        <div class="row">
-            <div class="col-6 col-12-small">
-                <h3 class="anchored">Agroindustria</h3>
-                <p>Nos especializamos en la optimización de procesos y costos de plantas agroindustriales: <strong>Ingenios Azucareros, Citrícolas y plantas de procesamiento</strong>.</p>
-            </div>
-            <div class="col-6 col-12-small">
-                <h3 class="anchored">Warehousing</h3>
-                <p>Aplicamos el mismo rigor analítico para optimizar la eficiencia, costos y layout de <strong>Centros de Distribución y Almacenes</strong>.</p>
-            </div>
+        <div style="background-color: #f8f9fa; padding: 1.8em; border-left: 5px solid #2e5b88; margin: 1.5em 0; border-radius: 4px;">
+            <h3 style="margin-top: 0; color: #222;" class="anchored">Un enfoque con rigor de trinchera</h3>
+            <p style="margin-bottom: 0; font-size: 0.98em; color: #555;">
+                Growise nació de una certeza operativa: la teoría del MBA no genera valor si no comprende la fricción cotidiana de la trinchera. Nuestro origen combina la gestión de empresas familiares en crisis y la operación de grandes plantas industriales — entendemos la presión de la caja y la soledad del dueño porque los vivimos del otro lado del mostrador. El dinero se escapa en la brecha entre lo que la dirección planifica y lo que la operación ejecuta; aportamos la infraestructura técnica y el análisis contractual para ver con exactitud quirúrgica dónde está el margen real.
+            </p>
         </div>
-        
-        <hr>
-        
-        <p>Nuestra ventaja es la sinergia de nuestro equipo: unimos la visión de <strong>Ingeniería, Estrategia y Datos</strong> con la <strong>Administración y Gestión de Negocios</strong>.</p>
 
-        <ul class="actions">
-            <li><a href="servicios.html" class="button">Nuestros Servicios</a></li>
-            <li><a href="quienes-somos.html" class="button">Quiénes Somos</a></li>
-        </ul>
+        <p>
+            <strong>La Diferencia Growise:</strong> Unimos la ingeniería de procesos y la infraestructura de datos avanzada con la visión contractual y financiera de alta dirección. <em>Usted no recibe gráficos para analizar; recibe conclusiones listas para actuar.</em>
+        </p>
     </section>
 
     <section id="two">
-        <h2 class="anchored">Áreas de Expertise</h2>
+        <header class="major">
+            <h2 class="anchored">Recovery Audit: detectamos recuperos de capital inmediatos y diseñamos esquemas de pricing estratégico para blindar el margen de la compañía</h2>
+        </header>
+        <p style="font-size: 1.05em; color: #444; line-height: 1.5;">
+            Auditamos el 100% de sus flujos operativos y contractuales — no un muestreo — para frenar fugas de margen invisibles y transformar datos complejos en decisiones ejecutivas listas para actuar.
+        </p>
+        <p style="font-size: 1.05em; color: #444; line-height: 1.5;">
+            Hoy concentramos nuestro motor de auditoría (Freight &amp; Fuel Audit) en <strong>Transporte de Cargas Generales</strong>: flota, combustible, peajes y estructura de costos. La misma metodología aplica a cualquier operación con alto volumen transaccional — si su negocio no es transporte pero sospecha fugas de rentabilidad, conversemos.
+        </p>
+
+        <ul class="actions" style="justify-content: center; display: flex; width: 100%; margin: 2em 0 2.5em 0;">
+            <li><a href="index.html#three" class="button primary">Solicitar Scoping Inicial</a></li>
+            <li><a href="servicios.html" class="button">Ver Metodología y Servicios</a></li>
+        </ul>
+    </section>
+
+    <section id="vision">
+        <header class="major">
+            <h2 class="anchored">Más allá de la auditoría: socios de estrategia y ejecución</h2>
+        </header>
+        <p style="font-size: 1.05em; color: #444; line-height: 1.5;">
+            El Recovery Audit es la puerta de entrada. El destino de Growise es acompañar a dueños y directorios en la competitividad de fondo: definición y ejecución de estrategia, desarrollo de modelos de costeo, mejora de rentabilidad y estructura organizacional, evaluación de proyectos de inversión y de nuevos negocios. No entregamos un informe y nos vamos — nos sentamos a ejecutar con usted.
+        </p>
         <div class="row">
-            <article class="col-6 col-12-xsmall work-item">
-                <a href="images/fulls/Dashboard_Estrategico.png" class="image fit thumb"><img src="images/thumbs/Dashboard_Estrategico.png" alt=""></a>
-                <h3 class="anchored">Modelos de Costeo y Control (BI)</h3>
-                <p>Desarrollamos modelos de costeo específicos para su industria.</p>
+            <article class="col-4 col-12-xsmall work-item">
+                <a href="images/fulls/Dashboard_Estrategico.png" class="image fit thumb"><img src="images/thumbs/Dashboard_Estrategico.png" alt="Modelos de Costeo y BI"></a>
+                <h3 class="anchored">Modelos de Costeo &amp; BI Directivo</h3>
+                <p>Modelado analítico a medida para conocer la rentabilidad y costo real por producto, cliente o contrato.</p>
             </article>
-            <article class="col-6 col-12-xsmall work-item">
-                <a href="images/fulls/Optimizacion_Procesos.png" class="image fit thumb"><img src="images/thumbs/Optimizacion_Procesos.png" alt=""></a>
-                <h3 class="anchored">Optimización de Procesos (IA/ML)</h3>
-                <p>Modelos en R y Solver para optimizar procesos de planta y almacenes.</p>
-            </article>
-            <article class="col-6 col-12-xsmall work-item">
-                <a href="images/fulls/Analisis_Competitividad.png" class="image fit thumb"><img src="images/thumbs/Analisis_Competitividad.png" alt=""></a>
-                <h3 class="anchored">Consultoría Estratégica</h3>
-                <p>Acompañamiento (Ingeniería + MBA) en la toma de decisiones.</p>
+            <article class="col-4 col-12-xsmall work-item">
+                <a href="images/fulls/Optimizacion_Procesos.png" class="image fit thumb"><img src="images/thumbs/Optimizacion_Procesos.png" alt="Optimización Operativa"></a>
+                <h3 class="anchored">Optimización Operativa &amp; Procesos</h3>
+                <p>Modelos cuantitativos e inteligencia de datos aplicados para destrabar cuellos de botella y reducir sobrecostos.</p>
             </article>
         </div>
+
+        <ul class="actions" style="justify-content: center; display: flex; width: 100%; margin: 1.5em 0 2.5em 0;">
+            <li><a href="quienes-somos.html" class="button">Conocer al Equipo</a></li>
+        </ul>
     </section>
 
     <section id="three">
-        <h2 class="anchored">Contacto</h2>
-        <p>Deje de navegar a ciegas o por intuición. Descubra cuánto dinero está perdiendo su operación hoy.</p>
+        <h2 class="anchored">Iniciemos una Conversación</h2>
+        <p>Deje de gestionar por intuición o con reportes que llegan tarde. Evaluemos sin costo preliminar el potencial de recupero en su operación.</p>
         
         <div class="row">
-
             <div class="col-6 col-12-small">
                 <h3 style="color: #787878; margin-bottom: 0.5em;" class="anchored">Marcelo J. Lamarque</h3>
+                <p style="font-size: 0.85em; margin-bottom: 1em; color: #888;">Eje Operaciones, Procesos &amp; Infraestructura de Datos</p>
                 <ul class="labeled-icons">
                     <li>
                         <h3 class="icon solid fa-envelope anchored"><span class="label">Email</span></h3>
@@ -257,22 +330,18 @@ header.quarto-title-block { padding-top: 3em !important; margin-bottom: 2em !imp
                     </li>
                     <li>
                         <h3 class="icon solid fa-mobile-alt anchored"><span class="label">WhatsApp</span></h3>
-                        <a href="https://wa.me/5493813301435">Agendar Diagnóstico Inicial</a>
+                        <a href="[https://wa.me/5493813301435](https://wa.me/5493813301435)" target="_blank">+54 9 381 330 1435</a>
                     </li>
                     <li>
                         <h3 class="icon brands fa-linkedin anchored"><span class="label">LinkedIn</span></h3>
-                        <a href="https://www.linkedin.com/in/mlamarque/">Perfil de LinkedIn</a>
-                    </li>
-                    <li>
-                        <h3 class="icon solid fa-map-marker-alt anchored"><span class="label">Ubicación</span></h3>
-                        Yerba Buena, Tucumán<br>
-                        Argentina
+                        <a href="[https://www.linkedin.com/in/mlamarque/](https://www.linkedin.com/in/mlamarque/)" target="_blank">Perfil de LinkedIn</a>
                     </li>
                 </ul>
             </div>
 
             <div class="col-6 col-12-small">
                 <h3 style="color: #787878; margin-bottom: 0.5em;" class="anchored">Bruno Macchi</h3>
+                <p style="font-size: 0.85em; margin-bottom: 1em; color: #888;">Eje Comercial, Contractual &amp; Pricing Estratégico</p>
                 <ul class="labeled-icons">
                     <li>
                         <h3 class="icon solid fa-envelope anchored"><span class="label">Email</span></h3>
@@ -280,22 +349,23 @@ header.quarto-title-block { padding-top: 3em !important; margin-bottom: 2em !imp
                     </li>
                     <li>
                         <h3 class="icon solid fa-mobile-alt anchored"><span class="label">WhatsApp</span></h3>
-                        <a href="https://wa.me/5493816043798">+54 9 381 604 3798</a>
+                        <a href="[https://wa.me/5493816043798](https://wa.me/5493816043798)" target="_blank">+54 9 381 604 3798</a>
                     </li>
                     <li>
                         <h3 class="icon brands fa-linkedin anchored"><span class="label">LinkedIn</span></h3>
-                        <a href="https://www.linkedin.com/in/macchib/">Perfil de LinkedIn</a>
+                        <a href="[https://www.linkedin.com/in/macchib/](https://www.linkedin.com/in/macchib/)" target="_blank">Perfil de LinkedIn</a>
                     </li>
                 </ul>
             </div>
-
         </div> 
     </section>
-</div> <footer id="footer">
+</div>
+
+<footer id="footer">
     <div class="inner">
         <ul class="copyright">
             <li>© Growise Consultora. Todos los derechos reservados.</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>Design: <a href="[http://html5up.net](http://html5up.net)">HTML5 UP</a></li>
         </ul>
     </div>
 </footer>

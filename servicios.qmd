@@ -4,12 +4,60 @@ title: "Servicios"
 
 ```{=html}
 <style>
-/* FUERZA A LA PÁGINA A OCUPAR TODO EL ANCHO Y RESPETA EL DISEÑO ORIGINAL */
-#quarto-content { 
+/* 1. ELIMINAR EL HEADER AUTOMÁTICO OCULTO DE QUARTO */
+#title-block-header,
+.quarto-title-block,
+.quarto-title-banner,
+header.quarto-title-block {
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 0 !important;
+}
+
+/* 2. RESETEAR CONTENEDORES INTERMEDIOS DE QUARTO / BOOTSTRAP */
+#quarto-content,
+#quarto-content > *,
+#quarto-document-content,
+.quarto-container,
+.page-columns,
+.content,
+main.content { 
     display: block !important; 
     max-width: none !important; 
-    margin: 0 !important; 
-    padding: 0 !important;
+    margin-top: 0 !important; 
+    padding-top: 0 !important;
+    border-top: none !important;
+}
+
+/* 3. ESPACIADO CALIBRADO DEL CONTENEDOR PRINCIPAL (#main) */
+#main {
+    padding-top: 3.5rem !important;
+    margin-top: 0 !important;
+}
+
+/* 4. ANULAR PADDING Y BORDES EN SECCIONES */
+#main > section,
+#main > section#servicios-detalle,
+#main > section:first-of-type,
+#servicios-detalle {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    border-top: none !important;
+}
+
+#main header.major,
+#main section#servicios-detalle header.major,
+header.major {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 1.5em !important;
+}
+
+#main header.major h2,
+header.major h2 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 </style>
 
@@ -17,12 +65,12 @@ title: "Servicios"
     <div class="inner">
         <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="Logo Growise" /></a>
         <h1><strong>Growise Consultora</strong><br />
-                    Inteligencia de Negocios<br />
-                    para Agroindustria y Warehousing.</h1>
+            Estrategia de Negocios &<br />
+            Rentabilidad Operativa.</h1>
         
         <ul class="icons" style="margin-top: 20px;">
-            <li><a href="https://www.linkedin.com/company/growiseconsultora/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-            <li><a href="https://www.instagram.com/growise.company/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="https://www.linkedin.com/company/growiseconsultora/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://www.instagram.com/growise.company/" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
             <li><a href="mailto:mlamarque@growise.com.ar" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
         </ul>
     </div>
@@ -31,53 +79,91 @@ title: "Servicios"
 <div id="main">
     <section id="servicios-detalle">
         <header class="major">
-            <h2>Nuestros Servicios</h2>
-        </header>
-        
-        <h3>Modelos de Costeo y Control de Gestión (BI)</h3>
-        <p>
-            <strong>El Problema:</strong> ¿Sabe cuánto le cuesta realmente cada caja de berry procesada, cada tonelada de azúcar producida o cada pallet almacenado en su depósito? Los costeos genéricos ocultan las fugas de rentabilidad.
-        </p>
-        <p>
-            <strong>Nuestra Solución:</strong> Desarrollamos <strong>modelos de costeo a medida</strong> para su operación. Integramos sus datos (partes de producción, ERP, planillas) en un Dashboard de Power BI que le permite ver el costo real y la rentabilidad por producto o línea.
-        </p>
-        
-        <div style="background-color: #f8f9fa; padding: 2em; border-left: 5px solid #787878; margin: 2em 0; border-radius: 4px;">
-            <h4 style="color: #444; margin-top: 0;">La Diferencia Growise: Conclusiones, no Gráficos</h4>
-            <p style="font-size: 0.95em; font-style: italic; margin-bottom: 1em;">
-                "El tablero pasa de ser una herramienta de descubrimiento a una herramienta de confirmación."
+            <h2>Nuestras Líneas de Servicio</h2>
+            <p style="font-size: 1.15em; color: #444; line-height: 1.5; margin-top: -0.5em;">
+                Intervenciones modulares de alto impacto diseñadas para proteger la rentabilidad y tomar decisiones con certeza operativa. Hoy concentramos nuestro Recovery Audit en Transporte de Cargas Generales (Freight & Fuel Audit); la misma metodología y las capacidades de costeo y optimización operativa aplican a cualquier operación con alto volumen transaccional.
             </p>
-            <p style="font-size: 0.9em; margin-bottom: 0;">
-                Los tableros estándar le dan datos y le piden a usted que sea el analista. Nuestro modelo es diferente: implementamos un "cerebro" (IA + Experiencia Experta) que le entrega la <strong>conclusión primero</strong>. Usted solo entra para verificar. <strong>Le ahorramos al CEO el 90% del esfuerzo mental.</strong>
+        </header>
+
+        <div style="background-color: #f8f9fa; padding: 2em; border-left: 5px solid #2e5b88; margin: 1.5em 0 2.5em 0; border-radius: 6px;">
+            <h3 style="margin-top: 0; color: #222; font-size: 1.25em;">Metodología por Fases: Cero Riesgo a Ciegas</h3>
+            <p style="font-size: 0.98em; color: #555; margin-bottom: 1.5em; line-height: 1.5;">
+                No presupuestamos diagnósticos genéricos ni vendemos horas de consultoría sin rumbo. Toda intervención se ejecuta en tres etapas estructuradas:
+            </p>
+        
+            <!-- FLUJO VISUAL DE 3 PASOS -->
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: space-between;">
+                
+                <!-- FASE 1 -->
+                <div style="flex: 1 1 200px; background: #ffffff; padding: 1.1em 1.2em; border-radius: 6px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                    <span style="display: inline-block; background-color: #e8f0fe; color: #2e5b88; font-weight: bold; font-size: 0.75em; padding: 2px 8px; border-radius: 3px; margin-bottom: 6px;">FASE 1</span>
+                    <h4 style="margin: 0 0 4px 0; color: #1e3a8a; font-size: 1.02em;">Scoping Inicial</h4>
+                    <p style="margin: 0; font-size: 0.85em; color: #64748b; line-height: 1.4;">Definición precisa del dolor, foco operativo y viabilidad.</p>
+                </div>
+        
+                <!-- FASE 2 -->
+                <div style="flex: 1 1 200px; background: #ffffff; padding: 1.1em 1.2em; border-radius: 6px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                    <span style="display: inline-block; background-color: #e8f0fe; color: #2e5b88; font-weight: bold; font-size: 0.75em; padding: 2px 8px; border-radius: 3px; margin-bottom: 6px;">FASE 2</span>
+                    <h4 style="margin: 0 0 4px 0; color: #1e3a8a; font-size: 1.02em;">Presupuesto Modular</h4>
+                    <p style="margin: 0; font-size: 0.85em; color: #64748b; line-height: 1.4;">Alcance cerrado y cotización por entregables concretos.</p>
+                </div>
+        
+                <!-- FASE 3 -->
+                <div style="flex: 1 1 200px; background: #ffffff; padding: 1.1em 1.2em; border-radius: 6px; border: 1px solid #2e5b88; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                    <span style="display: inline-block; background-color: #2e5b88; color: #ffffff; font-weight: bold; font-size: 0.75em; padding: 2px 8px; border-radius: 3px; margin-bottom: 6px;">FASE 3</span>
+                    <h4 style="margin: 0 0 4px 0; color: #1e3a8a; font-size: 1.02em;">Diagnóstico</h4>
+                    <p style="margin: 0; font-size: 0.85em; color: #64748b; line-height: 1.4;">Auditoría profunda sobre el 100% de la población transaccional, con recupero medible.</p>
+                </div>
+        
+            </div>
+        </div>
+        
+        <p style="font-size: 0.85em; color: #2e5b88; font-weight: bold; margin-bottom: 0.5em;">Foco de entrada: Transporte de Cargas Generales (Freight & Fuel Audit)</p>
+
+        <!-- SERVICIO 1 -->
+        <h3>1. Recovery Audit: Auditoría de Fugas Contractuales & Pricing Estratégico</h3>
+        <p>
+            <strong>El Problema:</strong> En empresas con contratos de servicios y operaciones complejas, el flujo de ingresos se fuga en la brecha entre lo que el contrato dice y lo que la operación realmente factura: cláusulas mal indexadas contra la inflación real, penalidades operativas no reclamadas o tarifas fijadas sin contemplar el costo marginal. En transporte de cargas generales, esto se traduce en flota, combustible y peajes mal controlados.
+        </p>
+        <p>
+            <strong>Nuestra Solución:</strong> Auditamos el <strong>100% de sus líneas de facturación y contratos</strong> (no un muestreo parcial). Reestructuramos fórmulas de indexación, detectamos recuperos de capital inmediatos y diseñamos esquemas de pricing estratégico para blindar el margen de la compañía. La misma metodología aplica a cualquier operación con alto volumen transaccional, más allá del transporte.
+        </p>
+
+        <hr>
+
+        <p style="font-size: 0.85em; color: #787878; font-weight: bold; margin-bottom: 0.5em;">Capacidad de consultoría de transformación</p>
+
+        <!-- SERVICIO 2 -->
+        <h3>2. Modelos de Costeo & BI Directivo (Conclusiones, no Gráficos)</h3>
+        <p>
+            <strong>El Problema:</strong> Los reportes tradicionales le dan datos dispersos y le exigen al director o dueño hacer de analista. Mientras tanto, los costeos promedio ocultan qué cliente, contrato, producto o línea de producción está absorbiendo los márgenes de la empresa.
+        </p>
+        <p>
+            <strong>Nuestra Solución:</strong> Diseñamos <strong>modelos de costeo a medida</strong> sobre su operación real. Entregamos infraestructura analítica donde el tablero pasa a ser una herramienta de confirmación: <em>el sistema le entrega primero la conclusión y el punto de acción</em>, ahorrándole a la dirección el 90% del esfuerzo de análisis.
+        </p>
+
+        <hr>
+
+        <!-- SERVICIO 3 -->
+        <h3>3. Optimización Operativa & Rediseño de Procesos</h3>
+        <p>
+            <strong>El Problema:</strong> Cuellos de botella en plantas de procesamiento, ineficiencias de layout y mermas en depósitos de distribución o sobrecostos de mantenimiento que se vuelven "invisibles" por la rutina diaria.
+        </p>
+        <p>
+            <strong>Nuestra Solución:</strong> Aplicamos <strong>rigor de ingeniería industrial y modelado cuantitativo</strong> directo en la operación. Optimizamos la capacidad productiva, reducimos tiempos muertos, estandarizamos flujos de trabajo y eliminamos sobrecostos ocultos en plantas, almacenes y centros de servicios. Nuestro motor incluye modelos de frontera de eficiencia (Data Envelopment Analysis) y machine learning para identificar, con precisión estadística, qué variables explican realmente la brecha entre su operación y el líder del sector. Usted puede saber cómo está parado en términos de eficiencia frente a la competencia.
+        </p>
+
+        <hr>
+
+        <div style="text-align: center; margin: 2em 0 1em 0;">
+            <p style="font-size: 1.1em; font-weight: bold; color: #333;">
+                ¿Sospecha que su operación tiene fugas de rentabilidad?
             </p>
         </div>
         
-        <hr>
-        
-        <h3>Optimización de Procesos (Modelos Matemáticos, ML y IA)</h3>
-        <p>
-            <strong>El Problema:</strong> La eficiencia de cosechadoras, el diseño del layout de un empaque, el análisis del proceso de producción o la gestión de inventario en un almacén son problemas complejos con miles de variables.
-        </p>
-        <p>
-            <strong>Nuestra Solución:</strong> Usamos <strong>Modelos Matemáticos, Machine Learning e IA</strong> (con R, Excel Avanzado y Solver) para encontrar la solución óptima. Optimizamos la rentabilidad de la cosecha, disminuimos las pérdidas en su empaque, mejoramos la eficiencia de sus líneas de producción y reducimos los costos operativos de su warehousing.
-        </p>
-        
-        <hr> 
-        
-        <h3>Consultoría Estratégica (Ingeniería + Administración)</h3>
-        <p>
-            <strong>El Problema:</strong> Los datos son inútiles si no se usan para tomar mejores decisiones estratégicas.
-        </p>
-        <p>
-            <strong>Nuestra Solución:</strong> Este es nuestro mayor diferencial. Actuamos como su socio estratégico. Lo ayudamos a leer los datos (Visión de Ingeniería), definir la hoja de ruta (Visión Estratégica de MBA) y asegurar la correcta implementación (Visión de Administración).<br>
-            <br> No entregamos datos en Tableros de Control bonitos. Entregamos <strong>rentabilidad y tranquilidad</strong>. Acompañamos en la toma de decisiones basadas en datos y experiencia para que pueda dedicarse a lo importante y no a lo urgente.
-        </p>
-        
-        <hr> 
-        
-        <ul class="actions">
+        <ul class="actions" style="justify-content: center; display: flex; width: 100%; margin: 1em 0 2.5em 0;">
+            <li><a href="index.html#three" class="button primary">Solicitar Scoping Inicial</a></li>
             <li><a href="quienes-somos.html" class="button">Conocer al Equipo</a></li>
-            <li><a href="index.html" class="button">Volver al Inicio</a></li>
         </ul>
     </section>
 </div>

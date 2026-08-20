@@ -1,16 +1,63 @@
 ---
-# Configuraciones de Quarto (puedes dejarlo vacío o poner el título)
 title: "Inicio"
 ---
 
 ```{=html}
 <style>
-/* FUERZA A LA HOME A OCUPAR TODO EL ANCHO */
-#quarto-content { 
+/* 1. ELIMINAR EL HEADER AUTOMÁTICO OCULTO DE QUARTO */
+#title-block-header,
+.quarto-title-block,
+.quarto-title-banner,
+header.quarto-title-block {
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 0 !important;
+}
+
+/* 2. RESETEAR CONTENEDORES INTERMEDIOS DE QUARTO / BOOTSTRAP */
+#quarto-content,
+#quarto-content > *,
+#quarto-document-content,
+.quarto-container,
+.page-columns,
+.content,
+main.content { 
     display: block !important; 
     max-width: none !important; 
-    margin: 0 !important; 
-    padding: 0 !important;
+    margin-top: 0 !important; 
+    padding-top: 0 !important;
+    border-top: none !important;
+}
+
+/* 3. ESPACIADO CALIBRADO DEL CONTENEDOR PRINCIPAL (#main) */
+#main {
+    padding-top: 3.5rem !important; /* Libra el menú superior sin dejar espacio residual */
+    margin-top: 0 !important;
+}
+
+/* 4. ANULAR PADDING Y BORDES DE LAS SECCIONES DE LA PLANTILLA */
+#main > section,
+#main > section#one,
+#main > section:first-of-type,
+#one {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    border-top: none !important;
+}
+
+#main header.major,
+#main section#one header.major,
+header.major {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 1.2em !important;
+}
+
+#main header.major h2,
+header.major h2 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 </style>
 
@@ -18,80 +65,88 @@ title: "Inicio"
     <div class="inner">
         <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="Logo Growise" /></a>
         <h1><strong>Growise Consultora</strong><br />
-                    Inteligencia de Negocios<br />
-                    para Agroindustria y Warehousing.</h1>
+            Estrategia de Negocios &<br />
+            Rentabilidad Operativa.</h1>
         
         <ul class="icons" style="margin-top: 20px;">
-    <li><a href="https://www.linkedin.com/company/growiseconsultora/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-    <li><a href="https://www.instagram.com/growise.company/" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-    <li><a href="mailto:mlamarque@growise.com.ar" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-</ul>
+            <li><a href="https://www.linkedin.com/company/growiseconsultora/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://www.instagram.com/growise.company/" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+            <li><a href="mailto:mlamarque@growise.com.ar" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
     </div>
 </header>
 
 <div id="main">
     <section id="one">
         <header class="major">
-            <h2>Optimizamos la Rentabilidad de la Agroindustria y Operaciones de Warehousing</h2>
-            <p style="font-size: 1.1em; color: #555; margin-top: -1em;">
-                No entregamos reportes teóricos. Transformamos datos complejos en decisiones de negocio rentables, uniendo la ingeniería de procesos con la estrategia de alta dirección.
+            <h2>Del Barro a la Estrategia</h2>
+            <p style="font-size: 1.15em; color: #444; line-height: 1.5; margin-top: -0.5em;">
+                Transformamos datos complejos en decisiones de negocio rentables, uniendo la ingeniería de procesos y el análisis de datos con la estrategia de alta dirección.
             </p>
         </header>
 
-        <p style="font-weight: bold;">
-            Somos una consultora boutique especializada en dos áreas de alto impacto:
-        </p>
-
-        <div class="row">
-            <div class="col-6 col-12-small">
-                <h3>Agroindustria</h3>
-                <p>Nos especializamos en la optimización de procesos y costos de plantas agroindustriales: <strong>Ingenios Azucareros, Citrícolas y plantas de procesamiento</strong>.</p>
-            </div>
-            <div class="col-6 col-12-small">
-                <h3>Warehousing</h3>
-                <p>Aplicamos el mismo rigor analítico para optimizar la eficiencia, costos y layout de <strong>Centros de Distribución y Almacenes</strong>.</p>
-            </div>
+        <div style="background-color: #f8f9fa; padding: 1.8em; border-left: 5px solid #2e5b88; margin: 1.5em 0; border-radius: 4px;">
+            <h3 style="margin-top: 0; color: #222;">Un enfoque con rigor de trinchera</h3>
+            <p style="margin-bottom: 0; font-size: 0.98em; color: #555;">
+                Growise nació de una certeza operativa: la teoría del MBA no genera valor si no comprende la fricción cotidiana de la trinchera. Nuestro origen combina la gestión de empresas familiares en crisis y la operación de grandes plantas industriales — entendemos la presión de la caja y la soledad del dueño porque los vivimos del otro lado del mostrador. El dinero se escapa en la brecha entre lo que la dirección planifica y lo que la operación ejecuta; aportamos la infraestructura técnica y el análisis contractual para ver con exactitud quirúrgica dónde está el margen real.
+            </p>
         </div>
-        
-        <hr>
-        
-        <p>Nuestra ventaja es la sinergia de nuestro equipo: unimos la visión de <strong>Ingeniería, Estrategia y Datos</strong> con la <strong>Administración y Gestión de Negocios</strong>.</p>
 
-        <ul class="actions">
-            <li><a href="servicios.html" class="button">Nuestros Servicios</a></li>
-            <li><a href="quienes-somos.html" class="button">Quiénes Somos</a></li>
-        </ul>
+        <p>
+            <strong>La Diferencia Growise:</strong> Unimos la ingeniería de procesos y la infraestructura de datos avanzada con la visión contractual y financiera de alta dirección. <em>Usted no recibe gráficos para analizar; recibe conclusiones listas para actuar.</em>
+        </p>
     </section>
 
     <section id="two">
-        <h2>Áreas de Expertise</h2>
+        <header class="major">
+            <h2>Recovery Audit: detectamos recuperos de capital inmediatos y diseñamos esquemas de pricing estratégico para blindar el margen de la compañía</h2>
+        </header>
+        <p style="font-size: 1.05em; color: #444; line-height: 1.5;">
+            Auditamos el 100% de sus flujos operativos y contractuales — no un muestreo — para frenar fugas de margen invisibles y transformar datos complejos en decisiones ejecutivas listas para actuar.
+        </p>
+        <p style="font-size: 1.05em; color: #444; line-height: 1.5;">
+            Hoy concentramos nuestro motor de auditoría (Freight & Fuel Audit) en <strong>Transporte de Cargas Generales</strong>: flota, combustible, peajes y estructura de costos. La misma metodología aplica a cualquier operación con alto volumen transaccional — si su negocio no es transporte pero sospecha fugas de rentabilidad, conversemos.
+        </p>
+
+        <ul class="actions" style="justify-content: center; display: flex; width: 100%; margin: 2em 0 2.5em 0;">
+            <li><a href="index.html#three" class="button primary">Solicitar Scoping Inicial</a></li>
+            <li><a href="servicios.html" class="button">Ver Metodología y Servicios</a></li>
+        </ul>
+    </section>
+
+    <section id="vision">
+        <header class="major">
+            <h2>Más allá de la auditoría: socios de estrategia y ejecución</h2>
+        </header>
+        <p style="font-size: 1.05em; color: #444; line-height: 1.5;">
+            El Recovery Audit es la puerta de entrada. El destino de Growise es acompañar a dueños y directorios en la competitividad de fondo: definición y ejecución de estrategia, desarrollo de modelos de costeo, mejora de rentabilidad y estructura organizacional, evaluación de proyectos de inversión y de nuevos negocios. No entregamos un informe y nos vamos — nos sentamos a ejecutar con usted.
+        </p>
         <div class="row">
-            <article class="col-6 col-12-xsmall work-item">
-                <a href="images/fulls/Dashboard_Estrategico.png" class="image fit thumb"><img src="images/thumbs/Dashboard_Estrategico.png" alt="" /></a>
-                <h3>Modelos de Costeo y Control (BI)</h3>
-                <p>Desarrollamos modelos de costeo específicos para su industria.</p>
+            <article class="col-4 col-12-xsmall work-item">
+                <a href="images/fulls/Dashboard_Estrategico.png" class="image fit thumb"><img src="images/thumbs/Dashboard_Estrategico.png" alt="Modelos de Costeo y BI" /></a>
+                <h3>Modelos de Costeo & BI Directivo</h3>
+                <p>Modelado analítico a medida para conocer la rentabilidad y costo real por producto, cliente o contrato.</p>
             </article>
-            <article class="col-6 col-12-xsmall work-item">
-                <a href="images/fulls/Optimizacion_Procesos.png" class="image fit thumb"><img src="images/thumbs/Optimizacion_Procesos.png" alt="" /></a>
-                <h3>Optimización de Procesos (IA/ML)</h3>
-                <p>Modelos en R y Solver para optimizar procesos de planta y almacenes.</p>
-            </article>
-            <article class="col-6 col-12-xsmall work-item">
-                <a href="images/fulls/Analisis_Competitividad.png" class="image fit thumb"><img src="images/thumbs/Analisis_Competitividad.png" alt="" /></a>
-                <h3>Consultoría Estratégica</h3>
-                <p>Acompañamiento (Ingeniería + MBA) en la toma de decisiones.</p>
+            <article class="col-4 col-12-xsmall work-item">
+                <a href="images/fulls/Optimizacion_Procesos.png" class="image fit thumb"><img src="images/thumbs/Optimizacion_Procesos.png" alt="Optimización Operativa" /></a>
+                <h3>Optimización Operativa & Procesos</h3>
+                <p>Modelos cuantitativos e inteligencia de datos aplicados para destrabar cuellos de botella y reducir sobrecostos.</p>
             </article>
         </div>
+
+        <ul class="actions" style="justify-content: center; display: flex; width: 100%; margin: 1.5em 0 2.5em 0;">
+            <li><a href="quienes-somos.html" class="button">Conocer al Equipo</a></li>
+        </ul>
     </section>
 
     <section id="three">
-        <h2>Contacto</h2>
-        <p>Deje de navegar a ciegas o por intuición. Descubra cuánto dinero está perdiendo su operación hoy.</p>
+        <h2>Iniciemos una Conversación</h2>
+        <p>Deje de gestionar por intuición o con reportes que llegan tarde. Evaluemos sin costo preliminar el potencial de recupero en su operación.</p>
         
         <div class="row">
-
             <div class="col-6 col-12-small">
                 <h3 style="color: #787878; margin-bottom: 0.5em;">Marcelo J. Lamarque</h3>
+                <p style="font-size: 0.85em; margin-bottom: 1em; color: #888;">Eje Operaciones, Procesos & Infraestructura de Datos</p>
                 <ul class="labeled-icons">
                     <li>
                         <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
@@ -99,22 +154,18 @@ title: "Inicio"
                     </li>
                     <li>
                         <h3 class="icon solid fa-mobile-alt"><span class="label">WhatsApp</span></h3>
-                        <a href="https://wa.me/5493813301435">Agendar Diagnóstico Inicial</a>
+                        <a href="[https://wa.me/5493813301435](https://wa.me/5493813301435)" target="_blank">+54 9 381 330 1435</a>
                     </li>
                     <li>
                         <h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
-                        <a href="https://www.linkedin.com/in/mlamarque/">Perfil de LinkedIn</a>
-                    </li>
-                    <li>
-                        <h3 class="icon solid fa-map-marker-alt"><span class="label">Ubicación</span></h3>
-                        Yerba Buena, Tucumán<br />
-                        Argentina
+                        <a href="[https://www.linkedin.com/in/mlamarque/](https://www.linkedin.com/in/mlamarque/)" target="_blank">Perfil de LinkedIn</a>
                     </li>
                 </ul>
             </div>
 
             <div class="col-6 col-12-small">
                 <h3 style="color: #787878; margin-bottom: 0.5em;">Bruno Macchi</h3>
+                <p style="font-size: 0.85em; margin-bottom: 1em; color: #888;">Eje Comercial, Contractual & Pricing Estratégico</p>
                 <ul class="labeled-icons">
                     <li>
                         <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
@@ -122,22 +173,23 @@ title: "Inicio"
                     </li>
                     <li>
                         <h3 class="icon solid fa-mobile-alt"><span class="label">WhatsApp</span></h3>
-                        <a href="https://wa.me/5493816043798">+54 9 381 604 3798</a>
+                        <a href="[https://wa.me/5493816043798](https://wa.me/5493816043798)" target="_blank">+54 9 381 604 3798</a>
                     </li>
                     <li>
                         <h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
-                        <a href="https://www.linkedin.com/in/macchib/">Perfil de LinkedIn</a>
+                        <a href="[https://www.linkedin.com/in/macchib/](https://www.linkedin.com/in/macchib/)" target="_blank">Perfil de LinkedIn</a>
                     </li>
                 </ul>
             </div>
-
         </div> 
     </section>
-</div> <footer id="footer">
+</div>
+
+<footer id="footer">
     <div class="inner">
         <ul class="copyright">
             <li>&copy; Growise Consultora. Todos los derechos reservados.</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>Design: <a href="[http://html5up.net](http://html5up.net)">HTML5 UP</a></li>
         </ul>
     </div>
 </footer>

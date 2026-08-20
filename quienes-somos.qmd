@@ -4,12 +4,60 @@ title: "Quiénes Somos"
 
 ```{=html}
 <style>
-/* FUERZA A LA PÁGINA A OCUPAR TODO EL ANCHO Y RESPETA EL DISEÑO ORIGINAL */
-#quarto-content { 
+/* 1. ELIMINAR EL HEADER AUTOMÁTICO OCULTO DE QUARTO */
+#title-block-header,
+.quarto-title-block,
+.quarto-title-banner,
+header.quarto-title-block {
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 0 !important;
+}
+
+/* 2. RESETEAR CONTENEDORES INTERMEDIOS DE QUARTO / BOOTSTRAP */
+#quarto-content,
+#quarto-content > *,
+#quarto-document-content,
+.quarto-container,
+.page-columns,
+.content,
+main.content { 
     display: block !important; 
     max-width: none !important; 
-    margin: 0 !important; 
-    padding: 0 !important;
+    margin-top: 0 !important; 
+    padding-top: 0 !important;
+    border-top: none !important;
+}
+
+/* 3. ESPACIADO CALIBRADO DEL CONTENEDOR PRINCIPAL (#main) */
+#main {
+    padding-top: 3.5rem !important;
+    margin-top: 0 !important;
+}
+
+/* 4. ANULAR PADDING Y BORDES EN SECCIONES */
+#main > section,
+#main > section#quienes-somos,
+#main > section:first-of-type,
+#quienes-somos {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    border-top: none !important;
+}
+
+#main header.major,
+#main section#quienes-somos header.major,
+header.major {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 1.5em !important;
+}
+
+#main header.major h2,
+header.major h2 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 </style>
 
@@ -17,12 +65,12 @@ title: "Quiénes Somos"
     <div class="inner">
         <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="Logo Growise" /></a>
         <h1><strong>Growise Consultora</strong><br />
-                    Inteligencia de Negocios<br />
-                    para Agroindustria y Warehousing.</h1>
+            Estrategia de Negocios &<br />
+            Rentabilidad Operativa.</h1>
         
         <ul class="icons" style="margin-top: 20px;">
-            <li><a href="https://www.linkedin.com/company/growiseconsultora/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-            <li><a href="https://www.instagram.com/growise.company/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="https://www.linkedin.com/company/growiseconsultora/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://www.instagram.com/growise.company/" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
             <li><a href="mailto:mlamarque@growise.com.ar" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
         </ul>
     </div>
@@ -34,60 +82,126 @@ title: "Quiénes Somos"
             <h2>Nuestro ADN: Del Barro a la Estrategia</h2>
         </header>
 
-        <p style="font-size: 1.1em; color: #555;">
-            Growise se fundó sobre una premisa: <strong>la teoría del MBA no sirve de nada sin la experiencia de la "trinchera".</strong>
+        <p style="font-size: 1.15em; color: #444; line-height: 1.5;">
+            Growise nació a partir de una certeza operativa: <strong>la teoría del MBA no genera valor real si no comprende la fricción cotidiana de la trinchera.</strong>
         </p>
         <p>
-            Nuestro origen se remonta a la gestión de empresas familiares en crisis y a la operación de grandes plantas industriales. Entendemos la presión de la caja, la soledad del dueño y la urgencia de los resultados porque lo vivimos "del otro lado del mostrador".
+            Nuestro recorrido combina la gestión de operaciones industriales de gran escala con el rigor contractual del sector corporativo. Entendemos la presión sobre la caja, la soledad del director al tomar decisiones críticas y la urgencia de ver resultados medibles porque gestionamos empresas reales del lado del operador y del directorio.
         </p>
         <p>
-            Hoy, somos el puente que faltaba: combinamos la potencia de la <strong>Ciencia de Datos y la Ingeniería</strong> con la empatía y visión de negocio que solo da la experiencia real.
+            Somos el puente integrador: unimos la potencia de la <strong>ingeniería de procesos y la infraestructura de datos</strong> con la <strong>estrategia comercial y financiera</strong> de alta dirección.
         </p>
-        
-        <hr>
-        
+
+        <p style="font-weight: bold; margin-top: 1.5em; margin-bottom: 0.8em;">Esa visión híbrida se sostiene en cuatro planos de autoridad:</p>
         <div class="row">
-            <div class="col-6 col-12-small team-member">
-                <span class="image fit"><img src="images/marcelo-lamarque.jpg" alt="Marcelo J. Lamarque" /></span>
-                <h3>Marcelo J. Lamarque</h3>
-                <p style="font-size: 0.9em; font-style: italic; color: #787878;">
-                    Ingeniero Industrial | MBA | PhD Candidate
-                </p>
-                <p>
-                    30 años de experiencia liderando plantas y reingenierías (Ledesma, La Sevillanita). Marcelo aporta la <strong>visión híbrida</strong>: conoce el barro de la operación y el lenguaje del directorio. Su especialidad es aplicar Data Science (R, Machine Learning) para encontrar rentabilidad donde el ojo humano no la ve.
-                </p>
-                <p style="font-size: 0.9em;">
-                    <a href="mailto:mlamarque@growise.com.ar">mlamarque@growise.com.ar</a><br>
-                    <a href="https://wa.me/5493813301435">WhatsApp: +54 9 381 330 1435</a><br>
-                    <a href="https://www.linkedin.com/in/mlamarque/">LinkedIn</a>
-                </p>
+            <div class="col-3 col-6-small col-12-xsmall" style="text-align: center;">
+                <h4 style="margin-bottom: 0.3em; color: #2e5b88;">Operativa</h4>
+                <p style="font-size: 0.85em; color: #666;">Décadas liderando plantas y proyectos reales, del lado del operador.</p>
             </div>
-            
-            <div class="col-6 col-12-small team-member">
-                <span class="image fit"><img src="images/bruno-macchi.jpg" alt="Bruno Macchi" /></span>
-                <h3>Bruno Macchi</h3>
-                <p style="font-size: 0.9em; font-style: italic; color: #787878;">
-                    Licenciado en Administración de Empresas
-                </p>
-                <p>
-                    Bruno es el <strong>ancla de gestión y viabilidad</strong>. Con experiencia corporativa (ex-Pluspetrol), aporta el rigor administrativo y contractual necesario para que los proyectos escalen. Asegura que cada solución técnica sea financieramente sólida, legalmente segura y culturalmente aplicable.
-                </p>
-                <p style="font-size: 0.9em;">
-                    <a href="mailto:bmacchi@growise.com.ar">bmacchi@growise.com.ar</a><br>
-                    <a href="https://wa.me/5493816043798">WhatsApp: +54 9 381 604 3798</a><br>
-                    <a href="https://www.linkedin.com/in/macchib/">LinkedIn</a>
-                </p>
+            <div class="col-3 col-6-small col-12-xsmall" style="text-align: center;">
+                <h4 style="margin-bottom: 0.3em; color: #2e5b88;">Táctica</h4>
+                <p style="font-size: 0.85em; color: #666;">Implementación de sistemas y procesos que efectivamente funcionan en el terreno.</p>
+            </div>
+            <div class="col-3 col-6-small col-12-xsmall" style="text-align: center;">
+                <h4 style="margin-bottom: 0.3em; color: #2e5b88;">Estratégica</h4>
+                <p style="font-size: 0.85em; color: #666;">Estructuración de decisiones de alta dirección con impacto financiero medible.</p>
+            </div>
+            <div class="col-3 col-6-small col-12-xsmall" style="text-align: center;">
+                <h4 style="margin-bottom: 0.3em; color: #2e5b88;">Académica</h4>
+                <p style="font-size: 0.85em; color: #666;">Rigor conceptual apalancado en investigación aplicada en eficiencia técnico-económica — <a href="articulos.html">ver Artículos</a>.</p>
             </div>
         </div>
 
         <hr>
         
-        <p>
-            Con Growise, la misma consultora que analiza su modelo de costos es la que construye el dashboard de Power BI, programa el modelo de optimización en R y se asegura de que su equipo pueda gestionarlo.
-        </p>
+        <div class="row">
+            <!-- PERFIL MARCELO -->
+            <div class="col-6 col-12-small team-member">
+                <span class="image fit"><img src="images/marcelo-lamarque.jpg" alt="Marcelo J. Lamarque" /></span>
+                <h3>Marcelo J. Lamarque</h3>
+                <p style="font-size: 0.9em; font-style: italic; color: #787878; margin-bottom: 0.8em;">
+                    Ingeniero Industrial | MBA en Dirección Estratégica | Doctorando en Ing. Industrial
+                </p>
+                <p>
+                    Más de 30 años de experiencia liderando plantas de procesamiento continuo, calidad y redes logísticas multi-sitio. Marcelo aporta la <strong>visión híbrida</strong>: conoce el barro de la operación y el lenguaje del directorio. Acompaña a la dirección en el <strong>diseño y reformulación de su estrategia de negocio</strong>, conectándola con la realidad operativa y desarrollando infraestructura analítica a medida para transformar datos dispersos en rentabilidad concreta. Coautor de una innovación en cristalización azucarera reconocida internacionalmente, presentada en el Congreso de la Sociedad Australiana de Tecnólogos de la Caña de Azúcar (ASSCT), Australia, 1998.
+                </p>
+                <ul class="labeled-icons" style="list-style: none; padding-left: 0; margin-top: 1em;">
+                    <li><a href="mailto:mlamarque@growise.com.ar">mlamarque@growise.com.ar</a></li>
+                    <li><a href="https://wa.me/5493813301435" target="_blank">+54 9 381 330 1435</a></li>
+                    <li><a href="https://www.linkedin.com/in/mlamarque/" target="_blank">Perfil de LinkedIn</a></li>
+                </ul>
+            </div>
+            
+            <!-- PERFIL BRUNO -->
+            <div class="col-6 col-12-small team-member">
+                <span class="image fit"><img src="images/bruno-macchi.jpg" alt="Bruno Macchi" /></span>
+                <h3>Bruno Macchi</h3>
+                <p style="font-size: 0.9em; font-style: italic; color: #787878; margin-bottom: 0.8em;">
+                    Licenciado en Administración de Empresas | Especialista Contractual & PMO
+                </p>
+                <p>
+                    Trayectoria corporativa en la industria de Oil & Gas y gestión de contratos de servicios de alta complejidad por mas de 15 años. Bruno es el <strong>eje de rigor financiero y viabilidad estratégica</strong>. Su especialidad es el pricing estratégico, la auditoría integral de cláusulas contractuales y la detección de fugas de capital para blindar los márgenes del negocio.
+                </p>
+                <ul class="labeled-icons" style="list-style: none; padding-left: 0; margin-top: 5.5em;">
+                    <li><a href="mailto:bmacchi@growise.com.ar">bmacchi@growise.com.ar</a></li>
+                    <li><a href="[https://wa.me/5493816043798](https://wa.me/5493816043798)" target="_blank">+54 9 381 604 3798</a></li>
+                    <li><a href="[https://www.linkedin.com/in/macchib/](https://www.linkedin.com/in/macchib/)" target="_blank">Perfil de LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
 
-        <ul class="actions">
-            <li><a href="servicios.html" class="button">Ver Nuestros Servicios</a></li>
+        <hr>
+
+        <h3 style="margin-bottom: 0.5em;">Trayectoria: décadas resolviendo desde el terreno</h3>
+        <p style="font-size: 0.98em; color: #555; margin-bottom: 1.2em;">
+            La visión híbrida de Growise no es una promesa de marketing — es el resultado medible de haber liderado operaciones reales, del lado del operador y del directorio.
+        </p>
+        <div class="row">
+            <div class="col-6 col-12-small">
+                <h4 style="margin-bottom: 0.3em;">Ledesma S.A.A.I. — Fábrica de Azúcar</h4>
+                <p style="font-size: 0.92em; color: #555;">
+                    Liderazgo de la reconversión del área de Calidad y de múltiples proyectos de sistemas de gestión (tableros de control en tiempo real, gestión de quejas y reclamos, identificación de calidad). <strong>Reducción de costos operativos del área en 33%.</strong>
+                </p>
+            </div>
+            <div class="col-6 col-12-small">
+                <h4 style="margin-bottom: 0.3em;">Creación y Reingeniería</h4>
+                <p style="font-size: 0.92em; color: #555;">
+                    Liderazgo en la creación de dos empresas de producción industrial desde el diseño y montaje hasta la puesta en marcha, la gestión y la implementación de SAP con módulo de producción — una fraccionadora de azúcar totalmente automatizada de 100.000 ton/año, constituida junto a actores reconocidos de la industria nacional, y además, conversión de empresa familiar de jugos concentrados unipersonal a Sociedad Anónima y reingeniería integral: <strong>-30% costos fijos, pérdidas de fabricación de 10% a 2%, +23% eficiencia de producción, +15% ingresos netos</strong> e incorporación de 1.800 clientes activos.
+                </p>
+            </div>
+        </div>
+
+        <div style="background-color: #f8f9fa; padding: 1.6em 1.8em; margin: 1.8em 0 2.5em 0; border-radius: 4px; border: 1px solid #e2e8f0;">
+            <span style="display: inline-block; background-color: #e8f0fe; color: #2e5b88; font-weight: bold; font-size: 0.75em; padding: 2px 8px; border-radius: 3px; margin-bottom: 8px;">CASO (SCOPING)</span>
+            <h4 style="margin: 0 0 0.5em 0; color: #222;">Distribuidora mayorista de materiales de construcción</h4>
+            <p style="font-size: 0.92em; color: #555; margin-bottom: 0.6em;">
+                Empresa de +400 empleados con presencia multi-sucursal en el NOA. En la etapa de scoping identificamos, con estimaciones conservadoras, un potencial de recupero de hasta el <strong>40% en costos de distribución</strong> y del <strong>15% en costos de alquiler de depósitos</strong>, mediante el ordenamiento logístico y la renegociación de la estructura de almacenamiento.
+            </p>
+            <p style="font-size: 0.82em; color: #888; margin-bottom: 0;">
+                <em>Nota: cifras estimadas en fase de scoping, no corresponden a un diagnóstico implementado.</em>
+            </p>
+        </div>
+
+        <div style="background-color: #f8f9fa; padding: 1.6em 1.8em; margin: 0 0 2.5em 0; border-radius: 4px; border: 1px solid #e2e8f0;">
+            <span style="display: inline-block; background-color: #e2f5e8; color: #1e6b3a; font-weight: bold; font-size: 0.75em; padding: 2px 8px; border-radius: 3px; margin-bottom: 8px;">CASO (IMPLEMENTADO)</span>
+            <h4 style="margin: 0 0 0.5em 0; color: #222;">Distribuidora de bebidas en expansión</h4>
+            <p style="font-size: 0.92em; color: #555; margin-bottom: 0;">
+                Empresa con crecimiento acelerado (4 locales en menos de 2 años) cuyo depósito quedó chico para la operación. Rediseñamos el layout, los criterios de almacenamiento, el ruteo de picking y despacho, y aplicamos análisis ABC para la asignación de espacios. <strong>Resultado: triplicaron la capacidad de almacenamiento en la misma superficie.</strong>
+            </p>
+        </div>
+
+        <hr>
+
+        <div style="background-color: #f8f9fa; padding: 1.8em; border-left: 5px solid #2e5b88; margin: 1.5em 0 2.5em 0; border-radius: 4px;">
+            <h4 style="margin-top: 0; color: #222;">Consultoría Boutique: Involucramiento Directo de los Socios</h4>
+            <p style="font-size: 0.98em; color: #555; margin-bottom: 0;">
+                En Growise no delegamos su proyecto en equipos junior ni entregamos tableros estándar desatendidos. Los mismos socios que diagnostican sus contratos y auditan su operación son quienes desarrollan los modelos y se sientan con usted a tomar las decisiones estratégicas.
+            </p>
+        </div>
+
+        <ul class="actions" style="justify-content: center; display: flex; width: 100%; margin: 1.5em 0 2.5em 0;">
+            <li><a href="servicios.html" class="button primary">Ver Líneas de Servicio</a></li>
+            <li><a href="index.html#three" class="button">Iniciar Conversación</a></li>
         </ul>
     </section>
 </div>
