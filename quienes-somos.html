@@ -198,12 +198,21 @@ header.quarto-title-block {
 .quarto-container,
 .page-columns,
 .content,
-main.content { 
-    display: block !important; 
-    max-width: none !important; 
-    margin-top: 0 !important; 
+main.content {
+    display: block !important;
+    max-width: none !important;
+    margin-top: 0 !important;
     padding-top: 0 !important;
     border-top: none !important;
+}
+
+/* FIX: "#quarto-content > *" de arriba fuerza display:block en TODOS los hijos directos,
+   incluyendo el <script id="quarto-html-after-body"> que Quarto inyecta ahí mismo.
+   Eso anula el display:none por defecto de <script> y su código queda visible como texto
+   al final de la página. Lo revertimos explícitamente. */
+#quarto-content > script,
+#quarto-content > style {
+    display: none !important;
 }
 
 /* 3. ESPACIADO CALIBRADO DEL CONTENEDOR PRINCIPAL (#main) */
