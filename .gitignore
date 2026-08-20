@@ -22,3 +22,5 @@
 # !articulos/**/*_files/  # Si alguna vez ves esto con un '!', es una excepción.
 .Rproj.user
 .Rproj.user
+.Rproj.user
+.Rproj.user
