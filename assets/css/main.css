@@ -2164,6 +2164,9 @@ input[type=button]:disabled,
   width: 180px;
   max-width: 60%;
 }
+#header .image.logo:before {
+  display: none;
+}
 #header .image.logo img {
   width: 100%;
   height: auto;
