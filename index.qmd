@@ -152,7 +152,7 @@ header.major h2 {
 
     <section id="three">
         <h2>Iniciemos una Conversación</h2>
-        <p>Deje de gestionar por intuición o con reportes que llegan tarde. Evaluemos sin costo preliminar el potencial de recupero en su operación.</p>
+        <p>Convirtamos su información dispersa en decisiones rápidas y confiables. Evaluemos sin costo preliminar el potencial de recupero en su operación.</p>
         
         <div class="row">
             <div class="col-6 col-12-small">
