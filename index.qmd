@@ -72,7 +72,7 @@ header.major h2 {
 
 <header id="header">
     <div class="inner">
-        <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="Logo Growise" /></a>
+        <a href="index.html" class="image logo"><img src="images/avatar.png" alt="Logo Growise" /></a>
         <h1><strong>Growise Consultora</strong><br />
             Estrategia de Negocios &<br />
             Rentabilidad Operativa.</h1>

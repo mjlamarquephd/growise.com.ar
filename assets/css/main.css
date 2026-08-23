@@ -2159,6 +2159,14 @@ input[type=button]:disabled,
   margin: 0 0 1em 0;
   width: 6.25em;
 }
+#header .image.logo {
+  margin: 0 0 1em 0;
+  width: 12.5em;
+}
+#header .image.logo img {
+  width: 100%;
+  height: auto;
+}
 
 /* Footer */
 #footer .icons {
