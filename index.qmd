@@ -102,7 +102,7 @@ header.major h2 {
         </div>
 
         <p>
-            <strong>La Diferencia Growise:</strong> Unimos la ingeniería de procesos y la infraestructura de datos avanzada con la visión contractual y financiera de alta dirección. <em>Usted no recibe gráficos para analizar; recibe conclusiones listas para actuar.</em>
+            <strong>La Diferencia Growise:</strong> Pensamos y hacemos juntos, de punta a punta: diseñamos la estrategia y la táctica, y las implementamos hasta ver el resultado.
         </p>
     </section>
 
