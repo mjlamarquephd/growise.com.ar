@@ -114,7 +114,7 @@ header.major h2 {
             Auditamos el 100% de sus flujos operativos y contractuales — no un muestreo — para frenar fugas de margen invisibles y transformar datos complejos en decisiones ejecutivas listas para actuar.
         </p>
         <p style="font-size: 1.05em; color: #444; line-height: 1.5;">
-            Hoy concentramos nuestro motor de auditoría (Freight & Fuel Audit) en <strong>Transporte de Cargas Generales</strong>: flota, combustible, peajes y estructura de costos. La misma metodología aplica a cualquier operación con alto volumen transaccional — si su negocio no es transporte pero sospecha fugas de rentabilidad, conversemos.
+            Nuestra metodología de auditoría (Freight & Fuel Audit) nació en operaciones de alto volumen transaccional — flota, combustible, peajes y estructura de costos — y hoy la aplicamos a cualquier negocio con esas características. Si sospecha fugas de rentabilidad en su operación, conversemos.
         </p>
 
         <ul class="actions" style="justify-content: center; display: flex; width: 100%; margin: 2em 0 2.5em 0;">
