@@ -1123,6 +1123,10 @@ $size-header-pad: 4em;
 			width: 180px;
 			max-width: 60%;
 
+			&:before {
+				display: none;
+			}
+
 			img {
 				width: 100%;
 				height: auto;
