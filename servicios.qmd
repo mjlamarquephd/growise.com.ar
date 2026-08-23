@@ -90,7 +90,7 @@ header.major h2 {
         <header class="major">
             <h2>Nuestras Líneas de Servicio</h2>
             <p style="font-size: 1.15em; color: #444; line-height: 1.5; margin-top: -0.5em;">
-                Intervenciones modulares de alto impacto diseñadas para proteger la rentabilidad y tomar decisiones con certeza operativa. Hoy concentramos nuestro Recovery Audit en Transporte de Cargas Generales (Freight & Fuel Audit); la misma metodología y las capacidades de costeo y optimización operativa aplican a cualquier operación con alto volumen transaccional.
+                Intervenciones modulares de alto impacto diseñadas para proteger la rentabilidad y tomar decisiones con certeza operativa. Nuestro Recovery Audit nació metodológicamente en Transporte de Cargas Generales (Freight & Fuel Audit); desarrollamos la misma metodología y capacidades de costeo y optimización operativa para cualquier operación con alto volumen transaccional.
             </p>
         </header>
 
@@ -127,7 +127,7 @@ header.major h2 {
             </div>
         </div>
         
-        <p style="font-size: 0.85em; color: #2e5b88; font-weight: bold; margin-bottom: 0.5em;">Foco de entrada: Transporte de Cargas Generales (Freight & Fuel Audit)</p>
+        <p style="font-size: 0.85em; color: #2e5b88; font-weight: bold; margin-bottom: 0.5em;">Origen metodológico: Transporte de Cargas Generales (Freight & Fuel Audit)</p>
 
         <!-- SERVICIO 1 -->
         <h3>1. Recovery Audit: Auditoría de Fugas Contractuales & Pricing Estratégico</h3>
