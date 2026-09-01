@@ -72,7 +72,7 @@ header.major h2 {
 
 <header id="header">
     <div class="inner">
-        <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="Logo Growise" /></a>
+        <a href="index.html" class="image logo"><img src="images/avatar.png" alt="Logo Growise" /></a>
         <h1><strong>Growise Consultora</strong><br />
             Estrategia de Negocios &<br />
             Rentabilidad Operativa.</h1>
@@ -102,7 +102,7 @@ header.major h2 {
         </div>
 
         <p>
-            <strong>La Diferencia Growise:</strong> Unimos la ingeniería de procesos y la infraestructura de datos avanzada con la visión contractual y financiera de alta dirección. <em>Usted no recibe gráficos para analizar; recibe conclusiones listas para actuar.</em>
+            <strong>La Diferencia Growise:</strong> Pensamos y hacemos juntos, de punta a punta: diseñamos la estrategia y la táctica, y las implementamos hasta ver el resultado.
         </p>
     </section>
 
@@ -114,7 +114,7 @@ header.major h2 {
             Auditamos el 100% de sus flujos operativos y contractuales — no un muestreo — para frenar fugas de margen invisibles y transformar datos complejos en decisiones ejecutivas listas para actuar.
         </p>
         <p style="font-size: 1.05em; color: #444; line-height: 1.5;">
-            Hoy concentramos nuestro motor de auditoría (Freight & Fuel Audit) en <strong>Transporte de Cargas Generales</strong>: flota, combustible, peajes y estructura de costos. La misma metodología aplica a cualquier operación con alto volumen transaccional — si su negocio no es transporte pero sospecha fugas de rentabilidad, conversemos.
+            Nuestra metodología de auditoría (Freight & Fuel Audit) nació en operaciones de alto volumen transaccional — flota, combustible, peajes y estructura de costos — y hoy la aplicamos a cualquier negocio con esas características. Si sospecha fugas de rentabilidad en su operación, conversemos.
         </p>
 
         <ul class="actions" style="justify-content: center; display: flex; width: 100%; margin: 2em 0 2.5em 0;">
@@ -135,11 +135,13 @@ header.major h2 {
                 <a href="images/fulls/Dashboard_Estrategico.png" class="image fit thumb"><img src="images/thumbs/Dashboard_Estrategico.png" alt="Modelos de Costeo y BI" /></a>
                 <h3>Modelos de Costeo & BI Directivo</h3>
                 <p>Modelado analítico a medida para conocer la rentabilidad y costo real por producto, cliente o contrato.</p>
+                <p><a href="servicios.html#costeo-bi">Ver detalle →</a></p>
             </article>
             <article class="col-4 col-12-xsmall work-item">
                 <a href="images/fulls/Optimizacion_Procesos.png" class="image fit thumb"><img src="images/thumbs/Optimizacion_Procesos.png" alt="Optimización Operativa" /></a>
                 <h3>Optimización Operativa & Procesos</h3>
                 <p>Modelos cuantitativos e inteligencia de datos aplicados para destrabar cuellos de botella y reducir sobrecostos.</p>
+                <p><a href="servicios.html#optimizacion-procesos">Ver detalle →</a></p>
             </article>
         </div>
 
@@ -150,7 +152,7 @@ header.major h2 {
 
     <section id="three">
         <h2>Iniciemos una Conversación</h2>
-        <p>Deje de gestionar por intuición o con reportes que llegan tarde. Evaluemos sin costo preliminar el potencial de recupero en su operación.</p>
+        <p>Convirtamos su información dispersa en decisiones rápidas y confiables. Evaluemos sin costo preliminar el potencial de recupero en su operación.</p>
         
         <div class="row">
             <div class="col-6 col-12-small">
@@ -163,11 +165,11 @@ header.major h2 {
                     </li>
                     <li>
                         <h3 class="icon solid fa-mobile-alt"><span class="label">WhatsApp</span></h3>
-                        <a href="[https://wa.me/5493813301435](https://wa.me/5493813301435)" target="_blank">+54 9 381 330 1435</a>
+                        <a href="https://wa.me/5493813301435" target="_blank">+54 9 381 330 1435</a>
                     </li>
                     <li>
                         <h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
-                        <a href="[https://www.linkedin.com/in/mlamarque/](https://www.linkedin.com/in/mlamarque/)" target="_blank">Perfil de LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/mlamarque/" target="_blank">Perfil de LinkedIn</a>
                     </li>
                 </ul>
             </div>
@@ -182,11 +184,11 @@ header.major h2 {
                     </li>
                     <li>
                         <h3 class="icon solid fa-mobile-alt"><span class="label">WhatsApp</span></h3>
-                        <a href="[https://wa.me/5493816043798](https://wa.me/5493816043798)" target="_blank">+54 9 381 604 3798</a>
+                        <a href="https://wa.me/5493816043798" target="_blank">+54 9 381 604 3798</a>
                     </li>
                     <li>
                         <h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
-                        <a href="[https://www.linkedin.com/in/macchib/](https://www.linkedin.com/in/macchib/)" target="_blank">Perfil de LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/macchib/" target="_blank">Perfil de LinkedIn</a>
                     </li>
                 </ul>
             </div>
@@ -198,7 +200,7 @@ header.major h2 {
     <div class="inner">
         <ul class="copyright">
             <li>&copy; Growise Consultora. Todos los derechos reservados.</li>
-            <li>Design: <a href="[http://html5up.net](http://html5up.net)">HTML5 UP</a></li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
     </div>
 </footer>

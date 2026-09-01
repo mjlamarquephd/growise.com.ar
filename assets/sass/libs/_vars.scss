@@ -18,28 +18,29 @@
 
 // Font.
 	$font: (
-		family:				('Source Sans Pro', Helvetica, sans-serif),
+		family:				('Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif),
+		family-heading:		('Didot LT Pro Roman', 'Playfair Display', Georgia, serif),
 		family-fixed:		('Courier New', monospace),
 		weight:				400,
-		weight-bold:		400
+		weight-bold:		600
 	);
 
-// Palette.
+// Palette (Growise brand).
 	$palette: (
-		bg:					#fff,
-		fg:					#a2a2a2,
-		fg-bold:			#787878,
-		fg-light:			#b2b2b2,
-		border:				#efefef,
-		border-bg:			#f7f7f7,
-		border2:			#dfdfdf,
-		border2-bg:			#e7e7e7,
+		bg:					#FFFFFF,
+		fg:					#64748B,
+		fg-bold:			#111827,
+		fg-light:			#94A3B8,
+		border:				#E2E8F0,
+		border-bg:			#F8FAFC,
+		border2:			#CBD5E1,
+		border2-bg:			#F1F5F9,
 
 		accent1: (
-			bg:				#49bf9d,
-			fg:				mix(#49bf9d, #ffffff, 25%),
-			fg-bold:		#ffffff,
-			fg-light:		mix(#49bf9d, #ffffff, 40%),
+			bg:				#56C8F5,
+			fg:				mix(#56C8F5, #ffffff, 25%),
+			fg-bold:		#111827,
+			fg-light:		mix(#56C8F5, #ffffff, 40%),
 			border:			rgba(255,255,255,0.25),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(255,255,255,0.5),
@@ -47,7 +48,7 @@
 		),
 
 		accent2: (
-			bg:				#1f1815,
+			bg:				#111827,
 			fg:				rgba(255,255,255,0.5),
 			fg-bold:		#ffffff,
 			fg-light:		rgba(255,255,255,0.4),

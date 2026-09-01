@@ -72,7 +72,7 @@ header.major h2 {
 
 <header id="header">
     <div class="inner">
-        <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="Logo Growise" /></a>
+        <a href="index.html" class="image logo"><img src="images/avatar.png" alt="Logo Growise" /></a>
         <h1><strong>Growise Consultora</strong><br />
             Estrategia de Negocios &<br />
             Rentabilidad Operativa.</h1>
@@ -90,7 +90,7 @@ header.major h2 {
         <header class="major">
             <h2>Nuestras Líneas de Servicio</h2>
             <p style="font-size: 1.15em; color: #444; line-height: 1.5; margin-top: -0.5em;">
-                Intervenciones modulares de alto impacto diseñadas para proteger la rentabilidad y tomar decisiones con certeza operativa. Hoy concentramos nuestro Recovery Audit en Transporte de Cargas Generales (Freight & Fuel Audit); la misma metodología y las capacidades de costeo y optimización operativa aplican a cualquier operación con alto volumen transaccional.
+                Intervenciones modulares de alto impacto diseñadas para proteger la rentabilidad y tomar decisiones con certeza operativa. Nuestro Recovery Audit nació metodológicamente en Transporte de Cargas Generales (Freight & Fuel Audit); desarrollamos la misma metodología y capacidades de costeo y optimización operativa para cualquier operación con alto volumen transaccional.
             </p>
         </header>
 
@@ -127,7 +127,7 @@ header.major h2 {
             </div>
         </div>
         
-        <p style="font-size: 0.85em; color: #2e5b88; font-weight: bold; margin-bottom: 0.5em;">Foco de entrada: Transporte de Cargas Generales (Freight & Fuel Audit)</p>
+        <p style="font-size: 0.85em; color: #2e5b88; font-weight: bold; margin-bottom: 0.5em;">Origen metodológico: Transporte de Cargas Generales (Freight & Fuel Audit)</p>
 
         <!-- SERVICIO 1 -->
         <h3>1. Recovery Audit: Auditoría de Fugas Contractuales & Pricing Estratégico</h3>
@@ -143,7 +143,7 @@ header.major h2 {
         <p style="font-size: 0.85em; color: #787878; font-weight: bold; margin-bottom: 0.5em;">Capacidad de consultoría de transformación</p>
 
         <!-- SERVICIO 2 -->
-        <h3>2. Modelos de Costeo & BI Directivo (Conclusiones, no Gráficos)</h3>
+        <h3 id="costeo-bi">2. Modelos de Costeo & BI Directivo (Conclusiones, no Gráficos)</h3>
         <p>
             <strong>El Problema:</strong> Los reportes tradicionales le dan datos dispersos y le exigen al director o dueño hacer de analista. Mientras tanto, los costeos promedio ocultan qué cliente, contrato, producto o línea de producción está absorbiendo los márgenes de la empresa.
         </p>
@@ -154,7 +154,7 @@ header.major h2 {
         <hr>
 
         <!-- SERVICIO 3 -->
-        <h3>3. Optimización Operativa & Rediseño de Procesos</h3>
+        <h3 id="optimizacion-procesos">3. Optimización Operativa & Rediseño de Procesos</h3>
         <p>
             <strong>El Problema:</strong> Cuellos de botella en plantas de procesamiento, ineficiencias de layout y mermas en depósitos de distribución o sobrecostos de mantenimiento que se vuelven "invisibles" por la rutina diaria.
         </p>
@@ -181,7 +181,7 @@ header.major h2 {
     <div class="inner">
         <ul class="copyright">
             <li>&copy; Growise Consultora. Todos los derechos reservados.</li>
-            <li>Design: <a href="[http://html5up.net](http://html5up.net)">HTML5 UP</a></li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
     </div>
 </footer>
