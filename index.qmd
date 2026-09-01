@@ -1,5 +1,6 @@
 ---
 title: "Inicio"
+image: assets/img/banner-linkedin-growise.png
 ---
 
 ```{=html}

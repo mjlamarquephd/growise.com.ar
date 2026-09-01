@@ -4,6 +4,9 @@ project:
 
 website:
   title: "Growise"
+  site-url: "https://growise.com.ar"
+  open-graph:
+    image: "assets/img/banner-linkedin-growise.png"
   navbar:
     left:
       - href: index.qmd
