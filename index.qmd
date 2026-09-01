@@ -1,7 +1,8 @@
----
-title: "Inicio"
-image: assets/img/banner-linkedin-growise.png
----
+   ---
+   title: "Inicio"
+   description: "Growise transforma datos complejos en decisiones de negocio rentables. Auditoría de fugas de margen (Recovery Audit) para operaciones y cadena de suministro en Chile, Perú y Colombia."
+   image: assets/img/social-preview.png
+   ---
 
 ```{=html}
 <style>
