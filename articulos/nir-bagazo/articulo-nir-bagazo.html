@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>articulo-nir-bagazo – Growise</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<!-- Google tag (gtag.js) -->
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-E46S4T4S3Z"></script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+
+
+  gtag('config', 'G-E46S4T4S3Z');
+
+</script>
+<style>
+/* RESET BÁSICO GLOBAL */
+body { padding: 0 !important; margin: 0 !important; }
+.quarto-container { max-width: none !important; padding: 0 !important; }
+main { margin-top: 0 !important; padding: 0 !important; }
+
+/* LEGIBILIDAD (Para los artículos) */
+p, li, section, .quarto-title-meta { color: #333 !important; font-size: 1.05em; line-height: 1.6; }
+h1, h2, h3, h4 { color: #2c3e50 !important; font-weight: bold; }
+
+/* GALERÍA DE ARTÍCULOS Y METADATOS */
+header.quarto-title-block { padding-top: 3em !important; margin-bottom: 2em !important; }
+.quarto-listing-category-title { font-weight: bold; color: #787878; margin-bottom: 1em; }
+.quarto-title-meta { border-top: 1px solid #eee; margin-top: 2em; padding-top: 1em; }
+.quarto-title-meta-heading { color: #888; text-transform: uppercase; font-size: 0.75em; letter-spacing: 1px; }
+.quarto-title-meta-contents { color: #444; }
+.cell-output-display img { max-width: 100% !important; height: auto !important; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 25px 0; }
+</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../assets/css/main.css">
+<meta property="og:title" content="Growise">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://growise.com.ar/articulos/nir-bagazo/assets/img/social-preview.png">
+<meta property="og:site_name" content="Growise">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Growise</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../servicios.html"> 
+<span class="menu-text">Servicios</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../quienes-somos.html"> 
+<span class="menu-text">Quiénes Somos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../articulos.html"> 
+<span class="menu-text">Artículos</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#cuando-el-cuello-de-botella-no-es-el-proceso-es-el-tiempo-del-dato" id="toc-cuando-el-cuello-de-botella-no-es-el-proceso-es-el-tiempo-del-dato" class="nav-link active" data-scroll-target="#cuando-el-cuello-de-botella-no-es-el-proceso-es-el-tiempo-del-dato">Cuando el cuello de botella no es el proceso, es el tiempo del dato</a>
+  <ul class="collapse">
+  <li><a href="#composición-rangos-y-la-singularidad-del-complejo-integrado" id="toc-composición-rangos-y-la-singularidad-del-complejo-integrado" class="nav-link" data-scroll-target="#composición-rangos-y-la-singularidad-del-complejo-integrado">Composición, rangos y la singularidad del complejo integrado</a></li>
+  <li><a href="#balances-termodinámicos-y-magnitud-de-pérdidas" id="toc-balances-termodinámicos-y-magnitud-de-pérdidas" class="nav-link" data-scroll-target="#balances-termodinámicos-y-magnitud-de-pérdidas">Balances termodinámicos y magnitud de pérdidas</a>
+  <ul class="collapse">
+  <li><a href="#degradación-del-poder-calorífico-inferior" id="toc-degradación-del-poder-calorífico-inferior" class="nav-link" data-scroll-target="#degradación-del-poder-calorífico-inferior">1. Degradación del poder calorífico inferior</a></li>
+  <li><a href="#el-balance-acoplado-imbibición-evaporación" id="toc-el-balance-acoplado-imbibición-evaporación" class="nav-link" data-scroll-target="#el-balance-acoplado-imbibición-evaporación">2. El balance acoplado imbibición-evaporación</a></li>
+  <li><a href="#impacto-en-digestores-continuos-de-celulosa" id="toc-impacto-en-digestores-continuos-de-celulosa" class="nav-link" data-scroll-target="#impacto-en-digestores-continuos-de-celulosa">3. Impacto en digestores continuos de celulosa</a></li>
+  </ul></li>
+  <li><a href="#método-tradicional-y-la-brecha-operativa-del-dato-diferido" id="toc-método-tradicional-y-la-brecha-operativa-del-dato-diferido" class="nav-link" data-scroll-target="#método-tradicional-y-la-brecha-operativa-del-dato-diferido">Método tradicional y la brecha operativa del dato diferido</a></li>
+  <li><a href="#calibración-quimiométrica-nir-online-y-control-en-tiempo-real" id="toc-calibración-quimiométrica-nir-online-y-control-en-tiempo-real" class="nav-link" data-scroll-target="#calibración-quimiométrica-nir-online-y-control-en-tiempo-real">Calibración quimiométrica NIR online y control en tiempo real</a>
+  <ul class="collapse">
+  <li><a href="#tratamiento-quimiométrico-multivariante-pls" id="toc-tratamiento-quimiométrico-multivariante-pls" class="nav-link" data-scroll-target="#tratamiento-quimiométrico-multivariante-pls">1. Tratamiento quimiométrico multivariante (PLS)</a></li>
+  <li><a href="#implementación-operativa-y-lazo-cerrado" id="toc-implementación-operativa-y-lazo-cerrado" class="nav-link" data-scroll-target="#implementación-operativa-y-lazo-cerrado">2. Implementación operativa y lazo cerrado</a></li>
+  </ul></li>
+  <li><a href="#cuantificación-del-impacto-físico-operativo" id="toc-cuantificación-del-impacto-físico-operativo" class="nav-link" data-scroll-target="#cuantificación-del-impacto-físico-operativo">Cuantificación del impacto físico-operativo</a></li>
+  <li><a href="#modelo-de-optimización-no-lineal-nlp-para-implementación-en-r-excel-solver" id="toc-modelo-de-optimización-no-lineal-nlp-para-implementación-en-r-excel-solver" class="nav-link" data-scroll-target="#modelo-de-optimización-no-lineal-nlp-para-implementación-en-r-excel-solver">Modelo de optimización no lineal (NLP) para implementación en R / Excel Solver</a>
+  <ul class="collapse">
+  <li><a href="#implementación-computacional-en-vba-excel-solver" id="toc-implementación-computacional-en-vba-excel-solver" class="nav-link" data-scroll-target="#implementación-computacional-en-vba-excel-solver">Implementación computacional en VBA / Excel Solver</a></li>
+  </ul></li>
+  <li><a href="#del-barro-a-la-estrategia" id="toc-del-barro-a-la-estrategia" class="nav-link" data-scroll-target="#del-barro-a-la-estrategia">Del Barro a la Estrategia</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="cuando-el-cuello-de-botella-no-es-el-proceso-es-el-tiempo-del-dato" class="level1">
+<h1>Cuando el cuello de botella no es el proceso, es el tiempo del dato</h1>
+<p>En la gestión ejecutiva de un complejo agroindustrial integrado, la intuición y los reportes diferidos son los mayores destructores silenciosos de EBITDA.</p>
+<p>El bagazo de caña de azúcar, en una estructura industrial con fábrica de celulosa y papel integrada, cumple una doble función que rara vez se analiza en conjunto: es simultáneamente materia prima fibrosa de alto valor y combustible de biomasa para las calderas de alta presión que energizan todo el complejo. Su porcentaje de humedad (H) y su contenido de sacarosa residual (Pol) constituyen el vector de estado termodinámico y económico que gobierna el rendimiento global del negocio.</p>
+<section id="composición-rangos-y-la-singularidad-del-complejo-integrado" class="level2">
+<h2 class="anchored" data-anchor-id="composición-rangos-y-la-singularidad-del-complejo-integrado">Composición, rangos y la singularidad del complejo integrado</h2>
+<p>A la salida del último molino del tándem de molienda, el flujo másico de bagazo responde a la siguiente matriz composicional en base húmeda:</p>
+<ul>
+<li><strong>Humedad (H):</strong> 49,0% a 52,5% (con desviaciones críticas superiores al 54,0% ante desbalances en la imbibición o desgaste del rayado de las masas).</li>
+<li><strong>Fibra insoluble (F):</strong> 44,0% a 47,0% (fracción rica en α-celulosa, hemicelulosa y lignina).</li>
+<li><strong>Sacarosa residual (Pol):</strong> 1,60% a 2,30% (azúcar no extraído disuelto en el agua remanente).</li>
+<li><strong>Cenizas e impurezas minerales (C):</strong> 1,2% a 2,5% (sílice y suelo retenidos en la cosecha).</li>
+</ul>
+<pre><code>                     ┌───────────────────────────────────────────────┐
+                     │   MOLIENDA: del orden de 900 TCH / 21.000 TCD  │
+                     │   ~960.000 ton/zafra de bagazo húmedo          │
+                     └──────────────────────┬──────────────────────-─┘
+                                            │
+                              [ DESMEDULADO MECÁNICO ]
+                                            │
+            ┌───────────────────────────────┴───────────────────────────────┐
+            ▼                                                               ▼
+┌────────────────────────┐                                      ┌────────────────────────┐
+│      FIBRA LARGA        │                                      │   MÉDULA + EXCEDENTE   │
+│      (~45% - 50%)       │                                      │      (~50% - 55%)      │
+└───────────┬────────────┘                                      └───────────┬────────────┘
+            │                                                               │
+            ▼                                                               ▼
+┌────────────────────────┐                                      ┌────────────────────────┐
+│ FÁBRICA DE PAPEL         │                                      │ CALDERAS DE ALTA        │
+│ Digestor Pandia          │                                      │ PRESIÓN (45-65 bar)     │
+│ ~130.000 ton/año papel   │                                      │ Cogeneración vapor/MW   │
+└────────────────────────┘                                      └────────────────────────┘</code></pre>
+<p>En un ingenio estándar con destilería anexa, el bagazo es tratado como un subproducto energético: se quema en su totalidad para lograr autosuficiencia térmica o para inyectar excedentes de energía a la red eléctrica.</p>
+<p>En un complejo agroindustrial integrado de esta escala, que procesa del orden de 3.300.000 a 3.400.000 toneladas de caña por zafra (~21.000 TCD, a un ritmo continuo de ~875-900 TCH), el bagazo es un insumo estratégico escaso. El desmedulado separa la fibra larga del parénquima o médula. La fibra alimenta los digestores químicos continuos para producir entre 120.000 y 130.000 toneladas/año de papel encapado y no encapado para uso comercial e industrial, mientras que la médula y el bagazo sobrante alimentan las calderas de vapor vivo (45 a 65 bar).</p>
+<p>Si la humedad del bagazo a calderas se incrementa, el déficit de vapor fuerza una decisión operativa destructiva de valor: desviar bagazo entero apto para papel hacia los quemadores, sustituyendo un producto final de alto margen por biomasa de bajo poder calorífico, o quemar gas natural fósil en calderas auxiliares para evitar la caída del colector principal.</p>
+</section>
+<section id="balances-termodinámicos-y-magnitud-de-pérdidas" class="level2">
+<h2 class="anchored" data-anchor-id="balances-termodinámicos-y-magnitud-de-pérdidas">Balances termodinámicos y magnitud de pérdidas</h2>
+<p>Cuando la humedad del bagazo sube, el impacto térmico y químico se propaga en cascada sobre tres subsistemas acoplados:</p>
+<pre><code>                     ┌───────────────────────────────────────────────┐
+                     │         INCREMENTO DE HUMEDAD EN BAGAZO        │
+                     └───────┬───────────────┬───────────────┬───────┘
+                             │               │               │
+     ┌───────────────────────┘               │               └───────────────────────┐
+     ▼                                       ▼                                       ▼
+┌──────────────────────┐               ┌───────────────────────┐               ┌───────────────────────┐
+│   CALDERAS (VAPOR)    │               │ MOLIENDA/EVAPORACIÓN  │               │   FÁBRICA DE PAPEL    │
+├──────────────────────┤               ├───────────────────────┤               ├───────────────────────┤
+│ • Caída de PCI         │               │ • Sobre-imbibición     │               │ • Variación licor/madera│
+│ • Menor evap. específica│               │ • Dilución de Brix     │               │ • Dispersión de Kappa   │
+│ • Quema de gas natural │               │ • Mayor consumo vapor  │               │ • Roturas de hoja        │
+└──────────────────────┘               └───────────────────────┘               └───────────────────────┘</code></pre>
+<section id="degradación-del-poder-calorífico-inferior" class="level3">
+<h3 class="anchored" data-anchor-id="degradación-del-poder-calorífico-inferior">1. Degradación del poder calorífico inferior</h3>
+<p>La literatura de ingeniería azucarera (Hugot, <em>Handbook of Cane Sugar Engineering</em>) describe una relación empírica aproximadamente lineal entre humedad y poder calorífico neto del bagazo:</p>
+<p><span class="math display">\[\Delta PCI \approx -k \cdot \Delta H, \qquad k \approx 48{,}5\ \text{kcal/kg por cada } 1{,}0\%\text{ de humedad}\]</span></p>
+<p>Esto ocurre por dos fenómenos simultáneos: disminuye la fracción másica de materia orgánica combustible por kilogramo de bagazo alimentado, y parte del calor liberado en el hogar de la caldera debe consumirse como calor latente de vaporización (<span class="math inline">\(h_{fg} \approx 2.440\)</span> kJ/kg) para evaporar el agua intrínseca del combustible, expulsándola como vapor sobrecalentado por chimenea a 160–180°C.</p>
+<p>Al reducir la humedad promedio en 2,0 puntos (por ejemplo, del 51,8% al 49,8%):</p>
+<ul>
+<li>El PCI aumenta en torno a +97 kcal/kg (+406 kJ/kg, de 1.680 a 1.777 kcal/kg — un +5,8% de energía térmica neta aprovechable).</li>
+<li>La evaporación específica de la caldera sube de 2,05 a 2,22 kg vapor/kg bagazo.</li>
+<li>Sobre el orden de 500.000 toneladas de bagazo quemadas por zafra en un complejo de esta escala, esto representa una generación adicional cercana a 85.000 toneladas de vapor vivo, desplazando directamente alrededor de 6.800.000 m³ de gas natural.</li>
+</ul>
+</section>
+<section id="el-balance-acoplado-imbibición-evaporación" class="level3">
+<h3 class="anchored" data-anchor-id="el-balance-acoplado-imbibición-evaporación">2. El balance acoplado imbibición-evaporación</h3>
+<p>Para agotar el azúcar residual (Pol en bagazo), la molienda utiliza imbibición compuesta. Sin embargo, aumentar el caudal de agua de imbibición sin supervisión analítica en tiempo real induce rendimientos decrecientes: cada tonelada de agua de imbibición agregada en exceso, que no logra ser drenada por las masas prensa, diluye el jugo mixto (el Brix cae de 15,5° a 13,5°). Esa agua adicional debe evaporarse en el tren de múltiple efecto, incrementando la demanda de vapor de escape a razón de aproximadamente 0,22 a 0,25 toneladas de vapor por tonelada de agua extra. Si esto coincide con una caldera perdiendo rendimiento por bagazo húmedo, el colector colapsa.</p>
+</section>
+<section id="impacto-en-digestores-continuos-de-celulosa" class="level3">
+<h3 class="anchored" data-anchor-id="impacto-en-digestores-continuos-de-celulosa">3. Impacto en digestores continuos de celulosa</h3>
+<p>En la planta de pulpa química a la soda, el control estequiométrico del digestor se rige por la relación licor activo / fibra seca. Si la humedad oscila ±3% sin detección inmediata, la concentración efectiva de álcali sobre fibra seca varía más del 6%, se descontrola la cinética de deslignificación (disparando la variabilidad del Número Kappa, con <span class="math inline">\(\sigma_K &gt; 2{,}5\)</span>), y la pulpa resultante sufre fluctuaciones en su grado de refinación y caídas en el índice de tracción. En las máquinas continuas de papel a alta velocidad, estas inhomogeneidades estructurales generan micro-cortes de la hoja húmeda en las prensas y sequería.</p>
+</section>
+</section>
+<section id="método-tradicional-y-la-brecha-operativa-del-dato-diferido" class="level2">
+<h2 class="anchored" data-anchor-id="método-tradicional-y-la-brecha-operativa-del-dato-diferido">Método tradicional y la brecha operativa del dato diferido</h2>
+<p>El ajuste de la presión hidráulica de los molinos y el caudal de imbibición dependía históricamente del método gravimétrico ICUMSA GS7-19 (estufa convectiva a 105°C + digestión húmeda Spencer para Pol):</p>
+<pre><code> 00:00               00:15               00:30                               02:30         02:45         03:00
+───┴───────────────────┴───────────────────┴───────────────────────────────────┴─────────────┴─────────────┴───►
+ Muestreo            Picado y            Secado en estufa                    Enfriamiento  Cálculo y     DATO
+ en cinta            preparación         tiro forzado                        y pesaje      comunicación  DISPONIBLE
+ (15 min)            (15 min)            (120 min)                           (15 min)      (15 min)</code></pre>
+<p>La latencia total del ciclo era de 3 horas. En un complejo de esta escala, procesando del orden de 900 TCH, durante esas 3 horas de “ceguera analítica” pasaban por los molinos cerca de 2.700 toneladas de caña, se despachaban unas 780 toneladas de bagazo a calderas y fábrica de papel en condiciones desconocidas, y se consumían alrededor de 1.600 toneladas de vapor sin poder realizar correlaciones causa-efecto.</p>
+<p>Las termobalanzas halógenas rápidas de laboratorio fracasaban sistemáticamente: su alícuota de 15 g era incapaz de representar un flujo heterogéneo de cientos de toneladas por hora, compuesto por mezclas variables de corteza y médula. El tándem operaba en lazo abierto, dependiendo de la pericia subjetiva del maquinista.</p>
+</section>
+<section id="calibración-quimiométrica-nir-online-y-control-en-tiempo-real" class="level2">
+<h2 class="anchored" data-anchor-id="calibración-quimiométrica-nir-online-y-control-en-tiempo-real">Calibración quimiométrica NIR online y control en tiempo real</h2>
+<p>Para resolver la latencia se instaló un espectrómetro de reflectancia difusa en el infrarrojo cercano (NIR, rango 1.100 a 2.200 nm) sobre la banda transportadora de salida del último molino, equipado con purga de aire seco continuo para evitar la acumulación de polvo y la condensación de vapor.</p>
+<pre><code>                    ESPECTRÓMETRO NIR ONLINE (1.100 - 2.200 nm)
+                    ┌────────────────────────────────────────┐
+                    │   Bandas O-H: 1.450 y 1.940 nm (Agua)   │
+                    │   Bandas C-H: 1.730 y 2.100 nm (Pol)    │
+                    └───────────────────┬────────────────────┘
+                                        │
+                                        ▼
+                       PROCESAMIENTO QUIMIOMÉTRICO (PLS)
+                    ┌────────────────────────────────────────┐
+                    │ • Normalización SNV                     │
+                    │ • 1ra derivada Savitzky-Golay            │
+                    │ • Filtro media móvil (60 s)               │
+                    └───────────────────┬────────────────────┘
+                                        │
+                                        ▼
+                          SISTEMA DCS / PANTALLA OPERADOR
+                    ┌────────────────────────────────────────┐
+                    │   Humedad: R² = 0,961 | RMSEP = ±0,38%  │
+                    │   Pol:     R² = 0,944 | RMSEP = ±0,11%  │
+                    │         CONTROL EN TIEMPO REAL          │
+                    └────────────────────────────────────────┘</code></pre>
+<section id="tratamiento-quimiométrico-multivariante-pls" class="level3">
+<h3 class="anchored" data-anchor-id="tratamiento-quimiométrico-multivariante-pls">1. Tratamiento quimiométrico multivariante (PLS)</h3>
+<p>El bagazo presenta dispersión física superficial y variabilidad en el tamaño de partícula. Para corregir las no linealidades ópticas y los desplazamientos de línea base espectral se aplicó un pipeline matemático estricto: corrección de dispersión (normalización SNV combinada con corrección de dispersión multiplicativa, MSC); derivación matemática (primera derivada con filtro polinomial de Savitzky-Golay, ventana de 9 puntos, polinomio de 2° orden); y regresión por mínimos cuadrados parciales (PLS), calibrada contra más de 400 muestras contrastadas por método oficial ICUMSA durante toda la zafra, abarcando variedades tempranas, intermedias y tardías.</p>
+<p>Desempeño analítico resultante: humedad con R² = 0,961 y RMSEP = ±0,38%; sacarosa residual con R² = 0,944 y RMSEP = ±0,11%.</p>
+</section>
+<section id="implementación-operativa-y-lazo-cerrado" class="level3">
+<h3 class="anchored" data-anchor-id="implementación-operativa-y-lazo-cerrado">2. Implementación operativa y lazo cerrado</h3>
+<p>La señal se integró al DCS mediante protocolo industrial, con un filtro de media móvil de 60 segundos, y se proyectó en una pantalla de gran formato sobre la plataforma del último molino. El operador pasó de recibir una auditoría punitiva de fin de turno a controlar un lazo de realimentación visual en tiempo real: si la humedad superaba el umbral objetivo, el maquinista corregía al instante la presión hidráulica de las vírgenes o modulaba las bombas de imbibición.</p>
+</section>
+</section>
+<section id="cuantificación-del-impacto-físico-operativo" class="level2">
+<h2 class="anchored" data-anchor-id="cuantificación-del-impacto-físico-operativo">Cuantificación del impacto físico-operativo</h2>
+<p>La estabilización del proceso en torno al target óptimo (H ≈ 49,5%, reducción de Pol en el orden de 0,15 puntos) genera tres fuentes independientes de mejora, medibles en unidades físicas:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Frente operativo</th>
+<th>Mecanismo físico de optimización</th>
+<th>Impacto físico / zafra</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Recuperación de sacarosa</td>
+<td>Menor pérdida de Pol en bagazo por optimización de imbibición</td>
+<td>Del orden de +1.200 toneladas de azúcar equivalente</td>
+</tr>
+<tr class="even">
+<td>Eficiencia térmica</td>
+<td>Mayor PCI por menor humedad, menor consumo de vapor</td>
+<td>Desplazamiento de ~6.800.000 m³ de gas natural fósil</td>
+</tr>
+<tr class="odd">
+<td>Fábrica de papel</td>
+<td>Menor varianza de Kappa, reducción de roturas en máquina (mejora de OEE)</td>
+<td>Del orden de +1.000 toneladas netas de papel comercializable</td>
+</tr>
+</tbody>
+</table>
+<p>Los tres frentes convergen sobre el mismo dato — humedad de bagazo en tiempo real — sin necesidad de tres sistemas de monitoreo independientes ni de tres responsables discutiendo con información distinta.</p>
+</section>
+<section id="modelo-de-optimización-no-lineal-nlp-para-implementación-en-r-excel-solver" class="level2">
+<h2 class="anchored" data-anchor-id="modelo-de-optimización-no-lineal-nlp-para-implementación-en-r-excel-solver">Modelo de optimización no lineal (NLP) para implementación en R / Excel Solver</h2>
+<p><em>(Formalización simbólica de la lógica descrita arriba — sin coeficientes ni valores asociados a ningún caso real.)</em></p>
+<p><strong>Variables de decisión</strong></p>
+<p><span class="math inline">\(q_w(t) \geq 0\)</span> — caudal de agua de imbibición en el tiempo <span class="math inline">\(t\)</span>.</p>
+<p><span class="math inline">\(p_h(t) \geq 0\)</span> — presión hidráulica de las vírgenes de molienda en el tiempo <span class="math inline">\(t\)</span>.</p>
+<p><strong>Función objetivo</strong> — maximizar el margen de contribución horario del sistema conjunto:</p>
+<p><span class="math display">\[\max \; \Pi(t) = V_{papel}\big(K(q_w,p_h)\big) + V_{vapor}\big(PCI(H(q_w,p_h))\big) + V_{azúcar}\big(Pol(q_w)\big) - C_{operativo}(q_w, p_h)\]</span></p>
+<p>Donde <span class="math inline">\(K\)</span> es la variabilidad del Número Kappa de la pulpa, <span class="math inline">\(PCI\)</span> es el poder calorífico del bagazo en función de la humedad <span class="math inline">\(H\)</span>, y <span class="math inline">\(Pol\)</span> es la sacarosa residual — las tres, funciones de las mismas dos variables de control.</p>
+<p><strong>Restricciones operativas</strong></p>
+<p>Límite de humedad para combustión autosuficiente: <span class="math display">\[H(q_w, p_h) \leq H_{max}\]</span></p>
+<p>Capacidad de evaporación en múltiple efecto: <span class="math display">\[V_{vapor,\,requerido}(q_w) \leq V_{vapor,\,capacidad}\]</span></p>
+<p>Consistencia de calidad de pulpa celulósica: <span class="math display">\[\sigma_K\big(H(q_w,p_h)\big) \leq \sigma_{K,\,max}\]</span></p>
+<p>Límites mecánicos y de extracción en molinos: <span class="math display">\[p_{h,\,min} \leq p_h \leq p_{h,\,max}\]</span></p>
+<section id="implementación-computacional-en-vba-excel-solver" class="level3">
+<h3 class="anchored" data-anchor-id="implementación-computacional-en-vba-excel-solver">Implementación computacional en VBA / Excel Solver</h3>
+<pre class="vba"><code>Option Explicit
+
+Sub OptimizarTandemMolienda()
+    ' Configuración de la optimización no lineal en Excel Solver
+    SolverReset
+
+    ' Celda objetivo: margen de contribución total del sistema -&gt; Maximizar
+    SolverOk SetCell:=Range("Margen_Total_Hora"), _
+             MaxMinVal:=1, _
+             ValueOf:=0, _
+             ByChange:=Range("Caudal_Imbibicion, Presion_Hidraulica"), _
+             Engine:=1, _
+             EngineDesc:="GRG Nonlinear"
+
+    ' Restricción 1: humedad de bagazo final &lt;= umbral objetivo
+    SolverAdd CellRef:=Range("Humedad_Bagazo_NIR"), _
+              Relation:=1, _
+              FormulaText:="0.500"
+
+    ' Restricción 2: carga de vapor en evaporadores &lt;= capacidad máxima
+    SolverAdd CellRef:=Range("Demanda_Vapor_Evaporacion"), _
+              Relation:=1, _
+              FormulaText:=Range("Capacidad_Max_Vapor_Escape").Address
+
+    ' Restricción 3: presión hidráulica en vírgenes de molinos (límites mecánicos)
+    SolverAdd CellRef:=Range("Presion_Hidraulica"), Relation:=3, FormulaText:="2500"
+    SolverAdd CellRef:=Range("Presion_Hidraulica"), Relation:=1, FormulaText:="3800"
+
+    ' Restricción 4: ratio de imbibición sobre fibra
+    SolverAdd CellRef:=Range("Ratio_Imbibicion_Fibra"), Relation:=3, FormulaText:="2.00"
+    SolverAdd CellRef:=Range("Ratio_Imbibicion_Fibra"), Relation:=1, FormulaText:="3.00"
+
+    ' Opciones del motor GRG Nonlinear
+    SolverOptions Convergence:=0.0001, CentralDerivatives:=True, MultiStart:=True
+
+    ' Ejecución silenciosa
+    SolverSolve UserFinish:=True
+    SolverFinish KeepFinal:=1
+End Sub</code></pre>
+</section>
+</section>
+<section id="del-barro-a-la-estrategia" class="level2">
+<h2 class="anchored" data-anchor-id="del-barro-a-la-estrategia">Del Barro a la Estrategia</h2>
+<p>El cuello de botella de la industria azucarera rara vez está en los fierros. Está en la latencia del dato. Cuando un proceso continuo se gestiona con información en tiempo real y rigor analítico, la fricción entre departamentos desaparece y el sistema converge solo hacia su punto de máxima eficiencia.</p>
+<p>Es la misma disciplina — instrumentar el dato donde nace, cerrar el lazo en tiempo real, y dejar que el sistema converja solo — que hoy aplicamos en el Recovery Audit, sobre otro tipo de fricción: la que ocurre entre el dato operativo y el reclamo comercial que nunca se ejecuta.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/growise\.com\.ar");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/jquery.poptrox.min.js"></script>
+<script src="../../assets/js/browser.min.js"></script>
+<script src="../../assets/js/breakpoints.min.js"></script>
+<script src="../../assets/js/util.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+
+
+
+</body></html>

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Marcelo J. Lamarque">
 
-<title>Un año de trabajo, diez minutos de reunión, y el origen de un método – Growise</title>
+<title>Cuando el cuello de botella no es el proceso, es el tiempo del dato – Growise</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -138,12 +138,12 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../assets/css/main.css">
-<meta property="og:title" content="Un año de trabajo, diez minutos de reunión, y el origen de un método – Growise">
+<meta property="og:title" content="Cuando el cuello de botella no es el proceso, es el tiempo del dato – Growise">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://growise.com.ar/articulos/scoping-caso-estiba/portada.png">
+<meta property="og:image" content="https://growise.com.ar/articulos/nir-bagazo/portada.png">
 <meta property="og:site_name" content="Growise">
-<meta property="og:image:height" content="675">
-<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="720">
+<meta property="og:image:width" content="1280">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -195,12 +195,23 @@ window.Quarto = {
     <h2 id="toc-title">En esta página</h2>
    
   <ul>
-  <li><a href="#la-mecánica-del-problema-estiba-en-bloque-y-fricción-lifo" id="toc-la-mecánica-del-problema-estiba-en-bloque-y-fricción-lifo" class="nav-link active" data-scroll-target="#la-mecánica-del-problema-estiba-en-bloque-y-fricción-lifo">La mecánica del problema: estiba en bloque y fricción LIFO</a></li>
-  <li><a href="#el-costo-invisible-de-la-falta-de-selectividad" id="toc-el-costo-invisible-de-la-falta-de-selectividad" class="nav-link" data-scroll-target="#el-costo-invisible-de-la-falta-de-selectividad">El costo invisible de la falta de selectividad</a></li>
-  <li><a href="#un-año-de-trabajo-diez-minutos-de-reunión" id="toc-un-año-de-trabajo-diez-minutos-de-reunión" class="nav-link" data-scroll-target="#un-año-de-trabajo-diez-minutos-de-reunión">Un año de trabajo, diez minutos de reunión</a></li>
-  <li><a href="#la-fractura-del-silo-organizacional" id="toc-la-fractura-del-silo-organizacional" class="nav-link" data-scroll-target="#la-fractura-del-silo-organizacional">La fractura del silo organizacional</a></li>
-  <li><a href="#cómo-diseñamos-el-scoping-en-growise" id="toc-cómo-diseñamos-el-scoping-en-growise" class="nav-link" data-scroll-target="#cómo-diseñamos-el-scoping-en-growise">Cómo diseñamos el Scoping en Growise</a></li>
-  <li><a href="#la-formalización-matemática" id="toc-la-formalización-matemática" class="nav-link" data-scroll-target="#la-formalización-matemática">La formalización matemática</a></li>
+  <li><a href="#composición-rangos-y-la-singularidad-del-complejo-integrado" id="toc-composición-rangos-y-la-singularidad-del-complejo-integrado" class="nav-link active" data-scroll-target="#composición-rangos-y-la-singularidad-del-complejo-integrado">Composición, rangos y la singularidad del complejo integrado</a></li>
+  <li><a href="#balances-termodinámicos-y-magnitud-de-pérdidas" id="toc-balances-termodinámicos-y-magnitud-de-pérdidas" class="nav-link" data-scroll-target="#balances-termodinámicos-y-magnitud-de-pérdidas">Balances termodinámicos y magnitud de pérdidas</a>
+  <ul class="collapse">
+  <li><a href="#degradación-del-poder-calorífico-inferior" id="toc-degradación-del-poder-calorífico-inferior" class="nav-link" data-scroll-target="#degradación-del-poder-calorífico-inferior">1. Degradación del poder calorífico inferior</a></li>
+  <li><a href="#el-balance-acoplado-imbibición-evaporación" id="toc-el-balance-acoplado-imbibición-evaporación" class="nav-link" data-scroll-target="#el-balance-acoplado-imbibición-evaporación">2. El balance acoplado imbibición-evaporación</a></li>
+  <li><a href="#impacto-en-digestores-continuos-de-celulosa" id="toc-impacto-en-digestores-continuos-de-celulosa" class="nav-link" data-scroll-target="#impacto-en-digestores-continuos-de-celulosa">3. Impacto en digestores continuos de celulosa</a></li>
+  </ul></li>
+  <li><a href="#método-tradicional-y-la-brecha-operativa-del-dato-diferido" id="toc-método-tradicional-y-la-brecha-operativa-del-dato-diferido" class="nav-link" data-scroll-target="#método-tradicional-y-la-brecha-operativa-del-dato-diferido">Método tradicional y la brecha operativa del dato diferido</a>
+  <ul class="collapse">
+  <li><a href="#tratamiento-quimiométrico-multivariante-pls" id="toc-tratamiento-quimiométrico-multivariante-pls" class="nav-link" data-scroll-target="#tratamiento-quimiométrico-multivariante-pls">1. Tratamiento quimiométrico multivariante (PLS)</a></li>
+  <li><a href="#implementación-operativa-y-lazo-cerrado" id="toc-implementación-operativa-y-lazo-cerrado" class="nav-link" data-scroll-target="#implementación-operativa-y-lazo-cerrado">2. Implementación operativa y lazo cerrado</a></li>
+  </ul></li>
+  <li><a href="#cuantificación-del-impacto-físico-operativo" id="toc-cuantificación-del-impacto-físico-operativo" class="nav-link" data-scroll-target="#cuantificación-del-impacto-físico-operativo">Cuantificación del impacto físico-operativo</a></li>
+  <li><a href="#modelo-de-optimización-no-lineal-nlp-para-implementación-en-r-excel-solver" id="toc-modelo-de-optimización-no-lineal-nlp-para-implementación-en-r-excel-solver" class="nav-link" data-scroll-target="#modelo-de-optimización-no-lineal-nlp-para-implementación-en-r-excel-solver">Modelo de optimización no lineal (NLP) para implementación en R / Excel Solver</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul></li>
   <li><a href="#del-barro-a-la-estrategia" id="toc-del-barro-a-la-estrategia" class="nav-link" data-scroll-target="#del-barro-a-la-estrategia">Del Barro a la Estrategia</a></li>
   </ul>
 </nav>
@@ -210,7 +221,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Un año de trabajo, diez minutos de reunión, y el origen de un método</h1>
+<h1 class="title">Cuando el cuello de botella no es el proceso, es el tiempo del dato</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Metodología</div>
     <div class="quarto-category">Scoping</div>
@@ -244,61 +255,150 @@ window.Quarto = {
 </header>
 
 
-<p>Antes de que existiera Growise, hubo una reunión que terminó de convencerme de cómo no quería trabajar nunca como consultor — y hoy nos toca hacer ese tipo de trabajo desde el otro lado del mostrador.</p>
-<p>Una consultora de logística había sido contratada para mejorar el FIFO en los depósitos de una planta azucarera donde yo era jefe de Laboratorio, y para rediseñar el layout de estiba según calidad. El problema de fondo era real y conocido en la industria: la producción es continua, pero la calidad del producto varía dentro de ese flujo, y se embolsa y estiba a medida que sale.</p>
-<section id="la-mecánica-del-problema-estiba-en-bloque-y-fricción-lifo" class="level2">
-<h2 class="anchored" data-anchor-id="la-mecánica-del-problema-estiba-en-bloque-y-fricción-lifo">La mecánica del problema: estiba en bloque y fricción LIFO</h2>
-<p>En un ingenio con refinería de gran escala (entre 1.500 y 2.500 toneladas/día de azúcar refinado), el producto sale de las secadoras-enfriadoras a ritmo continuo. Para maximizar la volumetría del depósito, el azúcar no se almacena en racks selectivos paletizados — el costo por metro cuadrado es prohibitivo para ese tonelaje — sino en estibas compactas en bloque, de varios metros de altura, armadas con cinta transportadora.</p>
-<p>Esa estiba en bloque impone una dinámica física de “último en entrar, primero en salir”. Si la calidad varía durante el turno — por ejemplo, el Color ICUMSA oscila por variaciones en la pureza del licor madre o en los tiempos de residencia en tachos —, el lote de mejor calidad queda físicamente sepultado detrás o debajo de lotes de especificación inferior. En planta lo llamábamos “azúcar entrampado”.</p>
-</section>
-<section id="el-costo-invisible-de-la-falta-de-selectividad" class="level2">
-<h2 class="anchored" data-anchor-id="el-costo-invisible-de-la-falta-de-selectividad">El costo invisible de la falta de selectividad</h2>
-<p>La falta de selectividad en el despacho genera pérdida de margen por tres vías, aunque nunca aparezca como una sola línea en ningún reporte:</p>
+<p>En la gestión ejecutiva de un complejo agroindustrial integrado, la intuición y los reportes diferidos son los mayores destructores silenciosos de EBITDA.</p>
+<p>El bagazo de caña de azúcar, en una estructura industrial con fábrica de celulosa y papel integrada, cumple una doble función que rara vez se analiza en conjunto: es simultáneamente materia prima fibrosa de alto valor y combustible de biomasa para las calderas de alta presión que energizan todo el complejo. Su porcentaje de humedad (H) y su contenido de sacarosa residual (Pol) constituyen el vector de estado termodinámico y económico que gobierna el rendimiento global del negocio.</p>
+<section id="composición-rangos-y-la-singularidad-del-complejo-integrado" class="level2">
+<h2 class="anchored" data-anchor-id="composición-rangos-y-la-singularidad-del-complejo-integrado">Composición, rangos y la singularidad del complejo integrado</h2>
+<p>A la salida del último molino del tándem de molienda, el flujo másico de bagazo responde a la siguiente matriz composicional en base húmeda:</p>
 <ul>
-<li><strong>Degradación forzada de calidad:</strong> vender azúcar de grado superior al precio de un grado inferior porque el lote correcto está entrampado y hay un programa de carga urgente que cumplir. Y un cliente que recibe esa condición de forma recurrente termina exigiéndola como estándar — incluso cuando después se le entrega, correctamente, la calidad que contrató.</li>
-<li><strong>Doble manipuleo:</strong> desarmar una estiba completa para rescatar una fracción atrapada en el fondo implica mano de obra extra, horas de autoelevador, rotura de envases y riesgo de apelmazamiento por compresión mecánica.</li>
-<li><strong>Quiebre de stock selectivo:</strong> tener producto en el depósito pero no poder acceder a la calidad específica que un cliente necesita en el momento en que la necesita.</li>
+<li><strong>Humedad (H):</strong> 49,0% a 52,5% (con desviaciones críticas superiores al 54,0% ante desbalances en la imbibición o desgaste del rayado de las masas).</li>
+<li><strong>Fibra insoluble (F):</strong> 44,0% a 47,0% (fracción rica en α-celulosa, hemicelulosa y lignina).</li>
+<li><strong>Sacarosa residual (Pol):</strong> 1,60% a 2,30% (azúcar no extraído disuelto en el agua remanente).</li>
+<li><strong>Cenizas e impurezas minerales (C):</strong> 1,2% a 2,5% (sílice y suelo retenidos en la cosecha).</li>
+<li></li>
 </ul>
-<p>La asignación de espacio en un depósito de este tipo no es un problema estático de almacenamiento. Es un problema de optimización combinatoria: hay que balancear costo de manipuleo, costo de degradación de calidad y costo de quiebre de stock, sujeto a la capacidad física del depósito y a las ventanas horarias de despacho.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Diagrama_Fibra.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Pie de foto de la imagen</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>En un ingenio estándar con destilería anexa, el bagazo es tratado como un subproducto energético: se quema en su totalidad para lograr autosuficiencia térmica o para inyectar excedentes de energía a la red eléctrica.</p>
+<p>En un complejo agroindustrial integrado de esta escala, que procesa del orden de 3.300.000 a 3.400.000 toneladas de caña por zafra (~21.000 TCD, a un ritmo continuo de ~875-900 TCH), el bagazo es un insumo estratégico escaso. El desmedulado separa la fibra larga del parénquima o médula. La fibra alimenta los digestores químicos continuos para producir entre 120.000 y 130.000 toneladas/año de papel encapado y no encapado para uso comercial e industrial, mientras que la médula y el bagazo sobrante alimentan las calderas de vapor vivo (45 a 65 bar).</p>
+<p>Si la humedad del bagazo a calderas se incrementa, el déficit de vapor fuerza una decisión operativa destructiva de valor: desviar bagazo entero apto para papel hacia los quemadores, sustituyendo un producto final de alto margen por biomasa de bajo poder calorífico, o quemar gas natural fósil en calderas auxiliares para evitar la caída del colector principal.</p>
 </section>
-<section id="un-año-de-trabajo-diez-minutos-de-reunión" class="level2">
-<h2 class="anchored" data-anchor-id="un-año-de-trabajo-diez-minutos-de-reunión">Un año de trabajo, diez minutos de reunión</h2>
-<p>Los consultores trabajaron casi un año con el personal de depósitos y logística. Entrevistaron, mapearon, diseñaron estrategia y táctica, y llegaron a una propuesta de rediseño operativo completo.</p>
-<p>El día de la presentación, la hipótesis sobre la que se sostenía todo el trabajo se reveló en la primera diapositiva: <em>“la fábrica no sabe lo que produce, la calidad no se puede medir.”</em></p>
-<p>Esa frase era falsa. Y lo sabía cualquiera que hubiera hablado con el Laboratorio — que no había sido consultado ni una sola vez en un año de trabajo.</p>
+<section id="balances-termodinámicos-y-magnitud-de-pérdidas" class="level2">
+<h2 class="anchored" data-anchor-id="balances-termodinámicos-y-magnitud-de-pérdidas">Balances termodinámicos y magnitud de pérdidas</h2>
+<p>Cuando la humedad del bagazo sube, el impacto térmico y químico se propaga en cascada sobre tres subsistemas acoplados:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Diagrama_Humedad_Bagazo.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Pie de foto de la imagen</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="degradación-del-poder-calorífico-inferior" class="level3">
+<h3 class="anchored" data-anchor-id="degradación-del-poder-calorífico-inferior">1. Degradación del poder calorífico inferior</h3>
+<p>La literatura de ingeniería azucarera (Hugot, <em>Handbook of Cane Sugar Engineering</em>) describe una relación empírica aproximadamente lineal entre humedad y poder calorífico neto del bagazo:</p>
+<p><span class="math display">\[\Delta PCI \approx -k \cdot \Delta H, \qquad k \approx 48{,}5\ \text{kcal/kg por cada } 1{,}0\%\text{ de humedad}\]</span></p>
+<p>Esto ocurre por dos fenómenos simultáneos: disminuye la fracción másica de materia orgánica combustible por kilogramo de bagazo alimentado, y parte del calor liberado en el hogar de la caldera debe consumirse como calor latente de vaporización (<span class="math inline">\(h_{fg} \approx 2.440\)</span> kJ/kg) para evaporar el agua intrínseca del combustible, expulsándola como vapor sobrecalentado por chimenea a 160–180°C.</p>
+<p>Al reducir la humedad promedio en 2,0 puntos (por ejemplo, del 51,8% al 49,8%):</p>
+<ul>
+<li>El PCI aumenta en torno a +97 kcal/kg (+406 kJ/kg, de 1.680 a 1.777 kcal/kg — un +5,8% de energía térmica neta aprovechable).</li>
+<li>La evaporación específica de la caldera sube de 2,05 a 2,22 kg vapor/kg bagazo.</li>
+<li>Sobre el orden de 500.000 toneladas de bagazo quemadas por zafra en un complejo de esta escala, esto representa una generación adicional cercana a 85.000 toneladas de vapor vivo, desplazando directamente alrededor de 6.800.000 m³ de gas natural.</li>
+</ul>
 </section>
-<section id="la-fractura-del-silo-organizacional" class="level2">
-<h2 class="anchored" data-anchor-id="la-fractura-del-silo-organizacional">La fractura del silo organizacional</h2>
-<p>El Laboratorio no trabajaba a ciegas. Operaba bajo protocolos internacionales de la industria azucarera (ICUMSA), y medía y registraba sistemáticamente: color por lectura espectrofotométrica, pureza inorgánica residual, humedad libre y actividad de agua, distribución granulométrica. Cada lote salía identificado con código, línea, turno y hora exacta de producción, vinculado a la base de datos analítica.</p>
-<p>La información existía con precisión decimal y granularidad horaria. El problema nunca fue la ausencia del dato. Logística gestionaba “bultos de 50 kg” como una masa homogénea, y los consultores tomaron la queja del supervisor de depósito — <em>“acá no sabemos qué calidad viene por la cinta”</em> — como una verdad estructural del proceso, en lugar de identificarla por lo que realmente era: una falla de interoperabilidad entre dos sistemas que ya tenían el dato, cada uno por su lado.</p>
-<p>Cuando el jefe de mi jefe me hizo entrar a esa sala y les preguntó a los consultores si habían hablado conmigo, la respuesta —que no había sido necesario, porque se habían basado en la información del personal operativo— cerró la reunión. Nada de lo presentado se implementó. Hubo que replantear el proyecto entero con la información que el Laboratorio ya tenía.</p>
+<section id="el-balance-acoplado-imbibición-evaporación" class="level3">
+<h3 class="anchored" data-anchor-id="el-balance-acoplado-imbibición-evaporación">2. El balance acoplado imbibición-evaporación</h3>
+<p>Para agotar el azúcar residual (Pol en bagazo), la molienda utiliza imbibición compuesta. Sin embargo, aumentar el caudal de agua de imbibición sin supervisión analítica en tiempo real induce rendimientos decrecientes: cada tonelada de agua de imbibición agregada en exceso, que no logra ser drenada por las masas prensa, diluye el jugo mixto (el Brix cae de 15,5° a 13,5°). Esa agua adicional debe evaporarse en el tren de múltiple efecto, incrementando la demanda de vapor de escape a razón de aproximadamente 0,22 a 0,25 toneladas de vapor por tonelada de agua extra. Si esto coincide con una caldera perdiendo rendimiento por bagazo húmedo, el colector colapsa.</p>
 </section>
-<section id="cómo-diseñamos-el-scoping-en-growise" class="level2">
-<h2 class="anchored" data-anchor-id="cómo-diseñamos-el-scoping-en-growise">Cómo diseñamos el Scoping en Growise</h2>
-<p>De ahí nace, en gran parte, la manera en que estructuramos el proceso en Growise: un Scoping que sirve exactamente para esto — para que una hipótesis de base se valide o se caiga antes de comprometer un año de trabajo y un presupuesto completo. No es una etapa comercial. Es una protección, tanto para el cliente como para nosotros, contra construir una estrategia sobre un supuesto que nadie chequeó con quien tenía el dato.</p>
-<p>El Scoping se ordena en tres instancias secuenciales:</p>
-<p><strong>1. Auditoría de la fuente física del dato.</strong> No se entrevista sin ver primero la serie temporal de datos. Se triangula la base de calidad contra el ERP y contra los movimientos físicos reales. La percepción del operador describe el síntoma; el registro o el ensayo analítico describe la restricción real del sistema.</p>
-<p><strong>2. Orden estricto de indagación.</strong> Primero el dueño del dato físico (Laboratorio, automatización). Después el transformador del proceso (fabricación, refinería). Después el ejecutor operativo (logística, depósito). Recién al final, el impacto financiero.</p>
-<p><strong>3. Formalización del modelo antes de tocar el piso.</strong> Se modela la variabilidad real con las distribuciones observadas, se formula el algoritmo de asignación, y si el retorno proyectado no justifica varias veces el costo del proyecto con los datos reales en mano, el proyecto no se ejecuta.</p>
-<p>Tres preguntas simples ordenan todo el Scoping: ¿dónde está registrada la variable crítica y con qué latencia se comparte? ¿Cuál es el valor real de la brecha que se quiere cerrar? ¿Qué hipótesis del personal contradice directamente los registros históricos del sistema? Ahí, casi siempre, está la ineficiencia oculta.</p>
+<section id="impacto-en-digestores-continuos-de-celulosa" class="level3">
+<h3 class="anchored" data-anchor-id="impacto-en-digestores-continuos-de-celulosa">3. Impacto en digestores continuos de celulosa</h3>
+<p>En la planta de pulpa química a la soda, el control estequiométrico del digestor se rige por la relación licor activo / fibra seca. Si la humedad oscila ±3% sin detección inmediata, la concentración efectiva de álcali sobre fibra seca varía más del 6%, se descontrola la cinética de deslignificación (disparando la variabilidad del Número Kappa, con <span class="math inline">\(\sigma_K &gt; 2{,}5\)</span>), y la pulpa resultante sufre fluctuaciones en su grado de refinación y caídas en el índice de tracción. En las máquinas continuas de papel a alta velocidad, estas inhomogeneidades estructurales generan micro-cortes de la hoja húmeda en las prensas y sequería.</p>
 </section>
-<section id="la-formalización-matemática" class="level2">
-<h2 class="anchored" data-anchor-id="la-formalización-matemática">La formalización matemática</h2>
-<p>Para quienes quieran ver el problema resuelto como se presentaría ante un directorio o se implementaría en una herramienta de optimización, el problema de estiba por calidad se define así:</p>
+</section>
+<section id="método-tradicional-y-la-brecha-operativa-del-dato-diferido" class="level2">
+<h2 class="anchored" data-anchor-id="método-tradicional-y-la-brecha-operativa-del-dato-diferido">Método tradicional y la brecha operativa del dato diferido</h2>
+<p>El ajuste de la presión hidráulica de los molinos y el caudal de imbibición dependía históricamente del método gravimétrico ICUMSA GS7-19 (estufa convectiva a 105°C + digestión húmeda Spencer para Pol):</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Tiempos_Estufa.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Pie de foto de la imagen</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>La latencia total del ciclo era de 3 horas. En un complejo de esta escala, procesando del orden de 900 TCH, durante esas 3 horas de “ceguera analítica” pasaban por los molinos cerca de 2.700 toneladas de caña, se despachaban unas 780 toneladas de bagazo a calderas y fábrica de papel en condiciones desconocidas, y se consumían alrededor de 1.600 toneladas de vapor sin poder realizar correlaciones causa-efecto.</p>
+<p>Las termobalanzas halógenas rápidas de laboratorio fracasaban sistemáticamente: su alícuota de 15 g era incapaz de representar un flujo heterogéneo de cientos de toneladas por hora, compuesto por mezclas variables de corteza y médula. El tándem operaba en lazo abierto, dependiendo de la pericia subjetiva del maquinista.</p>
+<p>Para resolver la latencia se instaló un espectrómetro de reflectancia difusa en el infrarrojo cercano (NIR, rango 1.100 a 2.200 nm) sobre la banda transportadora de salida del último molino, equipado con purga de aire seco continuo para evitar la acumulación de polvo y la condensación de vapor.</p>
+<section id="tratamiento-quimiométrico-multivariante-pls" class="level3">
+<h3 class="anchored" data-anchor-id="tratamiento-quimiométrico-multivariante-pls">1. Tratamiento quimiométrico multivariante (PLS)</h3>
+<p>El bagazo presenta dispersión física superficial y variabilidad en el tamaño de partícula. Para corregir las no linealidades ópticas y los desplazamientos de línea base espectral se aplicó un pipeline matemático estricto: corrección de dispersión (normalización SNV combinada con corrección de dispersión multiplicativa, MSC); derivación matemática (primera derivada con filtro polinomial de Savitzky-Golay, ventana de 9 puntos, polinomio de 2° orden); y regresión por mínimos cuadrados parciales (PLS), calibrada contra más de 400 muestras contrastadas por método oficial ICUMSA durante toda la zafra, abarcando variedades tempranas, intermedias y tardías.</p>
+<p>Desempeño analítico resultante: humedad con R² = 0,961 y RMSEP = ±0,38%; sacarosa residual con R² = 0,944 y RMSEP = ±0,11%.</p>
+</section>
+<section id="implementación-operativa-y-lazo-cerrado" class="level3">
+<h3 class="anchored" data-anchor-id="implementación-operativa-y-lazo-cerrado">2. Implementación operativa y lazo cerrado</h3>
+<p>La señal se integró al DCS mediante protocolo industrial, con un filtro de media móvil de 60 segundos, y se proyectó en una pantalla de gran formato sobre la plataforma del último molino. El operador pasó de recibir una auditoría punitiva de fin de turno a controlar un lazo de realimentación visual en tiempo real: si la humedad superaba el umbral objetivo, el maquinista corregía al instante la presión hidráulica de las vírgenes o modulaba las bombas de imbibición.</p>
+</section>
+</section>
+<section id="cuantificación-del-impacto-físico-operativo" class="level2">
+<h2 class="anchored" data-anchor-id="cuantificación-del-impacto-físico-operativo">Cuantificación del impacto físico-operativo</h2>
+<p>La estabilización del proceso en torno al target óptimo (H ≈ 49,5%, reducción de Pol en el orden de 0,15 puntos) genera tres fuentes independientes de mejora, medibles en unidades físicas:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Frente operativo</th>
+<th>Mecanismo físico de optimización</th>
+<th>Impacto físico / zafra</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Recuperación de sacarosa</td>
+<td>Menor pérdida de Pol en bagazo por optimización de imbibición</td>
+<td>Del orden de +1.200 toneladas de azúcar equivalente</td>
+</tr>
+<tr class="even">
+<td>Eficiencia térmica</td>
+<td>Mayor PCI por menor humedad, menor consumo de vapor</td>
+<td>Desplazamiento de ~6.800.000 m³ de gas natural fósil</td>
+</tr>
+<tr class="odd">
+<td>Fábrica de papel</td>
+<td>Menor varianza de Kappa, reducción de roturas en máquina (mejora de OEE)</td>
+<td>Del orden de +1.000 toneladas netas de papel comercializable</td>
+</tr>
+</tbody>
+</table>
+<p>Los tres frentes convergen sobre el mismo dato — humedad de bagazo en tiempo real — sin necesidad de tres sistemas de monitoreo independientes ni de tres responsables discutiendo con información distinta.</p>
+</section>
+<section id="modelo-de-optimización-no-lineal-nlp-para-implementación-en-r-excel-solver" class="level2">
+<h2 class="anchored" data-anchor-id="modelo-de-optimización-no-lineal-nlp-para-implementación-en-r-excel-solver">Modelo de optimización no lineal (NLP) para implementación en R / Excel Solver</h2>
+<p><em>(Formalización simbólica de la lógica descrita arriba — sin coeficientes ni valores asociados a ningún caso real.)</em></p>
 <p><strong>Variables de decisión</strong></p>
-<p><span class="math inline">\(X_{i,j,t} \in \{0,1\}\)</span> — indica si el lote de producción <span class="math inline">\(i\)</span> se asigna a la posición de estiba <span class="math inline">\(j\)</span> en el período <span class="math inline">\(t\)</span>.</p>
-<p><span class="math inline">\(Y_{i,k,t} \geq 0\)</span> — toneladas del lote <span class="math inline">\(i\)</span> despachadas al cliente <span class="math inline">\(k\)</span> en el período <span class="math inline">\(t\)</span>.</p>
-<p><strong>Función objetivo</strong> (maximizar el margen de contribución neto, con <span class="math inline">\(P\)</span> y <span class="math inline">\(C\)</span> como parámetros de precio y costo del sistema, sin valores numéricos asociados a ningún caso real):</p>
-<p><span class="math display">\[\max \; \Pi = \sum_{t}\sum_{k}\sum_{i} P_{k,t} \cdot Y_{i,k,t} \; - \sum_{t}\sum_{i}\sum_{j} C_{slotting,j} \cdot X_{i,j,t} \; - \sum_{t}\sum_{i}\sum_{j} C_{re\text{-}handling} \cdot R_{i,j,t}\]</span></p>
-<p><strong>Restricciones principales</strong></p>
-<p>Especificación estricta de calidad por cliente: <span class="math display">\[\sum_{i} ICUMSA_i \cdot Y_{i,k,t} \leq ICUMSA_{max,k} \cdot \sum_{i} Y_{i,k,t} \quad \forall k, t\]</span></p>
-<p>Accesibilidad física — anti-entrampamiento (si el frente está ocupado, no se puede acceder al fondo): <span class="math display">\[X_{i,j_{fondo},t} \leq 1 - \sum_{i'} X_{i',j_{frente},t} \quad \forall t\]</span></p>
-<p>Balance de masa en depósito: <span class="math display">\[Stock_{i,t} = Stock_{i,t-1} + Producción_{i,t} - \sum_{k} Y_{i,k,t}\]</span></p>
-<p>Con este modelo alimentado por el dato real de calidad en tiempo real, el problema de “producto entrampado” se resuelve algorítmicamente antes de mover la primera unidad — no reconstruyendo el depósito a prueba y error.</p>
+<p><span class="math inline">\(q_w(t) \geq 0\)</span> — caudal de agua de imbibición en el tiempo <span class="math inline">\(t\)</span>.</p>
+<p><span class="math inline">\(p_h(t) \geq 0\)</span> — presión hidráulica de las vírgenes de molienda en el tiempo <span class="math inline">\(t\)</span>.</p>
+<p><strong>Función objetivo</strong> — maximizar el margen de contribución horario del sistema conjunto:</p>
+<p><span class="math display">\[\max \; \Pi(t) = V_{papel}\big(K(q_w,p_h)\big) + V_{vapor}\big(PCI(H(q_w,p_h))\big) + V_{azúcar}\big(Pol(q_w)\big) - C_{operativo}(q_w, p_h)\]</span></p>
+<p>Donde <span class="math inline">\(K\)</span> es la variabilidad del Número Kappa de la pulpa, <span class="math inline">\(PCI\)</span> es el poder calorífico del bagazo en función de la humedad <span class="math inline">\(H\)</span>, y <span class="math inline">\(Pol\)</span> es la sacarosa residual — las tres, funciones de las mismas dos variables de control.</p>
+<p><strong>Restricciones operativas</strong></p>
+<p>Límite de humedad para combustión autosuficiente: <span class="math display">\[H(q_w, p_h) \leq H_{max}\]</span></p>
+<p>Capacidad de evaporación en múltiple efecto: <span class="math display">\[V_{vapor,\,requerido}(q_w) \leq V_{vapor,\,capacidad}\]</span></p>
+<p>Consistencia de calidad de pulpa celulósica: <span class="math display">\[\sigma_K\big(H(q_w,p_h)\big) \leq \sigma_{K,\,max}\]</span></p>
+<p>Límites mecánicos y de extracción en molinos: <span class="math display">\[p_{h,\,min} \leq p_h \leq p_{h,\,max}\]</span></p>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+</section>
 </section>
 <section id="del-barro-a-la-estrategia" class="level2">
 <h2 class="anchored" data-anchor-id="del-barro-a-la-estrategia">Del Barro a la Estrategia</h2>
-<p>Es el mismo motor — cruzar fuentes de datos que ya existen, entre actores que hoy no se hablan, para exponer una restricción que nadie había hecho explícita — el que hoy aplicamos en Chile, Perú y Colombia bajo el nombre Recovery Audit, adaptado a otro tipo de fuga: peajes mal imputados, tarifas fuera de contrato, combustible fuera de rango. La industria cambia. La lógica de cruce de datos, no.</p>
+<p>Uno de los cuellos de botella de la industria azucarera está en la latencia del dato. Cuando un proceso continuo se gestiona con información en tiempo real y rigor analítico, la fricción entre departamentos desaparece y el sistema converge solo hacia su punto de máxima eficiencia.</p>
+<p>Es la misma disciplina — instrumentar el dato donde nace, cerrar el lazo en tiempo real, y dejar que el sistema converja solo — que hoy aplicamos en el Recovery Audit, sobre otro tipo de fricción: la que ocurre entre el dato operativo y el reclamo comercial que nunca se ejecuta.</p>
 
 
 </section>

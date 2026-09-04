@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://growise.com.ar/servicios.html</loc>
+    <lastmod>2026-09-01T22:31:17.309Z</lastmod>
+  </url>
+  <url>
     <loc>https://growise.com.ar/index.html</loc>
     <lastmod>2026-09-01T23:26:12.635Z</lastmod>
+  </url>
+  <url>
+    <loc>https://growise.com.ar/articulos/scoping-caso-estiba/scoping-caso-estiba.html</loc>
+    <lastmod>2026-09-01T22:26:24.956Z</lastmod>
+  </url>
+  <url>
+    <loc>https://growise.com.ar/articulos/nir-bagazo/articulo-nir-bagazo.html</loc>
+    <lastmod>2026-09-03T23:22:13.332Z</lastmod>
+  </url>
+  <url>
+    <loc>https://growise.com.ar/articulos/ensayo-biorrefineria/Ensayo_Biorrefineria.html</loc>
+    <lastmod>2026-03-24T22:40:20.761Z</lastmod>
+  </url>
+  <url>
+    <loc>https://growise.com.ar/articulos/ceguera_operativa/ceguera_operativa.html</loc>
+    <lastmod>2026-03-24T23:26:59.748Z</lastmod>
+  </url>
+  <url>
+    <loc>https://growise.com.ar/articulos/key-insights/key-insights.html</loc>
+    <lastmod>2026-03-31T02:19:54.166Z</lastmod>
+  </url>
+  <url>
+    <loc>https://growise.com.ar/articulos/nir-bagazo/nir-bagazo.html</loc>
+    <lastmod>2026-09-04T00:15:41.824Z</lastmod>
+  </url>
+  <url>
+    <loc>https://growise.com.ar/articulos.html</loc>
+    <lastmod>2026-03-24T17:14:21.955Z</lastmod>
+  </url>
+  <url>
+    <loc>https://growise.com.ar/quienes-somos.html</loc>
+    <lastmod>2026-09-01T22:31:17.305Z</lastmod>
   </url>
 </urlset>
