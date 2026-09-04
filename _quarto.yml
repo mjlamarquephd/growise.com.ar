@@ -35,7 +35,7 @@ format:
           
           /* LEGIBILIDAD (Para los artículos) */
           p, li, section, .quarto-title-meta { color: #333 !important; font-size: 1.05em; line-height: 1.6; }
-          h1, h2, h3, h4 { color: #2c3e50 !important; font-weight: bold; }
+          h1, h2, h3, h4 { color: #2c3e50 !important; font-weight: bold; font-style: normal !important; }
           
           /* GALERÍA DE ARTÍCULOS Y METADATOS */
           header.quarto-title-block { padding-top: 3em !important; margin-bottom: 2em !important; }
