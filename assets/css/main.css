@@ -133,6 +133,7 @@ p {
 h1, h2, h3, h4, h5, h6 {
   color: #111827;
   font-family: "Didot LT Pro Roman", "Playfair Display", Georgia, serif;
+  font-style: normal;
   font-weight: 600;
   line-height: 1em;
   margin: 0 0 1em 0;
