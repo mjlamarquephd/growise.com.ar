@@ -6,7 +6,7 @@ categories:
   - Metodología
   - Scoping
   - Recovery Audit
-image: portada.png
+image: Portada.png
 ---
 
 En la gestión ejecutiva de un complejo agroindustrial integrado, la intuición y los reportes diferidos son los mayores destructores silenciosos de EBITDA.
